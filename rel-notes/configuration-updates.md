@@ -1,4 +1,4 @@
-## Configuration updates
+# Configuration updates
 
 New variables and configuration files introduced in this release of Docker-SimpliVity:
 
