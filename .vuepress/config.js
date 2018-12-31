@@ -7,7 +7,7 @@ module.exports = {
         ],
         sidebar: [
             {
-                title: 'Express containers',
+                title: 'Deployment Guide',
                 collapsable: false,
                 children: [
                 '/introduction'
