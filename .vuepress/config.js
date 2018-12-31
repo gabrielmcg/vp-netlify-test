@@ -15,7 +15,7 @@ module.exports = {
             },
             {
                 title: 'Release Notes',
-                children: [ '/rel-notes/configuration-updates' ]
+                children: [ '/rel-notes/release-notes', '/rel-notes/configuration-updates' ]
             }
         ]        
     }
