@@ -15,7 +15,7 @@ module.exports = {
             },
             {
                 title: 'Release Notes',
-                children: [ '/rel-notes/cve', '/rel-notes/new-features', '/rel-notes/synergy20', '/rel-notes/release-notes', '/rel-notes/configuration-updates' ]
+                children: [ '/rel-notes/cve', '/rel-notes/new-features', '/rel-notes/synergy20',  '/rel-notes/configuration-updates' ]
             }
         ]        
     }
