@@ -6,7 +6,7 @@ The HPE Express Containers with Docker Enterprise Edition on HPE SimpliVity solu
 
 **Figure 1.** Solution overview
 
-[svt/architecture-svt.md\#overview-graphic](svt/architecture-svt.md#overview-graphic) provides an overview of the steps used to deploy the solution. Deploying your hardware and HPE SimpliVity is specific to your environment and is not covered here. This document shows you how to:
+[Figure 1](svt-solution-overview.md#overview-graphic) provides an overview of the steps used to deploy the solution. Deploying your hardware and HPE SimpliVity is specific to your environment and is not covered here. This document shows you how to:
 
 -   Prepare the VM templates
 -   Create the Ansible host
@@ -14,5 +14,7 @@ The HPE Express Containers with Docker Enterprise Edition on HPE SimpliVity solu
 -   Run the Ansible playbooks
 
 Once you are up and running, you should regularly backup the system using the scripts provided as part of this solution.
+
+<h2 id="overview-graphic">test title</h2>
 
 [svt----media-overview-graphic-svt-png]:<../media/overview-graphic-svt.png> "Figure 1. Solution overview"
