@@ -1,3 +1,0 @@
-### Hello
-
-[Alpha](./alpha.html)

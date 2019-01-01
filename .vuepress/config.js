@@ -15,8 +15,21 @@ module.exports = {
             },
             {
                 title: 'Release Notes',
-                children: [ '/rel-notes/cve', '/rel-notes/new-features', '/rel-notes/synergy20',  '/rel-notes/configuration-updates' ]
-            }
+                children: [ 
+				'/rel-notes/cve', 
+				'/rel-notes/new-features', 
+				'/rel-notes/synergy20',  
+				'/rel-notes/configuration-updates',
+				'fixed.md'
+				]
+            },
+            {
+                title: 'Solution Overview',
+                children: [ 
+				'soln-overview/svt-solution-overview',
+				'soln-overview/svt-config'
+				]
+			}
         ]        
     }
 }
