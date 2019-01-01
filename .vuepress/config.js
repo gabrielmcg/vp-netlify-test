@@ -15,6 +15,7 @@ module.exports = {
             },
             {
                 title: 'Release Notes',
+				collapsable: false,
                 children: [ 
 				'/rel-notes/cve', 
 				'/rel-notes/new-features', 
