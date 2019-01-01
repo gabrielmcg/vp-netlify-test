@@ -21,7 +21,7 @@ module.exports = {
 				'/rel-notes/new-features', 
 				'/rel-notes/synergy20',  
 				'/rel-notes/configuration-updates',
-				'fixed.md'
+				'/rel-notes/fixed-release-svt.md'
 				]
             },
             {
