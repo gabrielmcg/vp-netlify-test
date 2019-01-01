@@ -15,6 +15,5 @@ The HPE Express Containers with Docker Enterprise Edition on HPE SimpliVity solu
 
 Once you are up and running, you should regularly backup the system using the scripts provided as part of this solution.
 
-<h2 id="overview-graphic">test title</h2>
 
 [svt----media-overview-graphic-svt-png]:<../media/overview-graphic-svt.png> "Figure 1. Solution overview"

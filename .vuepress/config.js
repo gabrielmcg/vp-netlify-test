@@ -28,7 +28,8 @@ module.exports = {
                 title: 'Solution Overview',
                 children: [ 
 				'soln-overview/svt-solution-overview',
-				'soln-overview/svt-config'
+				'soln-overview/svt-config',
+				'soln-overview/linux-config'
 				]
 			}
         ]        
