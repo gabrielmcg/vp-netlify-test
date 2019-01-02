@@ -22,7 +22,7 @@ By default, two load balancers are deployed to increase availability of UCP and 
 With the addition of the NFS and logging VMs, a total of 13 VMs are created for the default Linux-only deployment. In addition to these VMs, the playbooks also set up the Docker persistent storage plug-in from VMware. The vSphere Docker volume plug-in facilitates the storage of data in a shared datastore that can be accessed from any machine in the cluster.
 
 
-## Hybrid VM configuration \(Windows and Linux\)
+## Hybrid VM configuration (Windows and Linux)
 
 -   3 Docker swarm Windows worker VM nodes for container workloads \(optional\). Kubernetes is not yet supported for Windows workers.
 
