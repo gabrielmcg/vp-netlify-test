@@ -47,7 +47,7 @@ module.exports = {
 			{
                 title: 'Preparing the environment',
                 children: [ 
-				
+				'prep/verify-prereqs',
 				]
 			}
         ]        
