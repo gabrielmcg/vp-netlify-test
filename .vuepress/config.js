@@ -7,12 +7,13 @@ module.exports = {
         ],
         sidebar: [
             {
-                title: '',
+                title: 'Deployment guide',
 				collapsable: false,		
                 children: [				
 			    '/introduction',
 				]
 			},
+			'/introduction',
             {
                 title: 'Release notes',
 				collapsable: true,
