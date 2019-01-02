@@ -6,13 +6,6 @@ module.exports = {
             { text: 'Blog', link: '/blog/' }
         ],
         sidebar: [
-            {
-                title: 'Deployment guide',
-				collapsable: false,		
-                children: [				
-			    '/introduction',
-				]
-			},
 			'/introduction',
             {
                 title: 'Release notes',
@@ -48,6 +41,9 @@ module.exports = {
                 title: 'Preparing the environment',
                 children: [ 
 				'prep/verify-prereqs',
+				'prep/vsphere-ha',
+				'prep/install-vdvs',
+				'prep/create-ansible-node'
 				]
 			}
         ]        
