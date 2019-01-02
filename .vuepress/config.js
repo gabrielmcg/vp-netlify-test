@@ -6,7 +6,13 @@ module.exports = {
             { text: 'Blog', link: '/blog/' }
         ],
         sidebar: [
-			'/introduction',
+            {
+                title: '',
+				collapsable: false,		
+                children: [				
+			    '/introduction',
+				]
+			},
             {
                 title: 'Release notes',
 				collapsable: true,
