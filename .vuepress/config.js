@@ -40,7 +40,7 @@ module.exports = {
                 children: [ 
 				'soln-components/hardware'
 				]
-			}			
+			},			
 			{
                 title: 'Preparing the environment',
                 children: [ 
