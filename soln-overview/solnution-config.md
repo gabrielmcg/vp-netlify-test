@@ -1,4 +1,6 @@
-# Linux-only VM configuration
+# Solution configuration
+
+## Linux-only VM configuration
 
 -   3 Docker Universal Control Plane \(UCP\) VM nodes for HA and cluster management
 -   3 Docker Trusted Registry \(DTR\) VM nodes for HA of the container registry
@@ -18,3 +20,13 @@ By default, two load balancers are deployed to increase availability of UCP and 
 -   1 NFS server VM for storage of Docker DTR images
 
 With the addition of the NFS and logging VMs, a total of 13 VMs are created for the default Linux-only deployment. In addition to these VMs, the playbooks also set up the Docker persistent storage plug-in from VMware. The vSphere Docker volume plug-in facilitates the storage of data in a shared datastore that can be accessed from any machine in the cluster.
+
+
+## Hybrid VM configuration \(Windows and Linux\)
+
+-   3 Docker swarm Windows worker VM nodes for container workloads \(optional\). Kubernetes is not yet supported for Windows workers.
+
+The hybrid deployment will typically add 3 Windows worker nodes to the above configuration, co-located with the Linux workers.
+
+**Note:** Some of the application software supported by this configuration does not currently run on Windows, for example, the Sysdig Software Agent \(see the section [\#](#)\).
+
