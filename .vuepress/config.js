@@ -6,16 +6,10 @@ module.exports = {
             { text: 'Blog', link: '/blog/' }
         ],
         sidebar: [
+			'/introduction',
             {
-                title: 'Deployment Guide',
-                collapsable: false,
-                children: [
-                '/introduction'
-                ]
-            },
-            {
-                title: 'Release Notes',
-				collapsable: false,
+                title: 'Release notes',
+				collapsable: true,
                 children: [ 
 				'/rel-notes/cve', 
 				'/rel-notes/new-features', 
@@ -25,7 +19,7 @@ module.exports = {
 				]
             },
             {
-                title: 'Solution Overview',
+                title: 'Solution overview',
                 children: [ 
 				'soln-overview/svt-solution-overview',	
                 'soln-overview/svt-config',				
@@ -33,6 +27,18 @@ module.exports = {
 				'soln-overview/sizing',
 				'soln-overview/disaster-recovery',
 				'soln-overview/security'
+				]
+			},
+			{
+                title: 'Solution components',
+                children: [ 
+				'soln-components/hardware'
+				]
+			}			
+			{
+                title: 'Preparing the environment',
+                children: [ 
+				
 				]
 			}
         ]        
