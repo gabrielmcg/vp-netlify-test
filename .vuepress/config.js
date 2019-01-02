@@ -29,7 +29,7 @@ module.exports = {
                 children: [ 
 				'soln-overview/svt-solution-overview',	
                 'soln-overview/svt-config',				
-				'soln-overview/soln-config',
+				'soln-overview/solution-config',
 				
 				]
 			}
