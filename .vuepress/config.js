@@ -27,9 +27,16 @@ module.exports = {
             {
                 title: 'Solution Overview',
                 children: [ 
-				'soln-overview/svt-solution-overview',
-				'soln-overview/svt-config',
-				'soln-overview/linux-config'
+				'soln-overview/svt-solution-overview',				
+				{
+					title: 'Solution Configuration',
+					children: [ 
+					'soln-overview/svt-config',
+				    'soln-overview/linux-config'
+				    ]
+				},
+				'soln-overview/hybrid-config'
+				
 				]
 			}
         ]        
