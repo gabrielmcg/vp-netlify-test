@@ -30,7 +30,9 @@ module.exports = {
 				'soln-overview/svt-solution-overview',	
                 'soln-overview/svt-config',				
 				'soln-overview/solution-config',
-				'soln-overview/sizing'
+				'soln-overview/sizing',
+				'soln-overview/disaster-recovery',
+				'soln-overview/security'
 				]
 			}
         ]        
