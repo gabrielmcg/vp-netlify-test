@@ -121,7 +121,10 @@ module.exports = {
 			{
                 title: 'Deploying Prometheus and Grafana on Docker RHEL nodes',
                 children: [ 
-				'promgraf/promgraf-overview'
+				'promgraf/promgraf-overview',
+				'promgraf/promgraf-playbooks',
+				'promgraf/monitoring-config-promgraf',
+				'promgraf/using-promgraf-swarm'
 				]
 			}
         ]        
