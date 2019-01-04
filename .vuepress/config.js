@@ -117,8 +117,13 @@ module.exports = {
 				'splunk/splunk-ui',
 				'splunk/redeploying-splunk-demo'
 				]
+			},
+			{
+                title: 'Deploying Prometheus and Grafana on Docker RHEL nodes',
+                children: [ 
+				'promgraf/promgraf-overview'
+				]
 			}
-				
         ]        
     }
 }
