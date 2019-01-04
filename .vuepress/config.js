@@ -135,9 +135,13 @@ module.exports = {
 				'post-deploy/k8s-example-guestbook',
 				'post-deploy/k8s-nfs-provisioner'
 				]
+			},
+			{
+                title: 'Backup and restore',
+                children: [ 
+				'backup-restore/backup-restore'
+				]
 			}
-			
-			
         ]        
     }
 }
