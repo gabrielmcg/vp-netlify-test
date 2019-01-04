@@ -78,6 +78,11 @@ module.exports = {
                 title: 'Deploying the core components',
                 children: [ 
 				'deploy/running-playbooks'
+				'deploy/create-rhel-vms',
+				'deploy/load-balancers',
+				'deploy/install-docker-ucp-dtr',
+				'deploy/add-rhel-workers',
+				'deploy/svt-backup-playbooks'
 				]
 			}
 				
