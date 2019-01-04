@@ -88,7 +88,12 @@ module.exports = {
 			{
                 title: 'Deploying Windows workers',
                 children: [ 
-				'deploy-win/deploying-windows-workers'
+				'deploy-win/deploying-windows-workers',
+				'deploy-win/create-template-win',
+				'deploy-win/add-windows-workers',
+				'deploy-win/windows-config',
+				'deploy-win/windows-proxy',
+				'deploy-win/lifecycle-windows'
 				]
 			}
 				
