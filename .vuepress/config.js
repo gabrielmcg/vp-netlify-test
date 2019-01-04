@@ -113,7 +113,9 @@ module.exports = {
                 children: [ 
 				'splunk/splunk',
 				'splunk/install-splunk',
-				'splunk/monitoring-config-splunk'
+				'splunk/monitoring-config-splunk',
+				'splunk/splunk-ui',
+				'splunk/redeploying-splunk-demo'
 				]
 			}
 				
