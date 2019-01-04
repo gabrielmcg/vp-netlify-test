@@ -62,14 +62,14 @@ Once you deploy your environment and your Docker swarm nodes connect to the Sysd
 
 
 
-[media-sysdig-hpe-png]:</ops/media/sysdig-hpe.png> "Figure 4. Sysdig and HPE"
-[media-sysdig-registration-png]:</ops/media/sysdig-registration.png> "Figure 5. Sysdig trial registration"
-[media-sysdig-email-png]:</ops/media/sysdig-email.png> "Figure 6. Sysdig email"
-[media-sysdig-monitor-welcome-png]:</ops/media/sysdig-monitor-welcome.png> "Figure 7. Sysdig Monitor welcome page"
-[media-sysdig-setup-env-png]:</ops/media/sysdig-setup-env.png> "Figure 8. Sysdig Monitor set up environment"
-[media-sysdig-k8s-png]:</ops/media/sysdig-k8s.png> "Figure 9. Sysdig Monitor access code for Kubernetes"
-[media-sysdig-k8s-spotlight-png]:</ops/media/sysdig-k8s-spotlight.png> "Figure 10. Sysdig Monitor Spotlight for Kubernetes"
-[media-sysdig-docker-png]:</ops/media/sysdig-docker.png> "Figure 11. Sysdig Monitor download location and access code for Docker"
+[media-sysdig-hpe-png]:<../media/sysdig-hpe.png> "Figure 4. Sysdig and HPE"
+[media-sysdig-registration-png]:<../media/sysdig-registration.png> "Figure 5. Sysdig trial registration"
+[media-sysdig-email-png]:<../media/sysdig-email.png> "Figure 6. Sysdig email"
+[media-sysdig-monitor-welcome-png]:<../media/sysdig-monitor-welcome.png> "Figure 7. Sysdig Monitor welcome page"
+[media-sysdig-setup-env-png]:<../media/sysdig-setup-env.png> "Figure 8. Sysdig Monitor set up environment"
+[media-sysdig-k8s-png]:<../media/sysdig-k8s.png> "Figure 9. Sysdig Monitor access code for Kubernetes"
+[media-sysdig-k8s-spotlight-png]:<../media/sysdig-k8s-spotlight.png> "Figure 10. Sysdig Monitor Spotlight for Kubernetes"
+[media-sysdig-docker-png]:<../media/sysdig-docker.png> "Figure 11. Sysdig Monitor download location and access code for Docker"
 
 
 
