@@ -50,7 +50,13 @@ module.exports = {
                 title: 'Configuring the core components',
                 children: [ 
 				'config-core/ansible-config',
-				'config-core/edit-inventory'
+				'config-core/edit-inventory',
+				'config-core/vmware-config',
+				'config-core/svt-variables-config',
+				'config-core/svt-backup-config',
+				'config-core/network-config',
+				'config-core/environment-config',
+				'config-core/docker-config',
 				]
 			}
         ]        
