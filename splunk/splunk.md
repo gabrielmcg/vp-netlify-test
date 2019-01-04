@@ -43,3 +43,8 @@ For more information on configuring standalone Splunk for Linux and Windows work
 **Note:** You can configure the list of files monitored by the Universal Forwarder.
 
 Other syslog senders can be configured to send their data to the logger VM or directly to central Splunk.
+
+
+[media-splunk-architecture-png]:</media/splunk-architecture.png> "Figure 12. Splunk architecture"
+
+
