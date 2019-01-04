@@ -101,7 +101,9 @@ module.exports = {
                 children: [ 
 				'sysdig/deploying-sysdig',
 				'sysdig/sysdig',
-				'sysdig/install-sysdig'
+				'sysdig/install-sysdig',
+				'sysdig/monitoring-config-sysdig',
+				'sysdig/sysdig-trial'
 				]
 			}
 				
