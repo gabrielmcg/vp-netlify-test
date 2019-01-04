@@ -130,7 +130,10 @@ module.exports = {
 			{
                 title: 'Post deployment',
                 children: [ 
-				'post-deploy/post-deploy'
+				'post-deploy/post-deploy',
+				'post-deploy/install-kubectl',
+				'post-deploy/k8s-example-guestbook',
+				'post-deploy/k8s-nfs-provisioner'
 				]
 			}
 			
