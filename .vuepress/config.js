@@ -103,7 +103,9 @@ module.exports = {
 				'sysdig/sysdig',
 				'sysdig/install-sysdig',
 				'sysdig/monitoring-config-sysdig',
-				'sysdig/sysdig-trial'
+				'sysdig/sysdig-trial',
+				'sysdig/deploying-sysdig-k8s',
+				'sysdig/deploying-sysdig-swarm'
 				]
 			}
 				
