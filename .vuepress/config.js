@@ -107,8 +107,13 @@ module.exports = {
 				'sysdig/deploying-sysdig-k8s',
 				'sysdig/deploying-sysdig-swarm'
 				]
+			},
+			{
+                title: 'Deploying Splunk',
+                children: [ 
+				'splunk/splunk'
+				]
 			}
-				
 				
         ]        
     }
