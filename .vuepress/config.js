@@ -126,7 +126,15 @@ module.exports = {
 				'promgraf/monitoring-config-promgraf',
 				'promgraf/using-promgraf-swarm'
 				]
+			},
+			{
+                title: 'Post deployment',
+                children: [ 
+				'post-deploy/post-deploy'
+				]
 			}
+			
+			
         ]        
     }
 }
