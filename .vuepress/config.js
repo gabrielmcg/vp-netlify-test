@@ -95,6 +95,12 @@ module.exports = {
 				'deploy-win/windows-proxy',
 				'deploy-win/lifecycle-windows'
 				]
+			},
+			{
+                title: 'Deploying Sysdig monitoring',
+                children: [ 
+				'sysdig/deploying-sysdig'
+				]
 			}
 				
 				

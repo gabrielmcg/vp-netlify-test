@@ -15,7 +15,7 @@ Window-related variables are shown in [\#windows-config-table-conref](#windows-c
 |docker\_ee\_version\_windows|**group\_vars/vars**|It is important that the version of the Docker engine running on your Windows worker nodes is the same as that running on RHEL in the rest of your cluster. You should use this variable to explicitly match up the versions. For Docker 2.0, the recommended value is `'17.06'`. If you do not explicitly set this value, you may end up with an incompatible newer version running on your Windows workers.|
 |windows\_update|group\_vars/vars|Variable used to determine if Windows updates are automatically downloaded when installing Docker on Windows worker nodes \(in the `playbooks/install_docker.yml`\). Defaults to `true`. See the section [\#](#) for more information.|
 
-## group\_vars/win\_worker.yml
+## group_vars/win_worker.yml
 
 There is a separate file in the `group_vars` directory named `win_worker.yml` for advanced, Windows-specific configuration. These variables are used in the following playbooks:
 
