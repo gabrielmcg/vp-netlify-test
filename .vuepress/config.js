@@ -73,6 +73,12 @@ module.exports = {
 				'playbooks/convenience-playbooks.md',
 				'playbooks/convenience-scripts.md'
 				]
+			},
+			{
+                title: 'Deploying the core components',
+                children: [ 
+				'deploy/running-playbooks'
+				]
 			}
 				
 				
