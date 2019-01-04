@@ -111,7 +111,9 @@ module.exports = {
 			{
                 title: 'Deploying Splunk',
                 children: [ 
-				'splunk/splunk'
+				'splunk/splunk',
+				'splunk/install-splunk',
+				'splunk/monitoring-config-splunk'
 				]
 			}
 				
