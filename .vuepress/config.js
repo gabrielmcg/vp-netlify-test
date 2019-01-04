@@ -57,8 +57,25 @@ module.exports = {
 				'config-core/network-config',
 				'config-core/environment-config',
 				'config-core/docker-config',
+				'config-core/orchestrator-config',
+				'config-core/k8s-config',
+				'config-core/edit-vault',
+				'config-core/inventory-group-variables',
+				]
+			},
+			{
+                title: 'Overview of the playbooks',
+                children: [ 
+				'playbooks/playbooks-overview.md',
+				'playbooks/core-infrastructure.md',
+				'playbooks/optional-playbooks.md',
+				'playbooks/backup-restore-playbooks.md',
+				'playbooks/convenience-playbooks.md',
+				'playbooks/convenience-scripts.md'
 				]
 			}
+				
+				
         ]        
     }
 }
