@@ -84,6 +84,12 @@ module.exports = {
 				'deploy/add-rhel-workers',
 				'deploy/svt-backup-playbooks'
 				]
+			},
+			{
+                title: 'Deploying Windows workers',
+                children: [ 
+				'deploy-win/deploying-windows-workers'
+				]
 			}
 				
 				
