@@ -77,7 +77,7 @@ module.exports = {
 			{
                 title: 'Deploying the core components',
                 children: [ 
-				'deploy/running-playbooks'
+				'deploy/running-playbooks',
 				'deploy/create-rhel-vms',
 				'deploy/load-balancers',
 				'deploy/install-docker-ucp-dtr',
