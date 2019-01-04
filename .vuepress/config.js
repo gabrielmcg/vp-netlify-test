@@ -99,7 +99,9 @@ module.exports = {
 			{
                 title: 'Deploying Sysdig monitoring',
                 children: [ 
-				'sysdig/deploying-sysdig'
+				'sysdig/deploying-sysdig',
+				'sysdig/sysdig',
+				'sysdig/install-sysdig'
 				]
 			}
 				
