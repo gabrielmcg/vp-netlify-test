@@ -45,6 +45,13 @@ module.exports = {
 				'prep/install-vdvs',
 				'prep/create-ansible-node'
 				]
+			},
+			{
+                title: 'Configuring the core components',
+                children: [ 
+				'config-core/ansible-config',
+				'config-core/edit-inventory'
+				]
 			}
         ]        
     }
