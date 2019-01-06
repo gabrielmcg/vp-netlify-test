@@ -6,7 +6,13 @@ module.exports = {
             { text: 'Blog', link: '/blog/' }
         ],
         sidebar: [
-			'/introduction',
+		    {
+                title: 'Introduction',
+				collapsable: true,
+                children: [ 
+			    '/introduction'
+				]
+			},
             {
                 title: 'Release notes',
 				collapsable: true,
@@ -154,6 +160,15 @@ module.exports = {
 				'lifecycle/lifecycle-rhel',
 				'lifecycle/lifecycle-docker-ee',
 				'lifecycle/lifecycle-monitoring'
+				]
+			},
+			{
+                title: 'Appendices',
+                children: [ 
+				'appendices/appendix-a',
+				'appendices/appendix-b',
+				'appendices/appendix-c',
+				'appendices/appendix-d'
 				]
 			}
         ]        
