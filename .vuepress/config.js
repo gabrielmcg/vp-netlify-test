@@ -144,6 +144,12 @@ module.exports = {
 				'backup-restore/restore-ucp-dtr',
 				'backup-restore/simplivity-backups'
 				]
+			},
+			{
+                title: 'Solution lifecycle management',
+                children: [ 
+				'lifecycle/lifecycle'
+				]
 			}
         ]        
     }

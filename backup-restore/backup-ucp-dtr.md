@@ -29,10 +29,10 @@ This playbook creates two archives in the folder specified by the variable `back
 
 `<vmname>` is the name of the host \(in the inventory\) that was used to take the backup, and `<timestamp>` is the time at which the backup was taken. The file with the extension `.vars.tgz` contains information regarding the system that was backed up.
 
-You can override the generated file name by defining the variable **backup\_name** on the command line when running the playbook. In the example below:
+You can override the generated file name by defining the variable **backup_name** on the command line when running the playbook. In the example below:
 
 ```
-# ansible-playbook -i vm_hosts playbooks/backup_swarm.yml -e backup_name=**my\_swarm\_backup**
+# ansible-playbook -i vm_hosts playbooks/backup_swarm.yml -e backup_name=**my_swarm_backup**
 ```
 
 The generated files won't have `<vmname>` or `<timestamp>` appended:
@@ -44,7 +44,7 @@ The generated files won't have `<vmname>` or `<timestamp>` appended:
 
 **Warning:** **Online versus offline backups:** By default, the playbook performs online backups. You can take offline backups by setting the variable `swarm_backup_offline` to `"true"`. The playbook will then stop the Docker daemon on the machine used to take the backup \(a manager or UCP node\). Before it does so, the playbook will verify that enough managers are running in the cluster to maintain the quorum. If this is not the case, the playbook will exit with an error. For more information, see the Docker documentation at [https://docs.docker.com/engine/swarm/admin\_guide/\#recover-from-disasterv](https://docs.docker.com/engine/swarm/admin_guide/#recover-from-disasterv)
 
-## Backing up the Universal Control Plane \(UCP\)
+## Backing up the Universal Control Plane (UCP)
 
 When you backup UCP, you save the data/metadata outlined in [\#backup-ucp-data-meta-table-content](#backup-ucp-data-meta-table-content):
 
@@ -75,7 +75,7 @@ This playbook creates two archives in the folder specified by the variable `back
 You can override the generated file name by defining the variable **backup\_name** on the command line when running the playbook. In the example below:
 
 ```
-# ansible-playbook -i vm_hosts playbooks/backup_ucp.yml -e backup_name=**my\_ucp\_backup**
+# ansible-playbook -i vm_hosts playbooks/backup_ucp.yml -e backup_name=**my_ucp_backup**
 ```
 
 The generated files won't have `<vmname>` or `<timestamp>` appended:
@@ -89,7 +89,7 @@ The generated files won't have `<vmname>` or `<timestamp>` appended:
 
 For more information on UCP backup, see the Docker documentation at [https://docs.docker.com/datacenter/ucp/3.0/guides/admin/backups-and-disaster-recovery/](https://docs.docker.com/datacenter/ucp/3.0/guides/admin/backups-and-disaster-recovery/)
 
-## Backing up the Docker Trusted Registry \(DTR\)
+## Backing up the Docker Trusted Registry (DTR)
 
 When you backup DTR, you save the data/metadata outlined in [\#backup-dtr-data-meta-table-content](#backup-dtr-data-meta-table-content):
 
@@ -123,7 +123,7 @@ This playbook creates two archives in the folder specified by the variable `back
 You can override the generated file name by defining the variable **backup\_name** on the command line when running the playbook. In the example below:
 
 ```
-# ansible-playbook -i vm_hosts playbooks/backup_dtr_metadata.yml -e backup_name=**my\_dtr\_metadata\_backup**
+# ansible-playbook -i vm_hosts playbooks/backup_dtr_metadata.yml -e backup_name=**my_dtr_metadata_backup**
 ```
 
 The generated files won't have `<vmname>` or `<timestamp>` appended:
@@ -135,7 +135,7 @@ The generated files won't have `<vmname>` or `<timestamp>` appended:
 
 For more information on DTR backups, see the Docker documentation at [https://docs.docker.com/datacenter/dtr/2.md](https://docs.docker.com/datacenter/dtr/2.md)
 
-## Backing up DTR data \(images\)
+## Backing up DTR data (images)
 
 To make a backup of the images that are inventoried in DTR and stored on the NFS server, use `playbooks/backup_dtr_images.yml` 
 
@@ -155,7 +155,7 @@ This playbook creates two archives in the folder specified by the variable `back
 You can override the generated file names by defining the variable **backup\_name** on the command line when running the playbook, as shown in the example below:
 
 ```
-# ansible-playbook -i vm_hosts playbooks/backup_dtr_images.yml -e backup_name=**my\_dtr\_data\_backup**
+# ansible-playbook -i vm_hosts playbooks/backup_dtr_images.yml -e backup_name=**my_dtr_data_backup**
 ```
 
 The generated files won't have `<vmname>` or `<timestamp>` appended:
