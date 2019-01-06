@@ -139,7 +139,8 @@ module.exports = {
 			{
                 title: 'Backup and restore',
                 children: [ 
-				'backup-restore/backup-restore'
+				'backup-restore/backup-restore',
+				'backup-restore/backup-ucp-dtr'
 				]
 			}
         ]        
