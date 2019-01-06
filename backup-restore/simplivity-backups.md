@@ -17,7 +17,7 @@ The name of the special VM follows the pattern \<prefix\>-in-dockervols-<Datasto
 
 For example, based on the default values in the scripts, the VM name would be `hpe-VM-in-dockervols-Docker_HPE`
 
-### Create a Docker volume
+## Create a Docker volume
 
 To see any existing Docker volumes created using the vSphere driver, use the `docker volume ls` command and limit the results to those volumes created using the vSphere driver. If you have already used the playbooks to install Prometheus for example, you may see a listing as follows:
 
@@ -76,7 +76,7 @@ The container will exit once the shell command has run and any unnamed volumes w
 
 ```
 
-### Automated backup
+## Automated backup
 
 By default, the special VM and any Docker volume in the `dockvols` folder are backed up every hour. This is controlled by the following settings in the `group_vars/vars` file.
 
@@ -97,7 +97,7 @@ docker_volumes_policy: 'hpe-gold'
 
 The backup policy `hpe-gold` is assigned to the special VM that is used to back up the Docker volumes. This policy specifies that a backup is taken every hour \(`frequency: '60'` means sixty minutes\) while the backup is retained for one month \(`retention: '43200'` means 43200 minutes or thirty days\).
 
-### Manual backup
+## Manual backup
 
 Rather than waiting for an automated backup to take place, you can create a backup immediately. Right-click on the special VM, in this case `hpe-VM-in-dockervols-Docker_HPE`, select `All HPE SimpliVity Actions` and choose `Backup Virtual Machine` as shown in [\#backup-virtual-machine](#backup-virtual-machine).
 
@@ -111,7 +111,7 @@ You can specify a backup name, in this case `manual_backup_test_01`, as shown in
 
 **Figure 23.** Backup virtual machine details
 
-### Restore
+## Restore
 
 Right-click on the special VM, in this case hpe-VM-in-dockervols-Docker\_HPE. On the `Configure` tab, select `HPE SimpliVity Search Backups` as shown in [\#search-backups](#search-backups).
 

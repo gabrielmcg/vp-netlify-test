@@ -148,7 +148,11 @@ module.exports = {
 			{
                 title: 'Solution lifecycle management',
                 children: [ 
-				'lifecycle/lifecycle'
+				'lifecycle/lifecycle',
+				'lifecycle/lifecycle-svt',
+				'lifecycle/lifecycle-vdvs',
+				'lifecycle/lifecycle-rhel',
+				'lifecycle/lifecycle-docker-ee'
 				]
 			}
         ]        
