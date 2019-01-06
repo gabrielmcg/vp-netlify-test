@@ -187,3 +187,17 @@ You can verify that the volume contains the correct data by spinning up a contai
 ```
 
 The data you entered in the text file before performing the backup and deleting the volume is available once again after restoring the volume.
+
+
+
+
+[media-backup-virtual-machine-png]:<../media/backup-virtual-machine.png> "Figure 22. Backup virtual machine"
+[media-backup-vm-details-png]:<../media/backup-vm-details.png> "Figure 23. Backup virtual machine details"
+[media-search-backups-png]:<../media/search-backups.png> "Figure 24. Search backups"
+[media-restore-vm-png]:<../media/restore-vm.png> "Figure 25. Restore virtual machine"
+[media-restore-vm-details-png]:<../media/restore-vm-details.png> "Figure 26. Restore virtual machine details"
+[media-browse-restored-vm-png]:<../media/browse-restored-vm.png> "Figure 27. Browse for restored virtual machine"
+[media-vmdk-files-png]:<../media/vmdk-files.png> "Figure 28. Locate vmdk and vmfd files"
+[media-move-to-png]:<../media/move-to.png> "Figure 29. Move files"
+[media-destination-png]:<../media/destination.png> "Figure 30. Move to destination"
+[media-moved-png]:<../media/moved.png> "Figure 31. Files moved to destination"
