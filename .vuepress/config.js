@@ -152,7 +152,8 @@ module.exports = {
 				'lifecycle/lifecycle-svt',
 				'lifecycle/lifecycle-vdvs',
 				'lifecycle/lifecycle-rhel',
-				'lifecycle/lifecycle-docker-ee'
+				'lifecycle/lifecycle-docker-ee',
+				'lifecycle/lifecycle-monitoring'
 				]
 			}
         ]        
