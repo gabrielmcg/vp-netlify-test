@@ -37,7 +37,9 @@ increased system complexity that necessitates new working practices and tools fo
 The remainder of this blog post outlines the monitoring solutions that the solutuon provides to help you transition 
 to this new software lifecycle, from development and testing to deployment and day-to-day operations.
 
-Monitoring support in the solution
+## Monitoring support in the solution
+
+### Sysdig
 
 HPE has teamed up with Sysdig to offer a fully featured, 90-day trial version of Sysdig Monitor and Secure as 
 part of HPE Express Containers with Docker Enterprise Edition on HPE SimpliVity. 
@@ -48,6 +50,7 @@ on your cloud. This allows Sysdig Monitor, running as Software-as-a-Service (Saa
 from an infrastructure-centric point of view for the operations engineer and from an application-centric point 
 of view for the software developer.
 
+### Prometheus and Grafana
 Prometheus is a hugely popular, open-source time-series database for collecting and querying monitoring data, 
 and is typically used in conjunction with Grafana for data visualization. You can instrument your application 
 code to generate custom metrics, while there are custom exporters for common third-party software. 
@@ -55,6 +58,7 @@ cAdvisor generates container metrics, node-exporter reports on the underlying se
 produces metrics on how it is performing. All this data can be gathered and queried in Prometheus for 
 rules-based alerting and to produce management dashboards in Grafana.
 
+### Splunk
 Splunk Enterprise allows you to aggregate and analyze data from any source, both structured or unstructured, 
 using machine leaning to provide insight into patterns and trends and to help you make faster, better-informed 
 business decisions. This solution deploys a fully-featured (but capacity-restricted) demo version of 
