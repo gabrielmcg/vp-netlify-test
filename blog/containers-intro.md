@@ -1,6 +1,6 @@
 ---
 title: Understanding containers and related monitoring challenges
-date: 2018-07-28
+date: 2019-01-01
 description: Covering the basics on containers, DevOps and what it takes to lessen the challenges that come with monitoring containerized applications 
 ---
 
