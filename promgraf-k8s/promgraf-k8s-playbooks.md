@@ -13,17 +13,17 @@ by commenting out the appropriate line in the wrapper playbook.
 
 
 ## Prometheus Operator
-The Prometheus Operator makes running Prometheus on top of Kubernetes as easy as possible, while preserving Kubernetes-native configuration options.
+The Prometheus Operator makes running Prometheus on top of Kubernetes as easy as possible, while preserving Kubernetes-native configuration options. For more information on Prometheus Operator, see https://coreos.com/operators/prometheus/docs/latest/user-guides/getting-started.html.
 
 The playbook `playbooks/kube-prometheus/operator.yml` installs the operator itself. 
 
 ## Kube state metrics
-'kube-state-metrics' is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects. It is not focused on the health of the individual Kubernetes components, but rather on the health of the various objects inside, such as deployments, nodes and pods. For more information on 'kube-state-metrics`, see https://github.com/kubernetes/kube-state-metrics
+'kube-state-metrics' is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects. It is not focused on the health of the individual Kubernetes components, but rather on the health of the various objects inside, such as deployments, nodes and pods. For more information on 'kube-state-metrics`, see https://github.com/kubernetes/kube-state-metrics.
 
 The playbook `playbooks/kube-prometheus/kube-state-metrics.yml` installs on all UCP, DTR and Kubernetes worker nodes.
 
 ## Node exporter
-The `node-exporter` provides an overview of cluster node resources including CPU, memory and disk utilization and more.
+The `node-exporter` provides an overview of cluster node resources including CPU, memory and disk utilization and more. For more information on `node-exporter`, see https://github.com/prometheus/node_exporter.
 
 The playbook `playbooks/kube-prometheus/node-exporter.yml` installs `node-exporter` as a set of Docker containers on all UCP, DTR and Kubernetes worker nodes. Port `9100` is opened in the firewall on each node where it is installed.
 
@@ -75,4 +75,6 @@ kubectl -n monitoring patch svc grafana --type='json' -p '[{"op": "remove", "pat
 
 ## Teardown
 
- The playbook `playbooks/kube-prometheus-teardown.yml` strips down the installed Prometheus\Grafana stack.
+ The playbook `playbooks/kube-prometheus-teardown.yml` removes the installed Prometheus\Grafana stack.
+
+ 
