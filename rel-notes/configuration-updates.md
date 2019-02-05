@@ -1,6 +1,21 @@
 # Configuration updates
 
-New variables and configuration files introduced in this release of Docker-SimpliVity:
+
+## Express Containers 2.1
+
+New variables and configuration files introduced in release 2.1 of Docker-SimpliVity:
+
+- `backup_passphrase` variable in `group_vars/vault`
+- `nfs_provisioner_namespace` variable in `group_vars/vars` - default value of `nfsstorage`
+- `nfs_provisioner_serviceaccount` variable in `group_vars/vars` - default value of `nfs-provisioner`
+- `sysdig_collector` variable in `group_vars/vars` - default value is `collector.sysdigcloud.com`
+- `sysdig_collector_port` variable in `group_vars/vars` - default value is `6666`
+- `kubectl_version` variable in `group_vars/vars` - default value is `1.11.5`
+- `kubectl_checksum` variable in `group_vars/vars` - default value is checksum for `1.11.5`
+
+## Express Containers 2.0
+
+New variables and configuration files introduced in release 2.0 of Docker-SimpliVity:
 
 -   `docker_ee_reponame` variable in `group_vars/vars` replaces `docker_ee_version` - see [\#](#) 
 -   `docker_ee_version_windows` variable in `group_vars/vars` - see [\#](#)
