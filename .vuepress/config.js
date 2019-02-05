@@ -37,9 +37,7 @@ module.exports = {
                 title: 'Release notes',
 				collapsable: true,
                 children: [ 
-				'/rel-notes/cve', 
 				'/rel-notes/new-features', 
-				'/rel-notes/synergy20',  
 				'/rel-notes/configuration-updates',
 				'/rel-notes/fixed-release-svt.md'
 				]
