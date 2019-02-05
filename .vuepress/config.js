@@ -99,7 +99,7 @@ module.exports = {
 				]
 			},
 			{
-                title: 'Deploying the core components',
+                title: 'Deploying core components',
                 children: [ 
 				'deploy/running-playbooks',
 				'deploy/create-rhel-vms',
@@ -143,7 +143,13 @@ module.exports = {
 				]
 			},
 			{
-                title: 'Deploying Prometheus and Grafana on Docker RHEL nodes',
+                title: 'Deploying Prometheus and Grafana on Kubernetes',
+                children: [ 
+				'promgraf-k8s/promgraf-k8s-overview'
+				]
+			},							
+			{
+                title: 'Deploying Prometheus and Grafana on Docker Swarm',
                 children: [ 
 				'promgraf/promgraf-overview',
 				'promgraf/promgraf-playbooks',
