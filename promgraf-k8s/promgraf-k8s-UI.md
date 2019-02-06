@@ -27,7 +27,7 @@ to reset the default `admin` password.
 
 
 
- [media-prometheus-k8s-service-discovery]]:<../media/prometheus-k8s-service-discovery.png> "Prometheus Operator"
+[media-prometheus-k8s-service-discovery]:<../media/prometheus-k8s-service-discovery.png> "Prometheus Service Discovery"
 
 
 
