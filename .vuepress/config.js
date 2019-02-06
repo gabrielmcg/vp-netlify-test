@@ -146,7 +146,8 @@ module.exports = {
                 title: 'Deploying Prometheus and Grafana on Kubernetes',
                 children: [ 
 				'promgraf-k8s/promgraf-k8s-overview',
-				'promgraf-k8s/promgraf-k8s-playbooks'
+				'promgraf-k8s/promgraf-k8s-playbooks',
+				'promgraf-k8s/promgraf-k8s-UI'
 				]
 			},							
 			{
