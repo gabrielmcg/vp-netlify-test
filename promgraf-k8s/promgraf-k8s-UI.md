@@ -30,7 +30,6 @@ http://hpe2-ucp01.am2.cloudra.local:33090/targets
 **Figure: ** Prometheus targets
 
 
-
 ## Accessing Grafana UI
 
 The Grafana UI is available via your UCP, DTR or Kubernetes worker nodes, using `HTTP` on port `33030`, 
