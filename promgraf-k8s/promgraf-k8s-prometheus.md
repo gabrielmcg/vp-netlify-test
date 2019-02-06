@@ -45,8 +45,7 @@ Click on the drop-down titled ` - insert metric at cursor -` to see all the metr
 
 
 ## Node Exporter
-Metrics specific to the Node Exporter are prefixed with `node_` and include metrics like `node_cpu_seconds_total` and `node_exporter_build_info`.
-
+Metrics specific to the Node Exporter are prefixed with `node_` and include metrics like `node_cpu_seconds_total` and `node_exporter_build_info`. The table below lists some example expressions.
 
 
 |Metric	                                             |Meaning   |
@@ -55,6 +54,20 @@ Metrics specific to the Node Exporter are prefixed with `node_` and include metr
 |node_filesystem_avail_bytes	                     |The filesystem space available to non-root users (in bytes) |
 |rate(node_network_receive_bytes_total[1m])	         |The average network traffic received, per second, over the last minute (in bytes)
 
+More information on use of `node-exporter` metrics is available at https://github.com/prometheus/node_exporter.
+
+
+## cAdvisor
+cAdvisor (short for container Advisor) analyzes and exposes resource usage and performance data from running containers. cAdvisor exposes Prometheus metrics out of the box. The table below lists some example expressions.
+
+|Expression	                                               |Description	                   |For  |
+|----------------------------------------------------------|-------------------------------|-----|
+|rate(container_cpu_usage_seconds_total{name="redis"}[1m]) |The cgroup's CPU usage in the last minute (split up by core) |The `redis` container |
+|container_memory_usage_bytes{name="redis"}  |The cgroup's total memory usage (in bytes) |The redis container |
+|rate(container_network_transmit_bytes_total[1m]) |Bytes transmitted over the network by the container per second in the last minute |All containers|
+|rate(container_network_receive_bytes_total[1m])| Bytes received over the network by the container per second in the last minute| All containers|
+
+A full listing of cAdvisor-gathered container metrics exposed to Prometheus can be found in the cAdvisor documentation at https://github.com/google/cadvisor/blob/master/docs/storage/prometheus.md.
 
 
 
