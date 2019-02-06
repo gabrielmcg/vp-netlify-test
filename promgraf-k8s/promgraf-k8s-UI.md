@@ -14,14 +14,14 @@ To see what services are being monitored, access the service discovery page, via
 http://hpe2-ucp01.am2.cloudra.local:33090/service-discovery
 ```
 
-The monitores services are listed as shown in the folowing figure.
+The monitored services are listed as shown in the following figure.
 
 !["Prometheus service discovery"][media-prometheus-k8s-service-discovery] 
 
 **Figure:** Prometheus service discovery
 
 
-To see the status for the monitored services, access the targets pag via `Status -> Targets` or using the endpoint `/targets`.
+To see the status for the monitored services, access the targets page via `Status -> Targets` or using the endpoint `/targets`.
 
 ```
 http://hpe2-ucp01.am2.cloudra.local:33090/targets
