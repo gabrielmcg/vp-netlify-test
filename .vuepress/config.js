@@ -147,7 +147,8 @@ module.exports = {
                 children: [ 
 				'promgraf-k8s/promgraf-k8s-overview',
 				'promgraf-k8s/promgraf-k8s-playbooks',
-				'promgraf-k8s/promgraf-k8s-UI'
+				'promgraf-k8s/promgraf-k8s-prometheus',
+				'promgraf-k8s/promgraf-k8s-grafana'
 				]
 			},							
 			{

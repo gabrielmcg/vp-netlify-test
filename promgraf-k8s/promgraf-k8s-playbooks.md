@@ -33,6 +33,10 @@ While all the other Kubernetes components run on top of Kubernetes itself, `kube
 The playbook `playbooks/kube-prometheus/monitors.yml` installs Service Monitors for `kubelet` and `apiserver`.
 
 
+## cAdvisor
+
+Support for cAdvisor is built-in to Kubernetes, so cAdvisor metrics will automatically be available within Prometheus, without any other configuration required.
+
 **Note:**
 Because Docker EE provides a hosted version of Kubernetes, it is not possible to access metrics for `kube-scheduler` and `kube-controller-manager`.
 
@@ -77,4 +81,3 @@ kubectl -n monitoring patch svc grafana --type='json' -p '[{"op": "remove", "pat
 
  The playbook `playbooks/kube-prometheus-teardown.yml` removes the installed Prometheus\Grafana stack.
 
- 
