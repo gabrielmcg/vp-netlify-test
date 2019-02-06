@@ -8,9 +8,26 @@ The Prometheus UI is available via your UCP, DTR or Kubernetes worker nodes, usi
 http://hpe-ucp01.am2.cloudra.local:33090
 ```
 
+To see what services are being monitored, access the service discovery page, via `Status -> Service Discovery`, or using the `/service-discovery` endpoint:
 
-!["Prometheus Service Discovery"][media-prometheus-k8s-service-discovery] 
+```
+http://hpe2-ucp01.am2.cloudra.local:33090/service-discovery
+```
 
+!["Prometheus service discovery"][media-prometheus-k8s-service-discovery] 
+
+**Figure: ** Prometheus service discovery
+
+
+To see the status for the monitored services, access the targets pag via `Status -> Targets` or using the endpoint `/targets`.
+
+```
+http://hpe2-ucp01.am2.cloudra.local:33090/targets
+```
+
+!["Prometheus targets"][media-prometheus-k8s-targets] 
+
+**Figure: ** Prometheus targets
 
 
 
@@ -27,7 +44,8 @@ to reset the default `admin` password.
 
 
 
-[media-prometheus-k8s-service-discovery]:<../media/prometheus-k8s-service-discovery.png> "Prometheus Service Discovery"
+[media-prometheus-k8s-service-discovery]:<../media/prometheus-k8s-service-discovery.png> 
+[media-prometheus-k8s-targets]:<../media/prometheus-k8s-targets.png> 
 
 
 
