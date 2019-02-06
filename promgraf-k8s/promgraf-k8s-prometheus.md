@@ -25,17 +25,28 @@ To see the status for the monitored services, access the targets page via `Statu
 http://hpe2-ucp01.am2.cloudra.local:33090/targets
 ```
 
-The status of the various monitors are displayed,  as shown in the folowing figure.
+The status of the various monitors are displayed,  as shown in the following figure.
 
 !["Prometheus targets"][media-prometheus-k8s-targets] 
 
 **Figure:** Prometheus targets
 
 
+To see all the metrics available, click on Graph or use the endpoint `/graph`:
+```
+http://hpe2-ucp01.am2.cloudra.local:33090/graph
+```
+
+Click on the drop-down titled ` - insert metric at cursor -` to see all the metrics that are available to Prometheus.
+
+!["Prometheus targets"][media-prometheus-k8s-metrics] 
+
+**Figure:** Prometheus metrics
+
 
 
 [media-prometheus-k8s-service-discovery]:<../media/prometheus-k8s-service-discovery.png> 
 [media-prometheus-k8s-targets]:<../media/prometheus-k8s-targets.png> 
-
+[media-prometheus-k8s-metrics]:<../media/prometheus-k8s-metrics.png> 
 
 
