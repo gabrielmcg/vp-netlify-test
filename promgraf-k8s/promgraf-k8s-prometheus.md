@@ -44,6 +44,20 @@ Click on the drop-down titled ` - insert metric at cursor -` to see all the metr
 **Figure:** Prometheus metrics
 
 
+## Node Exporter
+Metrics specific to the Node Exporter are prefixed with `node_` and include metrics like `node_cpu_seconds_total` and `node_exporter_build_info`.
+
+
+
+|Metric	                                             |Meaning   |
+-----------------------------------------------------|----------|
+|rate(node_cpu_seconds_total{mode="system"}[1m])	 |The average amount of CPU time spent in system mode, per second, over the last minute (in seconds)|
+|node_filesystem_avail_bytes	                     |The filesystem space available to non-root users (in bytes) |
+|rate(node_network_receive_bytes_total[1m])	         |The average network traffic received, per second, over the last minute (in bytes)
+
+
+
+
 
 [media-prometheus-k8s-service-discovery]:<../media/prometheus-k8s-service-discovery.png> 
 [media-prometheus-k8s-targets]:<../media/prometheus-k8s-targets.png> 

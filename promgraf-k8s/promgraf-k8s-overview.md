@@ -9,7 +9,7 @@ The Prometheus Operator makes running Prometheus on top of Kubernetes as easy as
 
 !["Prometheus Operator"][media-prometheus-operator-jpg] 
 
-**Figure: ** Prometheus Operator
+**Figure:** Prometheus Operator
 
 
 
