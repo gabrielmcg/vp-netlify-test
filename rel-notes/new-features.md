@@ -5,9 +5,9 @@
 
 This release of the Docker-SimpliVity playbooks deploys Docker EE 2.1, featuring Kubernetes 1.11
 
-- **Prometheus/Grafana on Kubernetes:** The playbooks now deploy a full monitoring stack using Prometheus Operator. They install kube-state-metrics and node-exporter components, as well as supporting Kubelet and Apiserver metrics. Sample dashboards for Grafana are installed to help you monitor your Kubernetes infrastructure.
+- **Prometheus/Grafana on Kubernetes:** The playbooks now deploy a full monitoring stack using Prometheus Operator. They install `kube-state-metrics` and `node-exporter` components, as well as supporting Kubelet and Apiserver metrics. Sample dashboards for Grafana are installed to help you monitor your Kubernetes infrastructure.
 
-- **Docker UCP metrics for Kubernetes:** A simple, standalone Prometheus/Grafana deployment is provided to support visualization uf UCP metrics. These will be integrated into the full stack deployment in a futire release.
+- **Docker UCP metrics for Kubernetes:** A simple, standalone Prometheus/Grafana deployment is provided to support visualization of UCP metrics. These will be integrated into the full stack deployment in a future release.
 
 -  **Sysdig for Kubernetes:** Updated the Sysdig deployment to use Kubernetes  1.11 RBAC and config maps for sensitive data.
 
@@ -17,9 +17,10 @@ This release of the Docker-SimpliVity playbooks deploys Docker EE 2.1, featuring
 
 - **WordPress and MySQL using NFS Provisioner:** Validation of the Kubernetes install, featuring a WordPress and MySQL deployment with persistent storage using the NFS Provisioner
 
+- **kubectl:** Convenience playbook to download and install `kubectl`
+
 - **Client bundle:** Convenience playbook to download and configure the client bundle from UCP
 
-- **kubectl:** Convenience playbook to download and install `kubectl`
 
 
 ## Express Containers 2.0
