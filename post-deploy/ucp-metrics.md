@@ -23,7 +23,7 @@ to use the client bundle to access the UCP metrics. To run the playbook:
 ```
 
 
-## Promethues UI
+## Prometheus UI
 
 The playbook exposes a port to access the user interface for Prometheus - to find the port, get the details of the `prometheus` service:
 
