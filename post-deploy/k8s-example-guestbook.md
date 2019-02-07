@@ -43,7 +43,7 @@ Download the full set of Kubernetes examples and change to the guestbook directo
 The manifest file `redis-master-deployment.yaml`, included below, specifies a deployment controller that runs a single replica Redis master pod.
 
 ```
-# # cat redis-master-deployment.yaml
+# cat redis-master-deployment.yaml
 apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
 kind: Deployment
 metadata:
@@ -213,7 +213,7 @@ redis-slave-5cb5956459-gql5x      1/1       Running   0          19s
 The guestbook application needs to communicate to Redis slaves to read data. To make the Redis slaves discoverable, you need to set up a service that provides transparent load balancing to the set of pods.
 
 ```
-]# cat redis-slave-service.yaml
+# cat redis-slave-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -340,10 +340,10 @@ Query the list of services to verify that the `frontend` service is running.
 
 ```
 #  kubectl get services | grep frontend
-frontend       NodePort    10.96.16.200    <none>        80:**33444**/TCP     25s
+frontend       NodePort    10.96.16.200    <none>        80:33444/TCP     25s
 ```
 
-Access the UI using the identified port on any node in your cluster, for example, `http://hpe2-ucp01.am2.cloudra.local:**33444**/` as shown in [\#k8s-guestbook1](#k8s-guestbook1).
+Access the UI using the identified port on any node in your cluster, for example, `http://hpe2-ucp01.am2.cloudra.local:33444/` as shown in [\#k8s-guestbook1](#k8s-guestbook1).
 
 ![ "Guestbook UI"][media-k8s-guestbook1-png]
 
