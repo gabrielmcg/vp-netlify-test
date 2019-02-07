@@ -33,6 +33,9 @@ NAME         TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
 prometheus   NodePort   10.96.216.220   <none>        9090:34713/TCP   6d
 ```
 
+![ "UCP metrics in Prometheus"][media-ucp-prometheus-png]
+
+**Figure.** UCP metrics in Prometheus
 
 
 ## Using Grafana to vizualize UCP metrics
@@ -46,6 +49,14 @@ grafana   NodePort   10.96.177.108   <none>        3000:33118/TCP   6d
 ```
 
 
+
+
+![ "UCP Dashboard in Grafana"][media-ucp-grafana-png]
+
+**Figure.** UCP Dashboard in Grafana
+
+[media-ucp-prometheus-png]:<../media/ucp-prometheus.png> "Figure: UCP metrics in Prometheus"
+[media-ucp-grafana-png]:<../media/ucp-grafana.png> "Figure: UCP Dashboard in Grafana"
 
 
 

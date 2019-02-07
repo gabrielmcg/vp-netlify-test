@@ -1,8 +1,14 @@
 # Playbooks for installing Prometheus and Grafana on Kubernetes
 
+## Prerequisites
+
+Before you run the playbook to install Prometheus and Grafana on Kubernetes, you need to ensure that you have already downloaded and installed `kubectl` and set up your client bundle. Two convenience playbooks have been provided to make this process easier.
+
+The playbook `playbooks/install-kubectl.yml` installs a specific version of `kubectl` based on the settings 
+in your `group_vars/vars` file. 
+
 The playbook `playbooks/kube-prometheus.yml` is used to deploy the Prometheus/Grafana stack on Kubernetes. 
-It is a wrapper for a number of separate playbooks outlined below. You can choose not to install certian components 
-by commenting out the appropriate line in the wrapper playbook. 
+It is a wrapper for a number of separate playbooks outlined below. 
 
 - `playbooks/kube-prometheus/operator.yml` 
 - `playbooks/kube-prometheus/kube-state-metrics.yml` 
@@ -11,6 +17,7 @@ by commenting out the appropriate line in the wrapper playbook.
 - `playbooks/kube-prometheus/prometheus.yml`
 - `playbooks/kube-prometheus/grafana.yml`
 
+You can choose not to install certain components by commenting out the appropriate line in the wrapper playbook. 
 
 ## Prometheus Operator
 The Prometheus Operator makes running Prometheus on top of Kubernetes as easy as possible, while preserving Kubernetes-native configuration options. For more information on Prometheus Operator, see https://coreos.com/operators/prometheus/docs/latest/user-guides/getting-started.html.
