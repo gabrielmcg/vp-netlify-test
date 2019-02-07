@@ -1,8 +1,34 @@
 # Installing kubectl
 
+
+A convenience playbook is provided to make it easy to install `kubectl`. This playbook uses variables in `group_vars/vars` to determine which version to download. The default version specified by the variable `kubectl_version` in the sample variables file is `1.11.5`. 
+
+
+To run the playbook:
+
+```
+# ansible-playbook -i vm_hosts playbooks/install-kubectl.yml --vault-password-file .vault_pass
+```
+
+
+Test the installation by running the `kubectl version` command:
+
+```
+# kubectl version
+Client Version: version.Info{Major:"1", Minor:"11", GitVersion:"v1.11.5", GitCommit:"753b2dbc622f5cc417845f0ff8a77f539a4213ea", GitTreeState:"clean", BuildDate:"2018-11-26T14:41:50Z", GoVersion:"go1.10.3", Compiler:"gc", Platform:"linux/amd64"}
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+``
+
+The client version is reported correctly. However, `kubectl` cannot connect to the server until you set up 
+a client bundle - this is describes in a following section.
+
+
+## Manually installing kubectl
+
+
 You can find the version number for the current stable version of `kubectl` at [https://kubernetes.io/docs/tasks/tools/install-kubectl/](https://kubernetes.io/docs/tasks/tools/install-kubectl/). At the time of writing, the stable version is `1.13`.
 
-However, this version of `kubectl` is not compatible with UCP 3.0.\*. Instead, you need to install an earlier version, for example, `v1.10.4`. To download this specific version, follow the instructions below.
+The following is an example of manually downloading and installing a specific version of `kubectl`.
 
 ```
 # version=v1.10.4
@@ -12,8 +38,6 @@ However, this version of `kubectl` is not compatible with UCP 3.0.\*. Instead, y
 
 # kubectl version
 Client Version: version.Info{Major:"1", Minor:"10", GitVersion:"v1.10.4", GitCommit:"5ca598b4ba5abb89bb773071ce452e33fb66339d", GitTreeState:"clean", BuildDate:"2018-06-06T08:13:03Z", GoVersion:"go1.9.3", Compiler:"gc", Platform:"linux/amd64"}
-Server Version: version.Info{Major:"1", Minor:"8+", GitVersion:"v1.8.11-docker-8d637ae", GitCommit:"8d637aedf46b9c21dde723e29c645b9f27106fa5", GitTreeState:"clean", BuildDate:"2018-04-26T16:51:21Z", GoVersion:"go1.8.3", Compiler:"gc", Platform:"linux/amd64"}
-
 ```
 
 More details on installing `kubectl` are available at [https://kubernetes.io/docs/tasks/tools/install-kubectl/](https://kubernetes.io/docs/tasks/tools/install-kubectl/) 

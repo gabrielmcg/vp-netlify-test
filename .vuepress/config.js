@@ -110,6 +110,21 @@ module.exports = {
 				]
 			},
 			{
+                title: 'Post deployment',
+                children: [ 
+				'post-deploy/post-deploy',
+				'post-deploy/install-kubectl',
+				'post-deploy/install-client-bundle',				
+				'post-deploy/k8s-example-guestbook'
+				]
+			},
+			{
+                title: 'Configuring Storage',
+                children: [ 
+				'storage/k8s-nfs-provisioner'
+				]
+			},			
+			{
                 title: 'Deploying Windows workers',
                 children: [ 
 				'deploy-win/deploying-windows-workers',
@@ -158,15 +173,6 @@ module.exports = {
 				'promgraf/promgraf-playbooks',
 				'promgraf/monitoring-config-promgraf',
 				'promgraf/using-promgraf-swarm'
-				]
-			},
-			{
-                title: 'Post deployment',
-                children: [ 
-				'post-deploy/post-deploy',
-				'post-deploy/install-kubectl',
-				'post-deploy/k8s-example-guestbook',
-				'post-deploy/k8s-nfs-provisioner'
 				]
 			},
 			{
