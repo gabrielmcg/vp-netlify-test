@@ -7,11 +7,11 @@ A convenience playbook is provided to install and apply the client bundle. To ru
 # ansible-playbook -i vm_hosts playbooks/install-client-bundle.yml --vault-password-file .vault_pass
 ```
 
-The client bundle is downloaded to `~/certs.{{ ucp_instance }}.{{ ucp_username }}` where `ucp_instance` will 
-be specific to the cluster you are running against, for example, `hpe2-ucp01` and the `ucp-username' is typically `admin`.
+The client bundle is downloaded to `~/certs.<<ucp_instance>>.<<ucp_username>>` where `ucp_instance` will 
+be specific to the cluster you are running against, for example, `hpe2-ucp01` and the `ucp-username` is typically `admin`.
 
-Test the configuration by again running the `kubectl version` command - this time, it should now report the server  version 
-as well as the client version:
+Test the configuration by again running the `kubectl version` command - this time, it should now report 
+the server  version as well as the client version:
 
 ```
 # kubectl version
