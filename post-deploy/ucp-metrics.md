@@ -51,7 +51,9 @@ grafana   NodePort   10.96.177.108   <none>        3000:33118/TCP   6d
 ```
 
 
-The Grafana UI can be accessed on any node in your cluster, using the port returned by `get svc`. In this instance, it is accessed at `http://hpe2-ucp01.am2.cloudra.local:33118': 
+The Grafana UI can be accessed on any node in your cluster, using the port returned by `get svc`. In this 
+instance, it is accessed at `http://hpe2-ucp01.am2.cloudra.local:33118'. The example UCP Dashboard is taken from
+https://grafana.com/dashboards/9309. 
 
 ![ "UCP Dashboard in Grafana"][media-ucp-grafana-png]
 
