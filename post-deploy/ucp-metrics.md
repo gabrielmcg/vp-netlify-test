@@ -33,6 +33,8 @@ NAME         TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
 prometheus   NodePort   10.96.216.220   <none>        9090:34713/TCP   6d
 ```
 
+The Prometheus UI can be accessed on any node in your cluster, using the port returned by `get svc`. In this instance, it is accessed at `http://hpe2-ucp01.am2.cloudra.local:34713': 
+
 ![ "UCP metrics in Prometheus"][media-ucp-prometheus-png]
 
 **Figure.** UCP metrics in Prometheus
@@ -49,7 +51,7 @@ grafana   NodePort   10.96.177.108   <none>        3000:33118/TCP   6d
 ```
 
 
-
+The Grafana UI can be accessed on any node in your cluster, using the port returned by `get svc`. In this instance, it is accessed at `http://hpe2-ucp01.am2.cloudra.local:33118': 
 
 ![ "UCP Dashboard in Grafana"][media-ucp-grafana-png]
 
