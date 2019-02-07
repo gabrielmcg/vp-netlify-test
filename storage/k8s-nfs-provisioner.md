@@ -2,9 +2,9 @@
 
 ## Prerequisites
 
--   Configure the variables described in the section [\#](#)
--   Install the `kubectl` binary on your Ansible box as documented at [https://docs.docker.com/ee/ucp/user-access/kubectl/](https://docs.docker.com/ee/ucp/user-access/kubectl/)
--   Install the UCP Client bundle for the `admin` user as described at [https://docs.docker.com/ee/ucp/user-access/cli/\#download-client-certificates-by-using-the-rest-api](https://docs.docker.com/ee/ucp/user-access/cli/#download-client-certificates-by-using-the-rest-api)
+-   Configure the variables described in the section `Kubernetes Persistent Volume configuration`
+-   Install the `kubectl` binary on your Ansible box
+-   Install the UCP Client bundle for the `admin` user
 -   Confirm that you can connect to the cluster by running a test command, for example, `kubectl get nodes`
 
 ## Running the playbook

@@ -2,22 +2,23 @@
 
 ## Prerequisites
 
--   Install the `kubectl` binary on your Ansible box - see [https://docs.docker.com/ee/ucp/user-access/kubectl/](https://docs.docker.com/ee/ucp/user-access/kubectl/).
--   Install the UCP Client bundle for the `admin` user - see [https://docs.docker.com/ee/ucp/user-access/cli/](https://docs.docker.com/ee/ucp/user-access/cli/)
+-   Install the `kubectl` binary on your Ansible box
+-   Install the UCP Client bundle for the `admin` user
 -   Confirm that you can connect to the cluster by running a test command, for example, `kubectl get nodes`
 -   Ensure that you have configured the required variables, as described in the section [\#sysdig-config-k8s](#sysdig-config-k8s). For example, you add the relevant variables in the `group_vars/vars` file.
 
-    ```
-    sysdig_restricted_control_role: 'Restricted Control'
-    k8s_cluster: ucp_gab-ucp.cloudra.local
-    
-    ```
+```
+    sysdig_collector: 'collector.sysdigcloud.com'
+    sysdig_collector_port: '6666'
+    ysdig_agent: 'https://s3.amazonaws.com/download.draios.com/stable/install-agent'
+    sysdig_tags: 'location:Enter city,role:Enter role,owner:Customer name'
+    k8s_cluster: 'ucp_hpe-ucp.cloudra.local'
+```
 
     You should add the access key to the encrypted `group_vars/vault` using the command `ansible-vault edit group_vars/vault`.
 
     ```
-    sysdig_access_key: '10****97-9160-****-9061-84bfd0f****0'
-    
+    sysdig_access_key: '10****97-9160-****-9061-84bfd0f****0'    
     ```
 
 
