@@ -20,15 +20,19 @@
 
 ## Install sample charts
 
+A number of sample charts are delivered with the solution, for the purposes of demonstration.
+
 
 ### Nginx
+
+
 
 ```
 # cd ~/Docker-SimpliVity
 # helm install test/files/helm/nginx
 ```
 
-The output shows a service being created with a NodePort at `34567`. This value comes from the `values.yml` file.
+The output shows a service being created with a NodePort at `34567`. This value comes from the `values.yml` file in the folder.
 
 
 ```
@@ -54,4 +58,21 @@ worn-olm-nginx  2     14s
 ==> v1/Service
 NAME            TYPE      CLUSTER-IP    EXTERNAL-IP  PORT(S)       AGE
 worn-olm-nginx  NodePort  10.96.30.222  <none>       80:34567/TCP  14s
+```
+
+### Delete installed release
+
+List the installed releases to find the name of the release you wish to delete.
+
+```
+# helm list
+NAME            REVISION        UPDATED                         STATUS          CHART           APP VERSION     NAMESPACE
+worn-olm        1               Fri Feb  8 16:23:21 2019        DEPLOYED        nginx-0.1.0                     default
+```
+
+Use the `helm delete` command to removed the named release.
+
+```
+# helm delete worn-olm
+release "worn-olm" deleted
 ```
