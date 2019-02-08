@@ -26,7 +26,13 @@ A simple chart is provided in the `~/Docker-SimpliVity/test/files/helm/alpine` d
 The `templates/` directory contains a very simple pod resource with a couple of parameters. The `values.yaml` file contains the default values for the `alpine-pod.yaml` template.
 
 ```
+# cd ~/Docker-SimpliVity
 # helm install test/files/helm/alpine
+```
+
+The output shows that a single pod was deployed.
+
+```
 NAME:   old-mole
 LAST DEPLOYED: Fri Feb  8 17:27:35 2019
 NAMESPACE: default
