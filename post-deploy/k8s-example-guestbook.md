@@ -17,11 +17,18 @@ When deploying applications, you must be aware that Kubernetes version 1.11 ship
 
 ## Kubernetes guestbook example with Redis
 
+The playbook for the Kubernetes example guestbook is based on the example taken from the GitHub repo at https://github.com/kubernetes/examples. 
 
-### Summary
 ```
-# git clone https://github.com/kubernetes/examples k8s-examples
-# cd k8s-examples/guestbook
+# cd ~/Docker-Simplivity
+# ansible-playbook -i vm_hosts test/playbooks/k8s-guestbook.yml --vault-password-file .vault_pass
+```
+
+You can run the playbook directly, but it can be informative to walk through the individual files to see what is going on under the covers.
+
+### Quick start
+```
+# cd ~/Docker-Simplivity/test/files/k8s-examples/guestbook
 # kubectl apply -f redis-master-deployment.yaml
 # kubectl apply -f redis-master-service.yaml
 # kubectl apply -f redis-slave-deployment.yaml
@@ -33,10 +40,10 @@ When deploying applications, you must be aware that Kubernetes version 1.11 ship
 
 
 ### Details
-Download the full set of Kubernetes examples and change to the guestbook directory
+Change to the directory containing the `guestbook` YAML files. 
+
 ```
-# git clone https://github.com/kubernetes/examples k8s-examples
-# cd k8s-examples/guestbook
+# cd ~/Docker-Simplivity/test/files/k8s-examples/guestbook
 ```
 
 
@@ -350,3 +357,13 @@ Access the UI using the identified port on any node in your cluster, for example
 **Figure 21.** Guestbook UI
 
 [media-k8s-guestbook1-png]:<../media/k8s-guestbook1.png> 
+
+
+### Teardown
+
+A playbook is provided to remove the deployed `guestbook`artifacts.
+
+```
+# cd ~/Docker-Simplivity
+# ansible-playbook -i vm_hosts test/playbooks/k8s-guestbook-teardown.yml --vault-password-file .vault_pass
+```
