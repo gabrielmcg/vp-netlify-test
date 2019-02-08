@@ -11,7 +11,9 @@ New variables and configuration files introduced in release 2.1 of Docker-Simpli
 - `sysdig_collector` variable in `group_vars/vars` - default value is `collector.sysdigcloud.com`
 - `sysdig_collector_port` variable in `group_vars/vars` - default value is `6666`
 - `kubectl_version` variable in `group_vars/vars` - default value is `1.11.5`
-- `kubectl_checksum` variable in `group_vars/vars` - default value is checksum for `1.11.5`
+- `kubectl_checksum` variable in `group_vars/vars` - default value is checksum for version `1.11.5`
+- `helm_version` variable in `group_vars/vars` - default value is `2.12.3`
+- `helm_checksum`variable in `group_vars/vars` - default value is checksum for version `2.12.3`
 
 ## Express Containers 2.0
 
