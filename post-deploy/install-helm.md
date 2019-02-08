@@ -15,14 +15,28 @@
 # ansible-playbook -i vm_hosts playbooks/install_helm.yml --vault-password-file .vault_pass
 ```
 
-
-
-
 ## Install sample charts
 
 A number of sample charts are delivered with the solution, for the purposes of demonstration.
 
+### Alpine
 
+A simple chart is provided in the `~/Docker-SimpliVity/test/files/helm/alpine` directory to run a single pod of Alpine Linux.
+
+The `templates/` directory contains a very simple pod resource with a couple of parameters. The `values.yaml` file contains the default values for the `alpine-pod.yaml` template.
+
+```
+# helm install test/files/helm/alpine
+NAME:   old-mole
+LAST DEPLOYED: Fri Feb  8 17:27:35 2019
+NAMESPACE: default
+STATUS: DEPLOYED
+
+RESOURCES:
+==> v1/Pod
+NAME             READY  STATUS   RESTARTS  AGE
+old-mole-alpine  1/1    Running  0         0s
+```
 
 
 ### Nginx
