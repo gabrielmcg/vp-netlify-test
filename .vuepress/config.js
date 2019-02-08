@@ -114,7 +114,8 @@ module.exports = {
                 children: [ 
 				'post-deploy/post-deploy',
 				'post-deploy/install-kubectl',
-				'post-deploy/install-client-bundle',				
+				'post-deploy/install-client-bundle',
+				'post-deploy/install-helm',				
 				'post-deploy/k8s-example-guestbook',
 				'post-deploy/ucp-metrics'
 				]
