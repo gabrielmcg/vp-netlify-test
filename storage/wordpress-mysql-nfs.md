@@ -101,6 +101,125 @@ Click `Publish` and then `View post` to see your new blog post.
 **Figure.** View your first post
 
 
+## Test persistence for WordPress
+
+Find your uploaded image in WordPress Persistent Volume Claim (PVC)
+
+```
+# kubectl -n wordpress-mysql get pvc
+NAME             STATUS    VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+mysql-pv-claim   Bound     pvc-d48880e3-2d58-11e9-adb2-0242ac110003   1Gi        RWO            nfs            1h
+wp-pv-claim      Bound     pvc-d4bc101f-2d58-11e9-adb2-0242ac110003   20Gi       RWO            nfs            1h
+```
+
+Connect to the NFS VM and browse the `/k8s` folder to find the volume for the WordPress claim `wp-pv-claim`. 
+
+```
+# ssh hpe2-nfs ls /k8s
+wordpress-mysql-mysql-pv-claim-pvc-d48880e3-2d58-11e9-adb2-0242ac110003
+wordpress-mysql-wp-pv-claim-pvc-d4bc101f-2d58-11e9-adb2-0242ac110003
+```
+
+Locate the `wp-content` folder.
+
+```
+# ssh hpe2-nfs ls /k8s/wordpress-mysql-wp-pv-claim-pvc-d4bc101f-2d58-11e9-adb2-0242ac110003
+index.php
+license.txt
+readme.html
+wp-activate.php
+wp-admin
+wp-blog-header.php
+wp-comments-post.php
+wp-config.php
+wp-config-sample.php
+wp-content
+wp-cron.php
+wp-includes
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+```
+
+Now find the image used in the blog post. 
+
+```
+# ssh hpe2-nfs ls /k8s/wordpress-mysql-wp-pv-claim-pvc-d4bc101f-2d58-11e9-adb2-0242ac110003/wp-content/uploads/2019/02
+380-with-OmniStack-100x100.jpg
+380-with-OmniStack-150x150.jpg
+380-with-OmniStack-300x150.jpg
+380-with-OmniStack-768x384.jpg
+380-with-OmniStack.jpg
+```
+
+Note that WordPress has created a number of variations of the original image, for different screen sizes.
+
+
+Shutdown wordpress (leave MySQL running for now)
+
+```
+# kubectl -n wordpress-mysql delete -f /tmp/wordpress-mysql-nfs/wordpress-deployment.yml
+deployment.apps "wordpress" deleted
+```
+
+Refresh the page in the browser to confirm that WordPress is indeed inaccessible.
+
+!["Cannot connect to WordPress"][media-wordpress-cant-connect-png]
+
+**Figure.** Cannot connect to WordPress
+
+
+Redeploy Wordpress 
+
+```
+kubectl -n wordpress-mysql apply -f /tmp/wordpress-mysql-nfs/wordpress-deployment.yml        deployment.apps/wordpress created
+```
+
+Refresh the page in the browser to confirm that WordPress is now accessible and that the image in the blog post
+has survived the shutdown.
+
+!["View restored post"][media-wordpress-restored-png]
+
+**Figure.** View restored post
+
+
+#Test persistence in MySQL
+
+A similar procedure can be performed for MySQL. While assets such as images, CSS files, etc are strored in the 
+WordPress volume, infiormation about users, posts, comments, tags, etc are stored in the MySQL database.
+It is possible to browse the tables in the database and identify the rows related to the blog post you created.
+
+Shut down MySQL as follows:
+
+```
+# kubectl -n wordpress-mysql delete -f /tmp/wordpress-mysql-nfs/mysql-deployment.yml
+deployment.apps "wordpress-mysql" deleted
+```
+
+Refresh the page for your blog post, and you will see that WordPress can no longer connect to the database:
+
+!["Cannot connect to MySQL"][media-mysql-cant-connect-png]
+
+**Figure.** Cannot connect to MySQL
+
+
+Restore the MySQL deployment:
+
+```
+kubectl -n wordpress-mysql apply -f /tmp/wordpress-mysql-nfs/mysql-deployment.yml
+deployment.apps/wordpress-mysql created
+```
+
+!["Figure. Check after MySQL restored"][media-mysql-restored-png]
+
+**Figure.** Check after MySQL restored
+
+
 
 [media-wordpress-install-1-png]:<../media/wordpress-install-1.png> "Figure. Configure WordPress language"
 [media-wordpress-install-2-png]:<../media/wordpress-install-2.png> "Figure. Configure WordPress password"
@@ -108,3 +227,7 @@ Click `Publish` and then `View post` to see your new blog post.
 [media-wordpress-welcome-png]:<../media/wordpress-welcome.png> "Figure. WordPress welcome"
 [media-wordpress-newpost-png]:<../media/wordpress-newpost.png> "Figure. Create your first WordPress blog post"
 [media-wordpress-firstpost-png]:<../media/wordpress-firstpost.png> "Figure. View your first post"
+[media-wordpress-cant-connect-png]:<../media/wordpress-cant-connect.png> "Figure. Cannot connect to WordPress"
+[media-wordpress-restored-png]:<../media/wordpress-restored.png> "Figure. View restored post"
+[media-mysql-cant-connect-png]:<../media/mysql-cant-connect.png> "Figure. Cannot connect to MySQL"
+[media-mysql-restored-png]:<../media/mysql-restored.png> "Figure. Check after MySQL restored"
