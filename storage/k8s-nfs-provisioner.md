@@ -12,7 +12,7 @@
 Once the prerequisites are satisfied, run the appropriate playbook on your Ansible node:
 
 ```
-# cd Docker-SimpliVity
+# cd ~/Docker-SimpliVity
 # ansible-playbook -i vm_hosts playbooks/k8s-nfs-provisioner.yml --vault-password-file .vault_pass
 
 ```
@@ -25,7 +25,7 @@ In this example, it is assumed that the relevant variables are configured as fol
 |:-------|:----|
 |nfs\_provisioner\_role|`nfs-provisioner-runner`|
 |nfs\_provisioner\_name|`hpe.com/nfs`|
-|nfs\_provisioner\_storage\_class\_name|`**nfs**`|
+|nfs\_provisioner\_storage\_class\_name|`nfs`|
 |nfs\_provisioner\_server\_ip|`hpe-nfs.cloudra.local`|
 |nfs\_provisioner\_server\_share|`/k8s`|
 
@@ -34,7 +34,7 @@ In this instance, the server IP is set to the NFS VM that has been deployed.
 Ensure that your environment satisfies the prerequisites as described in [\#](#) and then run the playbook:
 
 ```
-# cd Docker-SimpliVity
+# cd ~/Docker-SimpliVity
 # ansible-playbook -i vm_hosts playbooks/k8s-nfs-provisioner.yml --vault-password-file .vault_pass
 
 ```

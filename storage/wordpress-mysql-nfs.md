@@ -14,7 +14,7 @@ configuration is the same as used in that section, namely:
 |:-------|:----|
 |nfs\_provisioner\_role|`nfs-provisioner-runner`|
 |nfs\_provisioner\_name|`hpe.com/nfs`|
-|nfs\_provisioner\_storage\_class\_name|`**nfs**`|
+|nfs\_provisioner\_storage\_class\_name|`nfs`|
 |nfs\_provisioner\_server\_ip|`hpe-nfs.cloudra.local`|
 |nfs\_provisioner\_server\_share|`/k8s`|
 
@@ -56,6 +56,9 @@ Browse to the specified port on any node in your cluster.
 http://hpe2-ucp01.am2.cloudra.local:33790
 ```
 
+
+## Configuring WordPress
+
 You need to configure the language and password before WordPress is ready to use.
 
 
@@ -66,24 +69,39 @@ You need to configure the language and password before WordPress is ready to use
 
 !["Configure WordPress password"][media-wordpress-install-2-png]
 
-**Figure.** Configure WordPress language
+**Figure.** Configure WordPress password
 
 Log in to WordPress, with the user name and password you have just set up.
 
-!["Configure WordPress password"][media-wordpress-install-2-png]
+!["Configure WordPress password"][media-wordpress-install-3-png]
 
-**Figure.** Configure WordPress language
+**Figure.** WordPress login
+
+The welcome page is presented.
+
+!["WordPress welcome"][media-wordpress-welcome-png]
+
+**Figure.** WordPress welcome
+
+
+
+## Create your first post
+
+Click on `Write your first blog post` and start creating some content. Add a blog title and then `Add Media` to upload an image to the Media Library and then `Insert into post`. In this example, the image is a file named 
+`380 with OmniStack.jpg`.
+
+!["Your first WordPress blog post"][media-wordpress-newpost-png]
+
+**Figure.** Your first WordPress blog post
+
+
 
 
 [media-wordpress-install-1-png]:<../media/wordpress-install-1.png> "Figure. Configure WordPress language"
 [media-wordpress-install-2-png]:<../media/wordpress-install-2.png> "Figure. Configure WordPress password"
-[media-wordpress-install-2-png]:<../media/wordpress-install-2.png> "Figure. WordPress login"
-
-
-
-
-
-
+[media-wordpress-install-3-png]:<../media/wordpress-install-3.png> "Figure. WordPress login"
+[media-wordpress-welcome-png]:<../media/wordpress-install-3.png> "Figure. WordPress welcome"
+[media-wordpress-newpost-png]:<../media/wordpress-install-3.png> "Figure. Your first WordPress blog post"
 
 
 
