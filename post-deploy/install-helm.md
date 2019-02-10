@@ -1,4 +1,4 @@
-# Install Helm
+# Installing Helm
 
 
 ## Prerequisites
