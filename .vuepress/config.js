@@ -123,7 +123,8 @@ module.exports = {
 			{
                 title: 'Configuring Storage',
                 children: [ 
-				'storage/k8s-nfs-provisioner'
+				'storage/k8s-nfs-provisioner',
+				'storage/wordpress-mysql-nfs'
 				]
 			},			
 			{
