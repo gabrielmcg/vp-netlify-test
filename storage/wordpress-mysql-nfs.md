@@ -188,7 +188,7 @@ has survived the shutdown.
 **Figure.** View restored post
 
 
-#Test persistence in MySQL
+## Test persistence in MySQL
 
 A similar procedure can be performed for MySQL. While assets such as images, CSS files, etc are strored in the 
 WordPress volume, infiormation about users, posts, comments, tags, etc are stored in the MySQL database.
@@ -214,6 +214,9 @@ Restore the MySQL deployment:
 kubectl -n wordpress-mysql apply -f /tmp/wordpress-mysql-nfs/mysql-deployment.yml
 deployment.apps/wordpress-mysql created
 ```
+
+Refresh the page in the browser to confirm that WordPress can now access the database and that the blog post
+has survived the database shutdown.
 
 !["Figure. Check after MySQL restored"][media-mysql-restored-png]
 
