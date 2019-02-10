@@ -90,10 +90,15 @@ The welcome page is presented.
 Click on `Write your first blog post` and start creating some content. Add a blog title and then `Add Media` to upload an image to the Media Library and then `Insert into post`. In this example, the image is a file named 
 `380 with OmniStack.jpg`.
 
-!["Your first WordPress blog post"][media-wordpress-newpost-png]
+!["Create your first WordPress blog post"][media-wordpress-newpost-png]
 
-**Figure.** Your first WordPress blog post
+**Figure.** Create your first WordPress blog post
 
+Click `Publish` and then `View post` to see your new blog post.
+
+!["View your first WordPress blog post"][media-wordpress-firstpost-png]
+
+**Figure.** View your first post
 
 
 
@@ -101,7 +106,5 @@ Click on `Write your first blog post` and start creating some content. Add a blo
 [media-wordpress-install-2-png]:<../media/wordpress-install-2.png> "Figure. Configure WordPress password"
 [media-wordpress-install-3-png]:<../media/wordpress-install-3.png> "Figure. WordPress login"
 [media-wordpress-welcome-png]:<../media/wordpress-welcome.png> "Figure. WordPress welcome"
-[media-wordpress-newpost-png]:<../media/wordpress-newpost.png> "Figure. Your first WordPress blog post"
-
-
-
+[media-wordpress-newpost-png]:<../media/wordpress-newpost.png> "Figure. Create your first WordPress blog post"
+[media-wordpress-firstpost-png]:<../media/wordpress-firstpost.png> "Figure. View your first post"
