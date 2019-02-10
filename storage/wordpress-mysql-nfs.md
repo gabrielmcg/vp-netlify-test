@@ -1,5 +1,6 @@
 # Validating the NFS provisioner using WordPress and MySQL
 
+A sample playbook has been provided to show how to use the NFS provioner for perstent storage for a WordPress and MySQL deployment.
 
 ## Prerequisites
 
@@ -18,8 +19,16 @@ configuration is the same as used in that section, namely:
 |nfs\_provisioner\_server\_share|`/k8s`|
 
 
+## Running the playbook
 
+The playbook `test/playbooks/wordpress-mysql-nfs.yml` creates Persistent Volume Claims for both `Wordpress` and `MySQL`, deploys both applications and makes the `WordPress` UI available via a NodePort. 
 
+```
+# cd ~/Docker-SimpliVity
+#  ansible-playbook -i vm_hosts ./test/playbooks/wordpress-mysql-nfs.yml --vault-password-file .vault_pass
+```
+
+The output shows the components created along with the NodePort for the `wordpress` service.
 
 ```
 ok: [localhost] => {
@@ -40,4 +49,41 @@ ok: [localhost] => {
         "wordpress-mysql   ClusterIP   None            <none>        3306/TCP       0s"
     ]
 ```
+
+Browse to the specified port on any node in your cluster.
+
+```
+http://hpe2-ucp01.am2.cloudra.local:33790
+```
+
+You need to configure the language and password before WordPress is ready to use.
+
+
+!["Configure WordPress language"][media-wordpress-install-1-png]
+
+**Figure.** Configure WordPress language
+
+
+!["Configure WordPress password"][media-wordpress-install-2-png]
+
+**Figure.** Configure WordPress language
+
+Log in to WordPress, with the user name and password you have just set up.
+
+!["Configure WordPress password"][media-wordpress-install-2-png]
+
+**Figure.** Configure WordPress language
+
+
+[media-wordpress-install-1-png]:<../media/wordpress-install-1.png> "Figure. Configure WordPress language"
+[media-wordpress-install-2-png]:<../media/wordpress-install-2.png> "Figure. Configure WordPress password"
+[media-wordpress-install-2-png]:<../media/wordpress-install-2.png> "Figure. WordPress login"
+
+
+
+
+
+
+
+
 
