@@ -100,8 +100,8 @@ Click on `Write your first blog post` and start creating some content. Add a blo
 [media-wordpress-install-1-png]:<../media/wordpress-install-1.png> "Figure. Configure WordPress language"
 [media-wordpress-install-2-png]:<../media/wordpress-install-2.png> "Figure. Configure WordPress password"
 [media-wordpress-install-3-png]:<../media/wordpress-install-3.png> "Figure. WordPress login"
-[media-wordpress-welcome-png]:<../media/wordpress-install-3.png> "Figure. WordPress welcome"
-[media-wordpress-newpost-png]:<../media/wordpress-install-3.png> "Figure. Your first WordPress blog post"
+[media-wordpress-welcome-png]:<../media/wordpress-welcome.png> "Figure. WordPress welcome"
+[media-wordpress-newpost-png]:<../media/wordpress-newpost.png> "Figure. Your first WordPress blog post"
 
 
 
