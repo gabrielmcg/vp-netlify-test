@@ -26,3 +26,10 @@ For more information on configuring Sysdig and running the relevant playbooks, s
 ## Monitoring with Prometheus and Grafana
 
 The solution can be configured to enable the use of Prometheus and Grafana for monitoring. In this setup, there is no need for native installs and all the required monitoring software runs in containers, deployed as either services or stacks. See the section [\#](#) for more information on configuring and deploying the software.
+
+The solution supports two separate monitoring stacks, with one running on Kubernetes and the other using Docker swarm.
+
+For more information on running Prometheus and Grafana on Kubernetes, see section TODO LINK
+
+For more information on running Prometheus and Grafana on Docker swarm, see section TODO LINK
+

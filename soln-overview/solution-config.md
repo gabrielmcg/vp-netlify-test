@@ -14,7 +14,7 @@ The Docker worker nodes will be co-located with the UCP and DTR nodes in a 3 phy
 -   1 Docker UCP load balancer VM to ensure access to UCP in the event of a node failure
 -   1 Docker DTR load balancer VM to ensure access to DTR in the event of a node failure
 
-By default, two load balancers are deployed to increase availability of UCP and DTR and these are placed on separate physical nodes. Load balancing for applications running on worker nodes can achieved by using the playbooks to deploy additional load balancers, or by manually configuring the existing two to support your applications in addition to supporting UCP and DTR.
+By default, two load balancer VMs are deployed to increase availability of UCP and DTR and these are placed on separate physical nodes. Load balancing for applications running on worker nodes can achieved by using the playbooks to deploy additional load balancers, or by manually configuring the existing two to support your applications in addition to supporting UCP and DTR.
 
 -   1 Logging server VM for central logging
 -   1 NFS server VM for storage of Docker DTR images

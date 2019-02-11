@@ -5,9 +5,9 @@
 
 New variables and configuration files introduced in release 2.1 of Docker-SimpliVity:
 
-- `backup_passphrase` variable in `group_vars/vault`
-- `nfs_provisioner_namespace` variable in `group_vars/vars` - default value of `nfsstorage`
-- `nfs_provisioner_serviceaccount` variable in `group_vars/vars` - default value of `nfs-provisioner`
+- `backup_passphrase` variable in `group_vars/vault` - a dummy value is provided in the sample vault file
+- `nfs_provisioner_namespace` variable in `group_vars/vars` - default value is `nfsstorage`
+- `nfs_provisioner_serviceaccount` variable in `group_vars/vars` - default value is `nfs-provisioner`
 - `sysdig_collector` variable in `group_vars/vars` - default value is `collector.sysdigcloud.com`
 - `sysdig_collector_port` variable in `group_vars/vars` - default value is `6666`
 - `kubectl_version` variable in `group_vars/vars` - default value is `1.11.5`

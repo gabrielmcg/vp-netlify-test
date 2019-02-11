@@ -5,7 +5,7 @@ The software components used in this Reference Configuration are listed in [\#so
 |Component|Version|
 |:--------|:------|
 |Ansible|2.7|
-|Docker EE|2.0 with Docker EE Engine 17.06 \(tested with UCP 3.0.6 and DTR 2.5.6\)|
+|Docker EE|2.1 with Docker EE Engine 18.09 \(tested with UCP 3.1.2 and DTR 2.6.0\)|
 |Red Hat® Enterprise Linux|7.5, 7.6|
 |Microsoft® Windows|Server 2016|
 |VMware®|ESXi 6.5.0 and vCenter 6.5.0|
