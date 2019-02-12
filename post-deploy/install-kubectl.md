@@ -22,7 +22,7 @@ The connection to the server localhost:8080 was refused - did you specify the ri
 ```
 
 The client version is reported correctly. However, `kubectl` cannot connect to the server until you set up 
-a client bundle - this is describes in the following section.
+a client bundle - this is described in the section titled `Installing the client bundle`.
 
 
 ## Manually installing kubectl
