@@ -5,7 +5,7 @@
 Many sample Kubernetes applications are available at [https://kubernetes.io/docs/tutorials/](https://kubernetes.io/docs/tutorials/). This section details how to deploy the stateless guestbook application with Redis as documented at [https://kubernetes.io/docs/tutorials/stateless-application/guestbook/](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/). 
 
 
-When deploying applications, you must be aware that Kubernetes version 1.11 shipped with Docker 2.1 and, as a result, you may have to make changes in some places to the configuration files.
+When deploying applications, you must be aware that Kubernetes version 1.11 shipped with Docker 2.1.  If you are testing examples that are designed to work with a newer (or older) version of Kubernetes, you may have to make changes in some places to the configuration files.
 
 
 ## Prerequisites
@@ -51,6 +51,7 @@ The manifest file `redis-master-deployment.yaml`, included below, specifies a de
 
 ```
 # cat redis-master-deployment.yaml
+
 apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
 kind: Deployment
 metadata:
@@ -90,6 +91,7 @@ Query the list of Pods to verify that the Redis master pod is running.
 
 ```
 # kubectl get pods | grep redis
+
 redis-master-57657796fc-psvhc     1/1       Running   0          32s
 ```
 
@@ -97,6 +99,7 @@ Use the `kubectl logs` command to view the logs from the Redis master pod:
 
 ```
 # kubectl logs -f redis-master-57657796fc-psvhc
+
                 _._
            _.-``__ ''-._
       _.-``    `.  `_.  ''-._           Redis 2.8.19 (00000000/0) 64 bit
@@ -125,6 +128,7 @@ The guestbook application needs to communicate with the Redis master to write it
 
 ```
 # cat redis-master-service.yaml
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -147,6 +151,7 @@ Apply the Redis master service from the `redis-master-service.yaml` file:
 
 ```
 #  kubectl apply -f redis-master-service.yaml
+
 service "redis-master" created
 
 ```
@@ -155,6 +160,7 @@ Query the list of services to verify that the Redis master service is running.
 
 ```
 # kubectl get svc
+
 NAME           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
 redis-master   ClusterIP   10.96.240.18    <none>        6379/TCP         1m
 ```
@@ -163,6 +169,7 @@ Although the Redis master is a single pod, you can make it highly available to m
 
 ```
 # cat redis-slave-deployment.yaml
+
 apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
 kind: Deployment
 metadata:
@@ -204,6 +211,7 @@ Create the Redis slaves from the `redis-slave-deployment.yaml` file.
 
 ```
 # kubectl apply -f  redis-slave-deployment.yaml
+
 deployment.apps "redis-slave" created
 
 ```
@@ -212,6 +220,7 @@ Query the list of Pods to verify that the Redis slave pods are running.
 
 ```
 # kubectl get pods | grep redis
+
 redis-master-57657796fc-psvhc     1/1       Running   0          7m
 redis-slave-5cb5956459-bqqlg      1/1       Running   0          19s
 redis-slave-5cb5956459-gql5x      1/1       Running   0          19s
@@ -221,6 +230,7 @@ The guestbook application needs to communicate to Redis slaves to read data. To 
 
 ```
 # cat redis-slave-service.yaml
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -242,6 +252,7 @@ Deploy the Redis slave service from the `redis-slave-service.yaml` file
 
 ```
 # kubectl apply -f redis-slave-service.yaml
+
 service "redis-slave" created
 
 ```
@@ -250,6 +261,7 @@ Query the list of services to verify that the Redis slave service is running.
 
 ```
 # kubectl get services | grep redis
+
 redis-master   ClusterIP   10.96.240.18    <none>        6379/TCP         4m
 redis-slave    ClusterIP   10.96.200.85    <none>        6379/TCP         22s
 ```
@@ -258,6 +270,7 @@ The guestbook application has a web frontend written in PHP serving the HTTP req
 
 ```
 # cat frontend-deployment.yaml
+
 apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
 kind: Deployment
 metadata:
@@ -297,6 +310,7 @@ Create the frontend deployment using the `frontend-deployment.yaml` file.
 
 ```
 # kubectl apply -f frontend-deployment.yaml
+
 deployment.apps "frontend" created
 
 ```
@@ -305,6 +319,7 @@ Query the list of pods to verify that the three frontend replicas are running.
 
 ```
 # kubectl get pods -l app=guestbook -l tier=frontend
+
 NAME                        READY     STATUS    RESTARTS   AGE
 frontend-7f5cd767dc-28j6b   1/1       Running   0          23s
 frontend-7f5cd767dc-mqcbv   1/1       Running   0          23s
@@ -315,6 +330,7 @@ If you want guests to be able to access your guestbook, you must configure the f
 
 ```
 # cat frontend-service.yaml
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -339,6 +355,7 @@ Deploy the `frontend` service using the `frontend-service.yaml` file
 
 ```
 # kubectl apply -f frontend-service.yaml
+
 service "frontend" created
 
 ```
@@ -347,10 +364,11 @@ Query the list of services to verify that the `frontend` service is running.
 
 ```
 #  kubectl get services | grep frontend
+
 frontend       NodePort    10.96.16.200    <none>        80:33444/TCP     25s
 ```
 
-Access the UI using the identified port on any node in your cluster, for example, `http://hpe2-ucp01.am2.cloudra.local:33444/` as shown in [\#k8s-guestbook1](#k8s-guestbook1).
+Access the UI using the identified port on any node in your cluster, for example, `http://hpe2-ucp01.am2.cloudra.local:33444/` as shown in the figure below.
 
 ![ "Guestbook UI"][media-k8s-guestbook1-png]
 

@@ -23,15 +23,18 @@ In this example, it is assumed that the relevant variables are configured as fol
 
 |Variable|Value|
 |:-------|:----|
+|nfs\_provisioner_namespace|`nfsstorage`|
 |nfs\_provisioner\_role|`nfs-provisioner-runner`|
+|nfs\_provisioner\_serviceaccount|`nfs-provisioner`|
 |nfs\_provisioner\_name|`hpe.com/nfs`|
 |nfs\_provisioner\_storage\_class\_name|`nfs`|
-|nfs\_provisioner\_server\_ip|`hpe-nfs.cloudra.local`|
+|nfs\_provisioner\_server\_ip|`hpe2-nfs.am2.cloudra.local`|
 |nfs\_provisioner\_server\_share|`/k8s`|
+
 
 In this instance, the server IP is set to the NFS VM that has been deployed.
 
-Ensure that your environment satisfies the prerequisites as described in [\#](#) and then run the playbook:
+Ensure that your environment satisfies the prerequisites and then run the playbook:
 
 ```
 # cd ~/Docker-SimpliVity
@@ -44,6 +47,7 @@ Running the command `kubectl get sc` will show the storage class named `nfs`:
 ```
 
 # kubectl get sc
+
 NAME      PROVISIONER   AGE
 nfs       hpe.com/nfs   5m
 
@@ -57,9 +61,9 @@ Create a temporary file `/tmp/pvc.yml` for a persistent volume claim \(PVC\) nam
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: **dynnfs-testpvc**
+  name: dynnfs-testpvc
   annotations:
-    volume.beta.kubernetes.io/storage-class: "**nfs**"
+    volume.beta.kubernetes.io/storage-class: "nfs"
 spec:
   accessModes:
     - ReadWriteMany
@@ -74,6 +78,7 @@ Create the PVC resource by running `kubectl apply` on this file.
 
 ```
 # kubectl apply -f /tmp/pvc.yml
+
 persistentvolumeclaim "dynnfs-testpvc" created
 ```
 
@@ -81,6 +86,7 @@ Verify that the corresponding persistent volume \(PV\) was created at the same t
 
 ```
 # kubectl get pv
+
 NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                    STORAGECLASS   REASON    AGE
 pvc-e685a9d2-8a6f-11e8-9025-0242ac110010   100Mi      RWX            Delete           Bound     default/dynnfs-testpvc   nfs                      4s
 
@@ -93,7 +99,7 @@ cat /tmp/pod.yml <<EOF
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: **dynnfs-testpod**
+  name: dynnfs-testpod
 spec:
   selector:
     matchLabels:
@@ -107,7 +113,7 @@ spec:
       volumes:
       - name: pod-data
         persistentVolumeClaim:
-          claimName: **dynnfs-testpvc**
+          claimName: dynnfs-testpvc
       containers:
       - name: dynnfs-testpod
         command:
@@ -116,7 +122,7 @@ spec:
         - while true; do sleep 1; done
         image: radial/busyboxplus:curl
         volumeMounts:
-        - mountPath: **/tmp/foo**
+        - mountPath: /tmp/foo
           name: pod-data
 EOF
 ```
@@ -125,33 +131,31 @@ Create the pod resource by running `kubectl apply` on the file.
 
 ```
 # kubectl apply -f /tmp/pod.yml
-deployment.apps "dynnfs-testpod" created
 
+deployment.apps "dynnfs-testpod" created
 ```
 
 Retrieve the pod ID and then execute a command in the pod to create a test file on the persistent volume. The file is named `/tmp/foo/bar.txt` and contains the string `hello`.
 
 ```
 # pod=$(kubectl get pod | awk '/dynnfs-testpod-/ {print $1}')
-# kubectl exec -it $pod -- sh -c "**echo hello \>/tmp/foo/bar.txt**"
+# kubectl exec -it $pod -- sh -c "echo hello \>/tmp/foo/bar.txt"
 ```
 
-In this example, where the NFS VM is being used as the storage back-end, you can examine the content of the folder containing the persistent volumes. Given the values specified above, where the NFS VM is named `hpe-nfs` and the `nfs_provisioner_server_share` is `k8s`, you can connect to the VM and explore the folder as follows.
+In this example, where the NFS VM is being used as the storage back-end, you can examine the content of the folder containing the persistent volumes. Given the values specified above, where the NFS VM is named `hpe2-nfs` and the `nfs_provisioner_server_share` is `k8s`, you can connect to the VM and explore the folder as follows.
 
 ```
-
-# ssh hpe-nfs ls -R /k8s
+# ssh hpe2-nfs ls -R /k8s
 /k8s:
 default-dynnfs-testpvc-pvc-e685a9d2-8a6f-11e8-9025-0242ac110010
  
 /k8s/default-dynnfs-testpvc-pvc-e685a9d2-8a6f-11e8-9025-0242ac110010:
-**bar.txt**
+bar.txt
 ```
 
 Examine the contents of the file to ensure that the string `hello` has been persisted in the file `bar.txt`.
 
 ```
-
-# ssh hpe-nfs cat /k8s/default-dynnfs-testpvc-pvc-e685a9d2-8a6f-11e8-9025-0242ac110010/bar.txt
-**hello**
+# ssh hpe2-nfs cat /k8s/default-dynnfs-testpvc-pvc-e685a9d2-8a6f-11e8-9025-0242ac110010/bar.txt
+hello
 ```

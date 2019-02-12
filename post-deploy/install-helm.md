@@ -53,7 +53,7 @@ An example chart is provided in the `~/Docker-SimpliVity/test/files/helm/nginx` 
 - A Deployment is used to create a Replica Set of nginx pods. (`templates/deployment.yaml`)
 - A Service is used to create a gateway to the pods running in the replica set (`templates/service.yaml`)
 
-The `values.yaml` exposes a few of the configuration options in the charts
+The `values.yaml` exposes a few of the configuration options in the charts.
 
 ```
 # cd ~/Docker-SimpliVity
