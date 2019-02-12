@@ -7,6 +7,7 @@ A convenience playbook is provided to make it easy to install `kubectl`. This pl
 To run the playbook:
 
 ```
+# cd ~/Docker-SimpliVity
 # ansible-playbook -i vm_hosts playbooks/install-kubectl.yml --vault-password-file .vault_pass
 ```
 
@@ -15,12 +16,13 @@ Test the installation by running the `kubectl version` command:
 
 ```
 # kubectl version
+
 Client Version: version.Info{Major:"1", Minor:"11", GitVersion:"v1.11.5", GitCommit:"753b2dbc622f5cc417845f0ff8a77f539a4213ea", GitTreeState:"clean", BuildDate:"2018-11-26T14:41:50Z", GoVersion:"go1.10.3", Compiler:"gc", Platform:"linux/amd64"}
 The connection to the server localhost:8080 was refused - did you specify the right host or port?
-``
+```
 
 The client version is reported correctly. However, `kubectl` cannot connect to the server until you set up 
-a client bundle - this is describes in a following section.
+a client bundle - this is describes in the following section.
 
 
 ## Manually installing kubectl
