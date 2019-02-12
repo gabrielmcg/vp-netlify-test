@@ -1,6 +1,6 @@
 # VMware configuration
 
-All VMware-related variables are mandatory and are described in [\#vmware-variables-table-conref](#vmware-variables-table-conref).
+All VMware-related variables are mandatory and are described in the table below.
 
 |Variable|File|Description|
 |:-------|:---|:----------|
@@ -13,9 +13,7 @@ All VMware-related variables are mandatory and are described in [\#vmware-variab
 |vm\_password|**group\_vars/vault**|The password for the `vm_username` user above.|
 |vm\_template|group\_vars/vars|Name of the RHEL VM Template to be use. Note that this is the name from a vCenter perspective, not the hostname.|
 |folder\_name|group\_vars/vars|vCenter folder to deploy the VMs. If you do not wish to deploy in a particular folder, the value should be `/`. Note: If you want to deploy in a specific folder, you need to create this folder in the inventory of the selected datacenter before starting the deployment.|
-|datastores|group\_vars/vars|List of datastores to be used, in list format, i.e. \['`Datastore1`','`Datastore2`'...\]. This or these datastore\(s\) must exist before you run the playbooks. Note that all the datastores should be mounted on all the ESXi hosts. Please note that from a HPE SimpliVity perspective, it is a best practice to use only one Datastore. Using more than one will not provide any advantages in terms of reliability and will add additional complexity.
-
- |
+|datastores|group\_vars/vars|List of datastores to be used, in list format, i.e. \['`Datastore1`','`Datastore2`'...\]. This or these datastore\(s\) must exist before you run the playbooks. Note that all the datastores should be mounted on all the ESXi hosts. Please note that from a HPE SimpliVity perspective, it is a best practice to use only one Datastore. Using more than one will not provide any advantages in terms of reliability and will add additional complexity.|
 |disk2|group\_vars/vars|UNIX® name of the second disk for the Docker VMs. Typically `/dev/sdb`|
 |disk2\_part|group\_vars/vars|UNIX name of the partition of the second disk for the Docker VMs. Typically `/dev/sdb1`|
 |vsphere\_plugin\_version|group\_vars/vars|Version of the vSphere plugin for Docker. The default is 0.21.2 which is the latest version at the time of writing this document. The version of the plugin should match the version of the vSphere Installation Bundle \(VIB\) that you installed on the ESXi servers.|

@@ -56,7 +56,7 @@ cpus='4' ram='16384' disk2_size='200'
 
 In the example above, the `worker03` node would have 4 times more CPU and double the RAM compared to the rest of the worker nodes.
 
-The different variables you can use are described in [\#variables-local-table-content](#variables-local-table-content) below. They are all mandatory unless otherwise specified.
+The different variables you can use are described in the table below. They are all mandatory unless otherwise specified.
 
 |Variable|Scope|Description|
 |:-------|:----|:----------|
