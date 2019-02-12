@@ -1,6 +1,6 @@
 # Networking configuration
 
-All network-related variables are mandatory and are described in [\#network-config-table-conref](#network-config-table-conref).
+All network-related variables are mandatory and are described in the table below.
 
 |Variable|File|Description|
 |:-------|:---|:----------|
