@@ -1,6 +1,6 @@
 # Environment configuration
 
-All Environment-related variables are described in [\#env-variables-table](#env-variables-table) below.
+All Environment-related variables are described in the table below.
 
 |Variable|File|Description|
 |--------|----|:----------|
