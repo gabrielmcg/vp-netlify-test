@@ -1,8 +1,8 @@
 # Kubernetes configuration
 
-The current playbooks support the deployment of UCP 3.0.\* which deploys Kubernetes version 1.8.\*. This version of the playbooks will not work with a version of UCP lower than version 3. If you wish to deploy using UCP 2.\*, you will need to download the previous release of the playbooks, which is available on the GitHub site.
+The current playbooks support the deployment of UCP 3.1.\* which deploys Kubernetes version 1.11.\*. This version of the playbooks will not work with a version of UCP lower than version 3. If you wish to deploy using UCP 2.\*, you will need to download an earlier release of the playbooks, which are available on the GitHub site.
 
-The preceding section [\#](#) explains how to assign a worker node to the Kubernetes orchestrator. This sections covers specific Kubernetes configuration, including how to set the pod CIDR and how to configure Kubernetes Persistent Volumes.
+The preceding section explains how to assign a worker node to the Kubernetes orchestrator. This sections covers specific Kubernetes configuration, including how to set the pod CIDR and how to configure Kubernetes Persistent Volumes.
 
 ### Pod CIDR
 
@@ -16,7 +16,7 @@ The default value is `192.168.0.0/16`. To set an alternative value, use the vari
 
 ## Kubernetes Persistent Volume configuration
 
-Variables related to the configuration of Kubernetes Persistent Volumes are shown in [\#k8s-persistent-volume-config-table-conref](#k8s-persistent-volume-config-table-conref).
+Variables related to the configuration of Kubernetes Persistent Volumes are shown in the following table.
 
 |Variable|File|Description|
 |:-------|:---|:----------|
@@ -28,4 +28,4 @@ Variables related to the configuration of Kubernetes Persistent Volumes are show
 
 ### Related playbooks
 
--   `playbooks/k8s-nfs-provisioner.yml` is used to enable a dynamic NFS provisioner which can be used to automatically create and allocate Kubernetes persistent volumes. The backend storage is provided by an NFS backend. This playbook is run from the Ansible box after downloading a UCP client bundle for the `admin` account and sourcing the downloaded `env.sh` file. For more information on using this playbook, see the section [\#](#).
+-   `playbooks/k8s-nfs-provisioner.yml` is used to enable a dynamic NFS provisioner which can be used to automatically create and allocate Kubernetes persistent volumes. The backend storage is provided by an NFS backend. This playbook is run from the Ansible box after downloading a UCP client bundle for the `admin` account and sourcing the downloaded `env.sh` file. For more information on using this playbook, see the section TODO LINK.

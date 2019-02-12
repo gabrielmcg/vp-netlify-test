@@ -38,15 +38,15 @@ networks:
     gateway: "{{ gateway }}"
  
 disks_specs:
-  - size_gb:  **50**
+  - size_gb: 50
     type: thin
     datastore: "{{ datastores | random }}"
-  - size_gb: **500**
+  - size_gb: 500
     type: thin
     datastore: "{{ datastores | random }}"
-  - size_gb: **800**
+  - size_gb: 800
     type: thin
     datastore: "{{ datastores | random }}"
 ```
 
-**Note:** The number of drives and the purpose of each drive is determined by the role of the VM and the specific playbooks that uses the information. The first disk is always used as the boot disk, irrespective of VM role, while the purpose of the second or third disk is specific to the role.
+Note: The number of drives and the purpose of each drive is determined by the role of the VM and the specific playbooks that uses the information. The first disk is always used as the boot disk, irrespective of VM role, while the purpose of the second or third disk is specific to the role.
