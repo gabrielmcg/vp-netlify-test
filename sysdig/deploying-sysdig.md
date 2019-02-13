@@ -4,6 +4,8 @@ By default, the playbooks for deploying Sysdig are commented out in `site.yml` a
 
 **Note:** 
 
-By default, you must have outgoing port 6666 open in your firewall, to allow data to flow to `collector.sysdigcloud.com`. You can configure the agent to use a different port by setting the `collector_port` parameter in the configuration file `/opt/draios/etc/dragent.yaml`. For more information, see the relevant Sysdig documentation at [https://support.sysdig.com/hc/en-us/articles/204205969](https://support.sysdig.com/hc/en-us/articles/204205969).
+By default, you must have outgoing port 6666 open in your firewall, to allow data to flow to `collector.sysdigcloud.com`. You can configure the agent to use a different port using the variable `sysdig\_collector_port` in `group\_vars/vars`.
+
+ For more information, see the relevant Sysdig documentation at [https://support.sysdig.com/hc/en-us/articles/204205969](https://support.sysdig.com/hc/en-us/articles/204205969).
 
 If you are using a proxy, it must be configured to be "fully-transparent". Non-transparent proxies will not allow the agent to connect.

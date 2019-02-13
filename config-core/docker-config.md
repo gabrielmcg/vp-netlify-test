@@ -1,6 +1,6 @@
 # Docker configuration
 
-All Docker-related variables are mandatory and are described in [\#docker-config-table-conref](#docker-config-table-conref).
+All Docker-related variables are mandatory and are described in the following table.
 
 |Variable|File|Description|
 |:-------|:---|:----------|

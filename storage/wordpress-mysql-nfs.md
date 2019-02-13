@@ -69,6 +69,8 @@ You need to configure the language and password before WordPress is ready to use
 **Figure.** Configure WordPress language
 
 
+Add  a username, password and other configuration details.
+
 !["Configure WordPress password"][media-wordpress-install-2-png]
 
 **Figure.** Configure WordPress password
@@ -89,7 +91,7 @@ The welcome page is presented.
 
 ## Create your first post
 
-Click on `Write your first blog post` and start creating some content. Add a blog title and then `Add Media` to upload an image to the Media Library and then `Insert into post`. In this example, the image is a file named 
+Click on `Write your first blog post` and start creating some content. Add a blog title and then click `Add Media` to upload an image to the Media Library and then `Insert into post`. In this example, the image is a file named 
 `380 with OmniStack.jpg`.
 
 !["Create your first WordPress blog post"][media-wordpress-newpost-png]
@@ -105,7 +107,7 @@ Click `Publish` and then `View post` to see your new blog post.
 
 ## Test persistence for WordPress
 
-Find your uploaded image in WordPress Persistent Volume Claim (PVC)
+Find your WordPress Persistent Volume Claim (PVC)
 
 ```
 # kubectl -n wordpress-mysql get pvc
@@ -192,8 +194,8 @@ has survived the shutdown.
 
 ## Test persistence in MySQL
 
-A similar procedure can be performed for MySQL. While assets such as images, CSS files, etc are strored in the 
-WordPress volume, infiormation about users, posts, comments, tags, etc are stored in the MySQL database.
+A similar procedure can be performed for MySQL. While assets such as images, CSS files, etc are stored in the 
+WordPress volume, information about users, posts, comments, tags, etc are stored in the MySQL database.
 It is possible to browse the tables in the database and identify the rows related to the blog post you created.
 
 Shut down MySQL as follows:

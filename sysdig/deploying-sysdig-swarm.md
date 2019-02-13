@@ -1,6 +1,6 @@
 # Deploying Sysdig monitoring on Docker Swarm
 
-The playbook `playbooks/install_sysdig.yml` is used to automate the configuration of the SaaS setup. By default, this playbook is commented out in `site.yml` and must be explicitly enabled. An access key variable must be set in the `group_vars/vault` file as detailed in [\#sysdig-config-table-content](#sysdig-config-table-content).
+The playbook `playbooks/install_sysdig.yml` is used to automate the configuration of the SaaS setup. By default, this playbook is commented out in `site.yml` and must be explicitly enabled. An access key variable must be set in the `group_vars/vault` file as detailed in TODO LINK.
 
 ```
 # cd Docker-SimpliVity

@@ -20,12 +20,14 @@ Variables related to the configuration of Kubernetes Persistent Volumes are show
 
 |Variable|File|Description|
 |:-------|:---|:----------|
+|nfs\_provisioner_namespace|group\_vars/vars|The Kubernetes namespace, for example, `nfsstorage`|
 |nfs\_provisioner\_role|group\_vars/vars|Name of the role to create, for example, `nfs-provisioner-runner`.|
+|nfs\_provisioner\_serviceaccount|group\_vars/vars|The Kubernetes service account name to use for RBAC purposes, for example, `nfs-provisioner`|
 |nfs\_provisioner\_name|group\_vars/vars|Name of the provisioner, for example, `hpe.com/nfs`|
 |nfs\_provisioner\_storage\_class\_name|group\_vars/vars|Name of the storage class to create, for example, `nfs`|
-|nfs\_provisioner\_server\_ip|group\_vars/vars|IP address \(or FQDN\) of your external NFS server, for example, `hpe-nfs.cloudra.local`|
+|nfs\_provisioner\_server\_ip|group\_vars/vars|IP address \(or FQDN\) of your external NFS server, for example, `hpe2-nfs.am2.cloudra.local`|
 |nfs\_provisioner\_server\_share|group\_vars/vars|Name of the NFS share where all the persistent volume data will be stored, for example, `/k8s`|
 
 ### Related playbooks
 
--   `playbooks/k8s-nfs-provisioner.yml` is used to enable a dynamic NFS provisioner which can be used to automatically create and allocate Kubernetes persistent volumes. The backend storage is provided by an NFS backend. This playbook is run from the Ansible box after downloading a UCP client bundle for the `admin` account and sourcing the downloaded `env.sh` file. For more information on using this playbook, see the section TODO LINK.
+-   `playbooks/k8s-nfs-provisioner.yml` is used to enable a dynamic NFS provisioner which can be used to automatically create and allocate Kubernetes persistent volumes. The backend storage is provided by an NFS backend. This playbook is run from the Ansible box after configuring `kubectl` and a UCP client bundle for the `admin` account. For more information on using this playbook, see the section TODO LINK.

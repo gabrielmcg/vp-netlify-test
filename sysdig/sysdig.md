@@ -14,7 +14,7 @@ Sysdig's approach to Docker monitoring uses transparent instrumentation to see i
 
 The implementation in this solution uses the Software as a Service \(SaaS\) version of Sysdig. The playbooks deploy Sysdig Agent software on each UCP, DTR and Linux worker node, as well as the NFS, logger and load balancer VMs and captured data is relayed back to your Sysdig SaaS Cloud portal. The deployment provides access to a 90 day try-and-buy, fully featured version of the Sysdig software.
 
-**Note:** The Sysdig functionality is not turned on by default in this solution - see the section on Configuration for more information on how to enable Sysdig. For more information on how to access the 90 day try-and-buy version, see the GitHub repository at [https://github.com/HewlettPackard/Docker-SimpliVity](https://github.com/HewlettPackard/Docker-SimpliVity).
+**Note:** The Sysdig functionality is not turned on by default in this solution - see the section on Configuration for more information on how to enable Sysdig. For more information on how to access the 90 day try-and-buy version, see the section `Registering for Sysdig trial`.
 
 
 [media-sysdig-architecture-png]:<../media/sysdig-architecture.png> "Figure 3. Sysdig architecture"

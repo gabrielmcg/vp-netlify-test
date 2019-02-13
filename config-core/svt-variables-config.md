@@ -1,6 +1,6 @@
 # HPE SimpliVity configuration
 
-Variables related to your HPE SimpliVity deployment are mandatory and are described in [\#svt-variables-table-conref](#svt-variables-table-conref).
+Variables related to your HPE SimpliVity deployment are mandatory and are described in the table below.
 
 |Variable|File|Description|
 |:-------|:---|:----------|
@@ -19,7 +19,7 @@ The playbooks have only been tested with three nodes in the ESX cluster, but the
 
 ### Using more than three nodes when DRS is not enabled
 
-The default `vm_hosts` file in the solution GitHub repository corresponds to a deployment on a 3-node HPE SimpliVity cluster. For each Ansible host in the inventory, you use the `esxi_hosts` variable to specify on which ESX hosts the VM should be placed. The following code extract shows 3 UCP VMs distributed across the three members of the cluster. This is the recommended placement as you do not want to one node to host two UCP VMs since a failure of that node would result in the cluster losing quorum.
+The default `vm_hosts` file in the solution GitHub repository corresponds to a deployment on a 3-node HPE SimpliVity cluster. For each Ansible host in the inventory, you use the `esxi_hosts` variable to specify on which ESX hosts the VM should be placed. The following code extract shows 3 UCP VMs distributed across the three members of the cluster. This is the recommended placement as you do not want one node to host two UCP VMs since a failure of that node would result in the cluster losing quorum.
 
 ```
 
