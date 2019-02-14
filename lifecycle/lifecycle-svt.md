@@ -6,17 +6,9 @@ In general, ensure that the software bits for the Arbiter and vSphere extension 
 
 |Order|Component|Dependency \(compatibility\)|Download/Documentation|
 |:----|:--------|:---------------------------|:---------------------|
-|1.|HPE SimpliVity Arbiter|1. HPE OmniStack|HPE SimpliVity OmniStack for vSphere Upgrade Guide Download software bits from HPE’s support website.
-
- [http://www.hpe.com/support](http://www.hpe.com/support)
-
- |
-|2.|HPE SimpliVity VMware Plug-in|1. HPE SimpliVity Arbiter 2. HPE OmniStack
-
- |
-|3.|HPE Omnistack|1. HPE SimpliVity VMware Plug-in 2. HPE SimpliVity Arbiter
-
- |
+|1.|HPE SimpliVity Arbiter|1. HPE OmniStack|HPE SimpliVity OmniStack for vSphere Upgrade Guide Download software bits from HPE’s support website.  [http://www.hpe.com/support](http://www.hpe.com/support)  |
+|2.|HPE SimpliVity VMware Plug-in|1. HPE SimpliVity Arbiter<br> 2. HPE OmniStack |
+|3.|HPE Omnistack|1. HPE SimpliVity VMware Plug-in<br> 2. HPE SimpliVity Arbiter |
 
 ## VMware components
 
@@ -24,12 +16,8 @@ The HPE SimpliVity solution used in this deployment guide is built on VMware vSp
 
 |Order|Component|Dependency \(compatibility\)|Download/Documentation|
 |:----|:--------|:---------------------------|:---------------------|
-|1.|VMware vCenter|1. HPE OmniStack 2. VMware ESXi
-
- |[VMware Upgrade for SimpliVity](https://support.hpe.com/hpsc/doc/public/display?sp4ts.oid=1010292248&docLocale=en_US&docId=emr_na-a00028056en_us) |
-|1.|VMware ESXi|1. HPE OmniStack 2. VMware vCenter
-
- |
+|1.|VMware vCenter|1. HPE OmniStack<br>2. VMware ESXi|[VMware Upgrade for SimpliVity](https://support.hpe.com/hpsc/doc/public/display?sp4ts.oid=1010292248&docLocale=en_US&docId=emr_na-a00028056en_us) |
+|1.|VMware ESXi|1. HPE OmniStack<br>2. VMware vCenter |
 
 ## HPE server software
 

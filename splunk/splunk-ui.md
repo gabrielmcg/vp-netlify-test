@@ -8,7 +8,7 @@ http://hpe-ucp01.am2.cloudra.local:8000/
 
 The default username and password for Splunk is `admin` / `changeme`.
 
-Use the `Docker App` to view the Docker overview as shown in [\#splunk-ui-docker](#splunk-ui-docker) and the Docker stats as shown in [\#splunk-ui-docker-stats](#splunk-ui-docker-stats).
+Use the `Docker App` to view the Docker overview as shown in [\#splunk-ui-docker](#splunk-ui-docker) and the Docker stats as shown in Figures 15 and 16.
 
 ![ "Docker overview"][media-splunk-ui-docker-png]
 
@@ -18,7 +18,7 @@ Use the `Docker App` to view the Docker overview as shown in [\#splunk-ui-docker
 
 **Figure 16.** Docker stats
 
-Use the `k8s App` to see the Kubernetes overview as shown in [\#splunk-ui-docker](#splunk-ui-docker) and then access the details for deployments, daemon sets, replica sets, services, etc.
+Use the `k8s App` to see the Kubernetes overview as shown in Figure 17 and then access the details for deployments, daemon sets, replica sets, services, etc.
 
 ![ "Kubernetes overview"][media-splunk-k8s-overview-png]
 

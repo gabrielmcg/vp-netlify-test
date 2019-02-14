@@ -1,6 +1,6 @@
 # Monitoring with Prometheus and Grafana
 
-The solution can be configured to enable the use of Prometheus and Grafana for monitoring. In this setup, there is no need for native installs and all the required monitoring software runs in containers, deployed as either services or stacks. The load among the three hosts will be shared as per [\#simplivity-ops-architecture-promgraf](#simplivity-ops-architecture-promgraf).
+The solution can be configured to enable the use of Prometheus and Grafana for monitoring. In this setup, there is no need for native installs and all the required monitoring software runs in containers, deployed as either services or stacks. The load among the three hosts will be shared as per the following diagram.
 
  ![ "Solution architecture: Linux workers with Prometheus and Grafana"][media-simplivity-ops-architecture-promgraf-png] 
 

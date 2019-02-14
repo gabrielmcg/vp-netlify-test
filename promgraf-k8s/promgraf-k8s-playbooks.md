@@ -25,9 +25,9 @@ The Prometheus Operator makes running Prometheus on top of Kubernetes as easy as
 The playbook `playbooks/kube-prometheus/operator.yml` installs the operator itself. 
 
 ## Kube state metrics
-'kube-state-metrics' is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects. It is not focused on the health of the individual Kubernetes components, but rather on the health of the various objects inside, such as deployments, nodes and pods. For more information on 'kube-state-metrics`, see https://github.com/kubernetes/kube-state-metrics.
+`kube-state-metrics` is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects. It is not focused on the health of the individual Kubernetes components, but rather on the health of the various objects inside, such as deployments, nodes and pods. For more information on `kube-state-metrics`, see https://github.com/kubernetes/kube-state-metrics.
 
-The playbook `playbooks/kube-prometheus/kube-state-metrics.yml` installs on all UCP, DTR and Kubernetes worker nodes.
+The playbook `playbooks/kube-prometheus/kube-state-metrics.yml` installs `kube-state-metrics` on all UCP, DTR and Kubernetes worker nodes.
 
 ## Node exporter
 The `node-exporter` provides an overview of cluster node resources including CPU, memory and disk utilization and more. For more information on `node-exporter`, see https://github.com/prometheus/node_exporter.
@@ -53,16 +53,19 @@ Because Docker EE provides a hosted version of Kubernetes, it is not possible to
 For convenience, the playbook sets up a NodePort so that the Prometheus UI can be accessed on port `33090`.
 
 ```
-kubectl -n monitoring patch svc prometheus-k8s --type='json' -p '[{"op":"replace","path":"/spec/type","value":"NodePort"}]'
-kubectl -n monitoring patch svc prometheus-k8s --type='json' -p '[{"op": "add", "path":"/spec/ports/0/nodePort", "value":33090}]'
+# kubectl -n monitoring patch svc prometheus-k8s --type='json' -p '[{"op":"replace","path":"/spec/type","value":"NodePort"}]'
+
+# kubectl -n monitoring patch svc prometheus-k8s --type='json' -p '[{"op": "add", "path":"/spec/ports/0/nodePort", "value":33090}]'
 ```
 
-On a production system, it is likely that you will want to remove this NodePort.
+On a production system, it is likely that you will want to remove this NodePort. The following code segment 
+shows how to use the `patch` command to remove the NodePort.
 
 
 ```
-kubectl -n monitoring patch svc prometheus-k8s --type='json' -p '[{"op": "remove", "path":"/spec/ports/0/nodePort"}]'
-kubectl -n monitoring patch svc prometheus-k8s --type='json' -p '[{"op": "remove", "path":"/spec/type"}]'
+# kubectl -n monitoring patch svc prometheus-k8s --type='json' -p '[{"op": "remove", "path":"/spec/ports/0/nodePort"}]'
+
+# kubectl -n monitoring patch svc prometheus-k8s --type='json' -p '[{"op": "remove", "path":"/spec/type"}]'
 ```
 
 
@@ -72,15 +75,17 @@ kubectl -n monitoring patch svc prometheus-k8s --type='json' -p '[{"op": "remove
 For convenience, the playbook sets up a NodePort so that the Grafana UI can be access on the port `33030`.
 
 ```
- kubectl -n monitoring patch svc grafana --type='json' -p '[{"op":"replace","path":"/spec/type", "value":"NodePort"}]'
-kubectl -n monitoring patch svc grafana --type='json' -p '[{"op": "add", "path":"/spec/ports/0/nodePort", "value":33030}]'
+# kubectl -n monitoring patch svc grafana --type='json' -p '[{"op":"replace","path":"/spec/type", "value":"NodePort"}]'
+
+# kubectl -n monitoring patch svc grafana --type='json' -p '[{"op": "add", "path":"/spec/ports/0/nodePort", "value":33030}]'
 ```
 
-On a production system, it is likely that you will want to remove this NodePort.
+On a production system, it is likely that you will want to remove this NodePort. The following code segment shows how to use the `patch` command to remove the NodePort.
 
 ```
-kubectl -n monitoring patch svc grafana --type='json' -p '[{"op": "remove", "path":"/spec/ports/0/nodePort"}]'
-kubectl -n monitoring patch svc grafana --type='json' -p '[{"op": "remove", "path":"/spec/type"}]'
+# kubectl -n monitoring patch svc grafana --type='json' -p '[{"op": "remove", "path":"/spec/ports/0/nodePort"}]'
+
+# kubectl -n monitoring patch svc grafana --type='json' -p '[{"op": "remove", "path":"/spec/type"}]'
 ```
 
 

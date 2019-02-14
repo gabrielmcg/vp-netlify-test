@@ -2,7 +2,7 @@
 
 Splunk Enterprise allows you to collect and index any data from any source, and to monitor systems and infrastructure in real time to preempt issues before they happen. It allows you to analyze your data to understand trends, patterns of activity and behavior, giving you valuable intelligence across your entire organization.
 
-This solution allows you to integrate your Containers-as-a-Service \(CaaS\) deployment with an existing Splunk Enterprise installation or to deploy a stand-alone Splunk Enterprise demo environment as a Docker stack in your cloud. In both instances, Universal Forwarders are used to collect data from your applications running on your Linux and Windows worker nodes in your cloud, as well as log data from the Docker platform itself and from the infrastructure VMs and servers. [\#splunk-arch](#splunk-arch) shows the Splunk architecture.
+This solution allows you to integrate your Containers-as-a-Service \(CaaS\) deployment with an existing Splunk Enterprise installation or to deploy a stand-alone Splunk Enterprise demo environment as a Docker stack in your cloud. In both instances, Universal Forwarders are used to collect data from your applications running on your Linux and Windows worker nodes in your cloud, as well as log data from the Docker platform itself and from the infrastructure VMs and servers. The following diagram shows the Splunk architecture.
 
  ![ "Splunk architecture"][media-splunk-architecture-png] 
 

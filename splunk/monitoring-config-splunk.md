@@ -63,7 +63,7 @@ In order to see some data in the UCP operational dashboard, you need to have UCP
 hpe-logger ip_addr='10.60.59.24/16' esxi_host='esxi-hpe-2.cloudra.local'
 ```
 
-This will configure UCP to send its logs to `hpe-logger.cloudra.local:1514`. You need to select the TCP protocol as shown in [\#ucp-config-syslog](#ucp-config-syslog).
+This will configure UCP to send its logs to `hpe-logger.cloudra.local:1514`. You need to select the TCP protocol as shown in the following diagram.
 
  ![ "Configure Remote Syslog Server in UCP"][media-ucp-config-syslog-png] 
 
@@ -71,7 +71,7 @@ This will configure UCP to send its logs to `hpe-logger.cloudra.local:1514`. You
 
 ## Configuring syslog in ESX
 
-This configuration must be done manually for each ESX server. The syslog server should be the server configured in the \[logger\] group in your `vm_hosts` inventory. The protocol should be `tcp` and the port `514` as shown in [\#esx-config-syslog](#esx-config-syslog).
+This configuration must be done manually for each ESX server. The syslog server should be the server configured in the \[logger\] group in your `vm_hosts` inventory. The protocol should be `tcp` and the port `514` as shown in Figure 14.
 
  ![ "Configure Syslog on ESXi Hosts"][media-esx-config-syslog-png] 
 
