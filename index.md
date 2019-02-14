@@ -10,5 +10,6 @@ New features include:
 - Docker UCP metrics for Kubernetes in standalone Prometheus deployment
 - Updated Sysdig deployment for Kubernetes 1.11
 - Updated NFS Provisioner for Kubernetes 1.11 RBAC
-- Support for Helm charts, with 2 sample charts for validation
 - Validation of Kubernetes install, featuring a WordPress and MySQL deployment with persistent storage using the NFS Provisioner
+- Playbooks for installing and configuring `kubectl` and the UCP client bundle
+- Support for Helm charts, with 2 sample charts for validation purposes
