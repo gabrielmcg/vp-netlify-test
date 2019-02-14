@@ -4,20 +4,8 @@
 
 |Variable|File|Description|
 |:-------|:---|:----------|
-|ucp\_certs\_dir|group\_vars/vars| -   If **ucp\_certs\_dir** is not defined, UCP is installed with self-signed certificates and DTR is installed with the `--ucp-insecure-tls` switch
--   If **ucp\_certs\_dir** is defined, this is a folder on the Ansible machine that must contain 3 files:
-    -   `ca.pem`, the root CA certificate in PEM format
-    -   `cert.pem`, the server certificate optionally followed by intermediate CAs
-    -   `key.pem`, the private key that comes with the `cert.pem` certificates
-
- |
-|dtr\_certs\_dir|group\_vars/vars| -   If **dtr\_certs\_dir** is not defined, DTR is installed with self-signed certificates
--   If **dtr\_certs\_dir** is defined, this is a folder on the Ansible machine that must contain 3 files:
-    -   `ca.pem`, the root CA certificate in PEM format
-    -   `cert.pem`, the server certificate optionally followed by intermediate CAs
-    -   `key.pem`, the private key that comes with the `cert.pem` certificates
-
- |
+|ucp\_certs\_dir|group\_vars/vars| -   If **ucp\_certs\_dir** is not defined, UCP is installed with self-signed certificates and DTR is installed with the `--ucp-insecure-tls` switch<br>- If **ucp\_certs\_dir** is defined, this is a folder on the Ansible machine that must contain 3 files:<br>  - `ca.pem`, the root CA certificate in PEM format<br>  -   `cert.pem`, the server certificate optionally followed by intermediate CAs<br>    -   `key.pem`, the private key that comes with the `cert.pem` certificates |
+|dtr\_certs\_dir|group\_vars/vars| -   If **dtr\_certs\_dir** is not defined, DTR is installed with self-signed certificates<br>-   If **dtr\_certs\_dir** is defined, this is a folder on the Ansible machine that must contain 3 files:<br>    -   `ca.pem`, the root CA certificate in PEM format<br>    -   `cert.pem`, the server certificate optionally followed by intermediate CAs<br>    -   `key.pem`, the private key that comes with the `cert.pem` certificates |
 
 **Note:** 
 
