@@ -4,7 +4,7 @@ The HPE SimpliVity environment is made up of proprietary HPE SimpliVity software
 
 In general, ensure that the software bits for the Arbiter and vSphere extension corresponding to an OmniStack release are used.
 
-|Order|Component|Dependency \(compatibility\)|Download/Documentation|
+|Order|Component|Dependency \(compatibility\)|Documentation|
 |:----|:--------|:---------------------------|:---------------------|
 |1.|HPE SimpliVity Arbiter|1. HPE OmniStack|HPE SimpliVity OmniStack for vSphere Upgrade Guide Download software bits from HPE’s support website.  [http://www.hpe.com/support](http://www.hpe.com/support)  |
 |2.|HPE SimpliVity VMware Plug-in|1. HPE SimpliVity Arbiter<br> 2. HPE OmniStack |

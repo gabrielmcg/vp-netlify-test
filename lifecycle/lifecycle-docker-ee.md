@@ -10,13 +10,7 @@ A banner will be displayed on the UI, as shown in [\#docker-update](#docker-upda
 
 |Order|Component|Dependency \(compatibility\)|Download/Documentation|
 |:----|:--------|:---------------------------|:---------------------|
-|1.|Docker Daemon/Engine|1.  VM Operating System
-2.  vDVS plugin
-3.  Prometheus and Grafana
-
-|-   [Docker Lifecycle Maintenance](https://success.docker.com/Policies/Maintenance_Lifecycle)
--   [Docker Compatibility Matrix](https://success.docker.com/Policies/Compatibility_Matrix)
-
- |
+|1.|Docker Daemon/Engine|1.  VM Operating System<br>2.  vDVS plugin<br>3.  Prometheus and Grafana|-   [Docker Lifecycle Maintenance](https://success.docker.com/Policies/Maintenance_Lifecycle)<br>
+-   [Docker Compatibility Matrix](https://success.docker.com/Policies/Compatibility_Matrix)|
 |2.|Universal Control Plane|
 |3.|Docker Trusted Registry|

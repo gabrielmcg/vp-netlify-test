@@ -6,11 +6,5 @@ When updating the Docker Volume service plug-in, ensure the ESXi version you are
 
 |Order|Component|Dependency \(compatibility\)|Download/Documentation|
 |:----|:--------|:---------------------------|:---------------------|
-|1.|Server Software|1.  VMware ESXi
-2.  Docker EE
-
-|[vSphere Docker Volume Service on GitHub](http://vmware.github.io/vsphere-storage-for-docker/documentation/index.html)|
-|2.|Client Software|1.  VM Operating System
-2.  Docker EE
-
-|
+|1.|Server Software|1.  VMware ESXi<br>2.  Docker EE|[vSphere Docker Volume Service on GitHub](http://vmware.github.io/vsphere-storage-for-docker/documentation/index.html)|
+|2.|Client Software|1.  VM Operating System<br>2.  Docker EE|

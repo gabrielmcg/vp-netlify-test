@@ -4,7 +4,4 @@ This solution is built using Red Hat Enterprise Linux \(see [\#rhel-components-t
 
 |Order|Component|Dependency \(compatibility\)|Download/Documentation|
 |:----|:--------|:---------------------------|:---------------------|
-|1.|Red Hat Enterprise Linux|-   Docker EE
--   vDVS client software plugin
-
-|[RHEL](https://access.redhat.com/articles/11258)|
+|1.|Red Hat Enterprise Linux|-   Docker EE<br>-   vDVS client software plugin|[RHEL](https://access.redhat.com/articles/11258)|

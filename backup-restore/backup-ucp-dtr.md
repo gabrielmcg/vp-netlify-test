@@ -4,7 +4,7 @@ The playbooks support backing up the swarm, UCP, DTR metadata and DTR images.
 
 ## Backup configuration variables
 
-[\#backup-ucp-table-content](#backup-ucp-table-content) shows the variables related to backing up UCP and DTR. All these variables are defined in the file **group\_vars/backups**. All the data that is backed up is streamed over an SSH connection to the backup server. Currently, the playbooks only support the use of the Ansible box as the backup server.
+The following table shows the variables related to backing up UCP and DTR. All these variables are defined in the file **group\_vars/backups**. All the data that is backed up is streamed over an SSH connection to the backup server. Currently, the playbooks only support the use of the Ansible box as the backup server.
 
 |Variable|File|Description|
 |:-------|:---|:----------|

@@ -8,14 +8,5 @@ Prometheus and Grafana monitoring tools \(see [\#promgraf-table-content](#promgr
 
 |Order|Component|Dependency \(compatibility\)|Download/Documentation|
 |:----|:--------|:---------------------------|:---------------------|
-|1.|Prometheus|1.  Grafana
-2.  Docker EE
-
-|1.  Prometheus Images on Docker Hub
-2.  [Upgrading Grafana](http://docs.grafana.org/installation/upgrading/)
-
-|
-|2.|Grafana|1.  Prometheus
-2.  Docker EE
-
-|
+|1.|Prometheus|1.  Grafana<br>2.  Docker EE|1.  Prometheus Images on Docker Hub<br>2.  [Upgrading Grafana](http://docs.grafana.org/installation/upgrading/)|
+|2.|Grafana|1.  Prometheus<br>2.  Docker EE|
