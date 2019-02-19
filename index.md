@@ -1,4 +1,4 @@
-# Welcome to Express Containers on HPE SimpliVity
+# Welcome to HPE Express Containers with Docker Enterprise Edition on HPE SimpliVity
 
 HPE Express Containers with Docker Enterprise Edition on HPE SimpliVity is a complete solution from Hewlett Packard Enterprise that includes all the hardware, software, professional services, and support you need to deploy a Containers-as-a-Service \(CaaS\) platform, allowing you to get up and running quickly and efficiently.
 

@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'HPE Express Containers with Docker Enterprise Edition on HPE SimpliVity',
+    title: 'HPE Express Containers',
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
