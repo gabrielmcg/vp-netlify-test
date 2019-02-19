@@ -65,4 +65,4 @@ The different variables you can use are described in the table below. They are a
 |cpus|Node/Group|Number of CPUs to assign to a VM or a group of VMs|
 |ram|Node/Group|Amount of RAM in MB to assign to a VM or a group of VMs|
 |disk2\_usage|Node/Group|Size of the second disk in GB to attach to a VM or a group of VMs. This variable is only mandatory on Docker nodes \(UCP, DTR, worker\) and NFS node. It is not required for the logger node or the load balancers.|
-|node\_policy|Node/Group|HPE SimpliVity backup policy to assign to a VM or a group of VMs. The name has to match one of the backup policies defined in the `group_vars/vars` file described in the section [\#](#).|
+|node\_policy|Node/Group|HPE SimpliVity backup policy to assign to a VM or a group of VMs. The name has to match one of the backup policies defined in the `group_vars/vars` file described in the section `HPE SimpliVity backup configuration`.|

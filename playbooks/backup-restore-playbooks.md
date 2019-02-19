@@ -1,6 +1,6 @@
 # Backup and restore playbooks
 
-Best practices and procedures are described in the section [\#](#). The following playbooks are used to perform backups:
+Best practices and procedures are described in the section `Backup and restore`. The following playbooks are used to perform backups:
 
 -   `playbooks/backup_swarm.yml` is used to back up the swarm data
 -   `playbooks/backup_ucp.yml` is used to back up UCP

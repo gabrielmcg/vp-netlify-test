@@ -28,5 +28,5 @@ With the addition of the NFS and logging VMs, a total of 13 VMs are created for 
 
 The hybrid deployment will typically add 3 Windows worker nodes to the above configuration, co-located with the Linux workers.
 
-**Note:** Some of the application software supported by this configuration does not currently run on Windows, for example, the Sysdig Software Agent \(see the section [\#](#)\).
+**Note:** Some of the application software supported by this configuration does not currently run on Windows, for example, the Sysdig Software Agent \(see the section `Monitoring with Sysdig`\).
 
