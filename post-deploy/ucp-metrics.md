@@ -34,7 +34,7 @@ NAME         TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
 prometheus   NodePort   10.96.216.220   <none>        9090:34713/TCP   6d
 ```
 
-The Prometheus UI can be accessed on any node in your cluster, using the port returned by `kubectl get svc`. In this instance, it is accessed at `http://hpe2-ucp01.am2.cloudra.local:34713`: 
+The Prometheus UI can be accessed on any node in your cluster, using the port returned by `kubectl get svc`. In this instance, it is accessed at `http://hpe2-ucp01.am2.cloudra.local:34713`.
 
 ![ "UCP metrics in Prometheus"][media-ucp-prometheus-png]
 

@@ -1,6 +1,9 @@
 # Windows configuration
 
-Window-related variables are shown in [\#windows-config-table-conref](#windows-config-table-conref).
+Window-related variables are shown in Table 15.
+
+
+**Table 15.** Windows variables
 
 |Variable|File|Description|
 |:-------|:---|:----------|
@@ -23,7 +26,10 @@ There is a separate file in the `group_vars` directory named `win_worker.yml` fo
 -   playbooks/install\_docker\_window.yml
 -   playbooks/scale\_workers\_win.yml
 
-In general, it should not be necessary to modify this file, but the variables are documented in [\#windows-advanced-config-table-content](#windows-advanced-config-table-content) for the sake of completeness.
+In general, it should not be necessary to modify this file, but the variables are documented in Table 16 for the sake of completeness.
+
+
+**Table 16.** Advanced windows variables
 
 |Variable|File|Description|
 |:-------|:---|:----------|
