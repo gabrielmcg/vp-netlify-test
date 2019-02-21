@@ -1,14 +1,19 @@
 # Software
 
-The software components used in this Reference Configuration are listed in [\#software-3rd-party-table-content](#software-3rd-party-table-content) and [\#software-hpe-table-content](#software-hpe-table-content).
+The software components used in this Reference Configuration are listed in Table 3 and Table 4.
+
+**Table 3.** Third-party software
 
 |Component|Version|
 |:--------|:------|
 |Ansible|2.7|
-|Docker EE|2.1 with Docker EE Engine 18.09 \(tested with UCP 3.1.2 and DTR 2.6.0\)|
-|Red Hat® Enterprise Linux|7.5, 7.6|
+|Docker EE|2.1 with Docker EE Engine 18.09 \(tested with UCP 3.1.3 and DTR 2.6.2\)|
+|Red Hat® Enterprise Linux|7.6|
 |Microsoft® Windows|Server 2016|
 |VMware®|ESXi 6.5.0 and vCenter 6.5.0|
+
+
+**Table 4.** HPE Software
 
 |Component|Version|
 |:--------|:------|
