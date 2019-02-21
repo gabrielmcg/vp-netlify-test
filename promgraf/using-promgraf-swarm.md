@@ -8,7 +8,7 @@ http://hpe-ucpvip.am2.cloudra.local:3000
 
 The default username and password for Grafana is `admin`/`admin`. The first time you login, you will be asked to reset the default `admin` password.
 
-Select the `Docker Swarm Monitor` dashboard that has already been loaded by the playbooks, as shown in [\#grafana-dashboard](#grafana-dashboard) and [\#grafana-dashboard2](#grafana-dashboard2).
+Select the `Docker Swarm Monitor` dashboard that has already been loaded by the playbooks, as shown in Figures 19 and 20.
 
 ![ "Docker Swarm Monitor"][media-grafana-dashboard-png]
 

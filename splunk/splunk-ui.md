@@ -8,7 +8,7 @@ http://hpe-ucp01.am2.cloudra.local:8000/
 
 The default username and password for Splunk is `admin` / `changeme`.
 
-Use the `Docker App` to view the Docker overview as shown in [\#splunk-ui-docker](#splunk-ui-docker) and the Docker stats as shown in Figures 15 and 16.
+Use the `Docker App` to view the Docker overview and the Docker stats as shown in Figures 15 and 16.
 
 ![ "Docker overview"][media-splunk-ui-docker-png]
 

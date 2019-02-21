@@ -13,7 +13,7 @@ For both types of deployment, you need to download the Splunk Universal forwarde
 -   files/splunk/windows/splunkforwarder-7.1.2.msi
 -   files/splunk/linux/splunkforwarder-7.1.2.rpm
 
-You need to set the variable `splunk_architecture_universal_forwarder_package` to the name you selected for the package\(s\), not including the file extension. Depending on the Splunk deployment you have chosen, edit the file `templates/splunk/**splunk**/vars.yml` or the file `templates/splunk/**splunk\_demo**/vars.yml` and set the variable, for example:
+You need to set the variable `splunk_architecture_universal_forwarder_package` to the name you selected for the package\(s\), not including the file extension. Depending on the Splunk deployment you have chosen, edit the file `templates/splunk/splunk/vars.yml` or the file `templates/splunk/splunk_demo/vars.yml` and set the variable, for example:
 
 ```
 splunk_architecture_universal_forwarder_package: 'splunkforwarder-7.1.2'
