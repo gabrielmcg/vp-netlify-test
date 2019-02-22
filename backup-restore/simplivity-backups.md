@@ -99,13 +99,13 @@ The backup policy `hpe-gold` is assigned to the special VM that is used to back 
 
 ## Manual backup
 
-Rather than waiting for an automated backup to take place, you can create a backup immediately. Right-click on the special VM, in this case `hpe-VM-in-dockervols-Docker_HPE`, select `All HPE SimpliVity Actions` and choose `Backup Virtual Machine` as shown in [\#backup-virtual-machine](#backup-virtual-machine).
+Rather than waiting for an automated backup to take place, you can create a backup immediately. Right-click on the special VM, in this case `hpe-VM-in-dockervols-Docker_HPE`, select `All HPE SimpliVity Actions` and choose `Backup Virtual Machine` as shown in Figure 22.
 
  ![ "Backup virtual machine"][media-backup-virtual-machine-png] 
 
 **Figure 22.** Backup virtual machine
 
-You can specify a backup name, in this case `manual_backup_test_01`, as shown in [\#backup-vm-details](#backup-vm-details).
+You can specify a backup name, in this case `manual_backup_test_01`, as shown in Figure 23.
 
  ![ "Backup virtual machine details"][media-backup-vm-details-png] 
 
@@ -113,7 +113,7 @@ You can specify a backup name, in this case `manual_backup_test_01`, as shown in
 
 ## Restore
 
-Right-click on the special VM, in this case hpe-VM-in-dockervols-Docker\_HPE. On the `Configure` tab, select `HPE SimpliVity Search Backups` as shown in [\#search-backups](#search-backups).
+Right-click on the special VM, in this case hpe-VM-in-dockervols-Docker\_HPE. On the `Configure` tab, select `HPE SimpliVity Search Backups` as shown in Figure 24.
 
  ![ "Search backups"][media-search-backups-png] 
 
@@ -121,13 +121,13 @@ Right-click on the special VM, in this case hpe-VM-in-dockervols-Docker\_HPE. On
 
 You can narrow the search based on the time of the backup. If you are restoring from an automatic backup, the name will be the timestamp of the backup. If you are restoring from a manual backup, the name will be the one you specified earlier when creating the backup, in this case `manual_backup_test_01`.
 
-Right-click on the backup you wish to restore, as shown in [\#restore-vm](#restore-vm), and select `Restore Virtual Machine`.
+Right-click on the backup you wish to restore, as shown in Figure 25, and select `Restore Virtual Machine`.
 
  ![ "Restore virtual machine"][media-restore-vm-png] 
 
 **Figure 25.** Restore virtual machine
 
-In the details screen, shown in [\#restore-vm-details](#restore-vm-details), you can choose a name for the new virtual machine and specify the datastore.
+In the details screen, shown in Figure 26, you can choose a name for the new virtual machine and specify the datastore.
 
  ![ "Restore virtual machine details"][media-restore-vm-details-png] 
 
@@ -135,31 +135,31 @@ In the details screen, shown in [\#restore-vm-details](#restore-vm-details), you
 
 The name of the new virtual machine will default to a combination of the special VM name and a timestamp, in this instance `hpe-VM-in-dockervols-Docker_HPE-2018-11-26-20h47m01s`. The datastore should be the one specified in the datastores array from the `group_vars/vars` file. Click OK to restore the virtual machine.
 
-Once the virtual machine has been restored, navigate to the datastore and locate the new VM in the file browser, as shown in [\#browse-restored-vm](#browse-restored-vm).
+Once the virtual machine has been restored, navigate to the datastore and locate the new VM in the file browser, as shown in Figure 27.
 
  ![ "Browse for restored virtual machine"][media-browse-restored-vm-png] 
 
 **Figure 27.** Browse for restored virtual machine
 
-Navigate to the folder named `1111111-1111-1111-1111-...` as shown in [\#vmdk-files](#vmdk-files). You will see files with names based on the Docker volume name that you used at the start, in this instance `test_01.vmdk` and `test_01-478...f1f.vmfd`
+Navigate to the folder named `1111111-1111-1111-1111-...` as shown in Figure 28. You will see files with names based on the Docker volume name that you used at the start, in this instance `test_01.vmdk` and `test_01-478...f1f.vmfd`
 
  ![ "Locate vmdk and vmfd files"][media-vmdk-files-png] 
 
 **Figure 28.** Locate vmdk and vmfd files
 
-You need to move these two files to the `dockvols` sub-directory named `1111111-1111-1111-1111-...` in the same datastore. Right click on the `.vmdk` file and choose `Move to...` as shown in [\#move-to](#move-to).
+You need to move these two files to the `dockvols` sub-directory named `1111111-1111-1111-1111-...` in the same datastore. Right click on the `.vmdk` file and choose `Move to...` as shown in Figure 29.
 
  ![ "Move files"][media-move-to-png] 
 
 **Figure 29.** Move files
 
-Set the destination folder to the `dockvols` sub-directory named `1111111-1111-1111-1111-...` as shown in [\#destination](#destination).
+Set the destination folder to the `dockvols` sub-directory named `1111111-1111-1111-1111-...` as shown in Figure 30.
 
  ![ "Move to destination"][media-destination-png] 
 
 **Figure 30.** Move to destination
 
-It is only necessary to move the `.vmdk` file as the `.vmfd` file will automatically follow. The `dockvols` sub-directory named `1111111-1111-1111-1111-...` should now contain both files as shown in [\#moved](#moved).
+It is only necessary to move the `.vmdk` file as the `.vmfd` file will automatically follow. The `dockvols` sub-directory named `1111111-1111-1111-1111-...` should now contain both files as shown in Figure 31.
 
  ![ "Files moved to destination"][media-moved-png] 
 

@@ -6,6 +6,9 @@ The playbooks support backing up the swarm, UCP, DTR metadata and DTR images.
 
 The following table shows the variables related to backing up UCP and DTR. All these variables are defined in the file **group\_vars/backups**. All the data that is backed up is streamed over an SSH connection to the backup server. Currently, the playbooks only support the use of the Ansible box as the backup server.
 
+
+**Table 21.** Backup variables
+
 |Variable|File|Description|
 |:-------|:---|:----------|
 |backup\_server|**group\_vars/backups**|Currently, the playbooks only support the use of the Ansible box as the backup server.|
@@ -43,11 +46,14 @@ The generated files won't have `<vmname>` or `<timestamp>` appended:
 <backup_dest>/my_swarm_backup.vars.tgz
 ```
 
-**Warning:** **Online versus offline backups:** By default, the playbook performs online backups. You can take offline backups by setting the variable `swarm_backup_offline` to `"true"`. The playbook will then stop the Docker daemon on the machine used to take the backup \(a manager or UCP node\). Before it does so, the playbook will verify that enough managers are running in the cluster to maintain the quorum. If this is not the case, the playbook will exit with an error. For more information, see the Docker documentation at [https://docs.docker.com/engine/swarm/admin\_guide/\#recover-from-disasterv](https://docs.docker.com/engine/swarm/admin_guide/#recover-from-disasterv)
+**Warning: Online versus offline backups:** By default, the playbook performs online backups. You can take offline backups by setting the variable `swarm_backup_offline` to `"true"`. The playbook will then stop the Docker daemon on the machine used to take the backup \(a manager or UCP node\). Before it does so, the playbook will verify that enough managers are running in the cluster to maintain the quorum. If this is not the case, the playbook will exit with an error. For more information, see the Docker documentation at [https://docs.docker.com/engine/swarm/admin\_guide/\#recover-from-disasterv](https://docs.docker.com/engine/swarm/admin_guide/#recover-from-disasterv)
 
 ## Backing up the Universal Control Plane (UCP)
 
-When you backup UCP, you save the data/metadata outlined in [\#backup-ucp-data-meta-table-content](#backup-ucp-data-meta-table-content):
+When you backup UCP, you save the data/metadata outlined in Table 22:
+
+
+**Table 22.** UCP data backed up
 
 |Data|Description|
 |:---|:----------|
@@ -88,11 +94,14 @@ The generated files won't have `<vmname>` or `<timestamp>` appended:
 
 **Warning:** To create a consistent backup, the backup command **temporarily stops the UCP containers running on the node where the backup is being performed**. User resources, such as services, containers, and stacks are not affected by this operation and will continue to operate as expected. Any long-lasting `docker exec`, `docker logs`, `docker events`, or `docker attach` operations on the affected manager node will be disconnected.
 
-For more information on UCP backup, see the Docker documentation at [https://docs.docker.com/datacenter/ucp/3.0/guides/admin/backups-and-disaster-recovery/](https://docs.docker.com/datacenter/ucp/3.0/guides/admin/backups-and-disaster-recovery/)
+For more information on UCP backup, see the Docker documentation at [https://docs.docker.com/ee/ucp/admin/backups-and-disaster-recovery/](https://docs.docker.com/ee/ucp/admin/backups-and-disaster-recovery/)
 
 ## Backing up the Docker Trusted Registry (DTR)
 
-When you backup DTR, you save the data/metadata outlined in [\#backup-dtr-data-meta-table-content](#backup-dtr-data-meta-table-content):
+When you backup DTR, you save the data/metadata outlined in Table 23:
+
+
+**Table 23.** DTR data backed up
 
 |Data|Backed up?|Description|
 |:---|:---------|:----------|
@@ -134,7 +143,7 @@ The generated files won't have `<vmname>` or `<timestamp>` appended:
 <backup_dest>/my_dtr_metadata_backup.vars.tgz
 ```
 
-For more information on DTR backups, see the Docker documentation at [https://docs.docker.com/datacenter/dtr/2.md](https://docs.docker.com/datacenter/dtr/2.md)
+For more information on DTR backups, see the Docker documentation at [https://docs.docker.com/ee/dtr/admin/disaster-recovery/](https://docs.docker.com/ee/dtr/admin/disaster-recovery/)
 
 ## Backing up DTR data (images)
 
@@ -166,7 +175,7 @@ The generated files won't have `<vmname>` or `<timestamp>` appended:
 <backup_dest>/my_dtr_data_backup.vars.tgz
 ```
 
-For more information on DTR backups, see the Docker documentation at [https://docs.docker.com/datacenter/dtr/2.5/guides/admin/backups-and-disaster-recovery/](https://docs.docker.com/datacenter/dtr/2.5/guides/admin/backups-and-disaster-recovery/)
+For more information on DTR backups, see the Docker documentation at [https://docs.docker.com/ee/dtr/admin/disaster-recovery/](https://docs.docker.com/ee/dtr/admin/disaster-recovery/)
 
 ## Backing up other metadata, including passwords
 
@@ -188,7 +197,9 @@ dtr_version="<DTR version of DTR backup>"
 
 ## Backup Utility
 
-The script `backup.sh` can be used to take a backup of the swarm, UCP, DTR metadata and the DTR images in one go. You can pass this script an argument \(tag\) that will be used to prefix the backup filenames, thereby overriding the default naming. [\#backup-utility-table-content](#backup-utility-table-content) shows the file names produced by `backup.sh` based on the argument passed in the command line.
+The script `backup.sh` can be used to take a backup of the swarm, UCP, DTR metadata and the DTR images in one go. You can pass this script an argument \(tag\) that will be used to prefix the backup filenames, thereby overriding the default naming. Table 24 shows the file names produced by `backup.sh` based on the argument passed in the command line.
+
+**Table 24.** Backup utility
 
 |Example|Command line|Generated filenames|
 |:------|:-----------|:------------------|
