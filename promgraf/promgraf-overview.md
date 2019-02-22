@@ -1,4 +1,4 @@
-# Monitoring Docker swarm with Prometheus and Grafana
+# Monitoring with Prometheus and Grafana on Docker swarm 
 
 The solution can be configured to enable the use of Prometheus and Grafana for monitoring. In this setup, there is no need for native installs and all the required monitoring software runs in containers, deployed as either services or stacks. The load among the three hosts will be shared as per the following diagram.
 
