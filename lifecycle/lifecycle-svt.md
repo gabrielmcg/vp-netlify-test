@@ -1,8 +1,11 @@
 # HPE SimpliVity environment
 
-The HPE SimpliVity environment is made up of proprietary HPE SimpliVity software, VMware software and HPE firmware. There are interdependencies between the various components that need to be accounted for and are provided in the table below. The components in [\#svt-components-table-content](#svt-components-table-content) are part of the HPE SimpliVity environment that require lifecycle management.
+The HPE SimpliVity environment is made up of proprietary HPE SimpliVity software, VMware software and HPE firmware. There are interdependencies between the various components that need to be accounted for and are provided in the table below. The components in Table 25 are part of the HPE SimpliVity environment that require lifecycle management.
 
 In general, ensure that the software bits for the Arbiter and vSphere extension corresponding to an OmniStack release are used.
+
+
+**Table 25.** HPE SimpliVity components
 
 |Order|Component|Dependency \(compatibility\)|Documentation|
 |:----|:--------|:---------------------------|:---------------------|
@@ -12,7 +15,9 @@ In general, ensure that the software bits for the Arbiter and vSphere extension 
 
 ## VMware components
 
-The HPE SimpliVity solution used in this deployment guide is built on VMware vSphere. VMware ESXi and vCenter \(see [\#vmware-components-table-content](#vmware-components-table-content)\) are the two components from VMware that are leveraged by the HPE SimpliVity software.
+The HPE SimpliVity solution used in this deployment guide is built on VMware vSphere. VMware ESXi and vCenter \(see Table 26) are the two components from VMware that are leveraged by the HPE SimpliVity software.
+
+**Table 26.** VMware components
 
 |Order|Component|Dependency \(compatibility\)|Download/Documentation|
 |:----|:--------|:---------------------------|:---------------------|
@@ -21,7 +26,9 @@ The HPE SimpliVity solution used in this deployment guide is built on VMware vSp
 
 ## HPE server software
 
-HPE SimpliVity servers are based on HPE server platforms and require a compatible firmware version to function with HPE OmniStack Software, as shown in [\#hpe-components-table-content](#hpe-components-table-content).
+HPE SimpliVity servers are based on HPE server platforms and require a compatible firmware version to function with HPE OmniStack Software, as shown in Table 27.
+
+**Table 27.** HPE server components
 
 |Order|Component|Dependency \(compatibility\)|Download/Documentation|
 |:----|:--------|:---------------------------|:---------------------|

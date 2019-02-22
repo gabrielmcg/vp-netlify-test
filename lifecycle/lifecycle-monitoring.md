@@ -4,7 +4,10 @@ To learn more about upgrading Splunk, see the relevant documentation at [How to 
 
 The Sysdig agent runs as a container and the latest version is pulled from the Docker hub on first installation. Re-run the `install_sysdig.yml` playbook to update to the newest version if required.
 
-Prometheus and Grafana monitoring tools \(see [\#promgraf-table-content](#promgraf-table-content)\) run as containers within the Docker environment. Newer versions of these tools can be deployed by pulling the Docker images from Docker Hub. Verify that the version of Prometheus that is being used is compatible with the version of Docker EE.
+Prometheus and Grafana monitoring tools \(see Table 31\) run as containers within the Docker environment. Newer versions of these tools can be deployed by pulling the Docker images from Docker Hub. Verify that the version of Prometheus that is being used is compatible with the version of Docker EE.
+
+
+**Table 31.** Monitoring tools: Prometheus and Grafana
 
 |Order|Component|Dependency \(compatibility\)|Download/Documentation|
 |:----|:--------|:---------------------------|:---------------------|

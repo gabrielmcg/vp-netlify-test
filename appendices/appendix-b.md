@@ -1,6 +1,8 @@
 # Appendix B: Using customer supplied certificates for UCP and DTR
 
-[\#customer-certs-table-content](#customer-certs-table-content) lists the variables used when configuring customer supplied certificates for UCP and DTR.
+Table 32 lists the variables used when configuring customer supplied certificates for UCP and DTR.
+
+**Table 32.** Customer certs variables
 
 |Variable|File|Description|
 |:-------|:---|:----------|

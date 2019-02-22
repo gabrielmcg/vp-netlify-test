@@ -36,19 +36,19 @@ More details here: http://curl.haxx.se/docs/sslcerts.html
 
 ## Enable certs for browser \(Windows 2016 example\)
 
-Choose `Manage computer certificates` in the control panel as shown in [\#manage-computer-certificates](#manage-computer-certificates) 
+Choose `Manage computer certificates` in the control panel as shown in Figure 33. 
 
 ![ "Manage computer certificates"][media-manage-computer-certificates-png]
 
 **Figure 33.** Manage computer certificates
 
-Import the `ca.pem` for UCP into the Trusted Root Certification Authorities, as shown in [\#import-ca-pem](#import-ca-pem) 
+Import the `ca.pem` for UCP into the Trusted Root Certification Authorities, as shown in Figure 34.
 
 ![ "Import the ca.pem"][media-import-ca-pem-png]
 
 **Figure 34.** Import the ca.pem
 
-It should now show up in the list of certificates. You may need to restart your browser to see the green, secure lock symbol as shown in [\#green-https](#green-https)
+It should now show up in the list of certificates. You may need to restart your browser to see the green, secure lock symbol as shown in Figure 35.
 
 ![ "Secure HTTPS"][media-green-https-png]
 
