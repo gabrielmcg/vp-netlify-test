@@ -36,7 +36,7 @@ This playbook creates two archives in the folder specified by the variable `back
 You can override the generated file name by defining the variable **backup_name** on the command line when running the playbook. In the example below:
 
 ```
-# ansible-playbook -i vm_hosts playbooks/backup_swarm.yml -e backup_name=**my_swarm_backup**
+# ansible-playbook -i vm_hosts playbooks/backup_swarm.yml -e backup_name=my_swarm_backup
 ```
 
 The generated files won't have `<vmname>` or `<timestamp>` appended:
@@ -82,7 +82,7 @@ This playbook creates two archives in the folder specified by the variable `back
 You can override the generated file name by defining the variable **backup\_name** on the command line when running the playbook. In the example below:
 
 ```
-# ansible-playbook -i vm_hosts playbooks/backup_ucp.yml -e backup_name=**my_ucp_backup**
+# ansible-playbook -i vm_hosts playbooks/backup_ucp.yml -e backup_name=my_ucp_backup
 ```
 
 The generated files won't have `<vmname>` or `<timestamp>` appended:
@@ -133,7 +133,7 @@ This playbook creates two archives in the folder specified by the variable `back
 You can override the generated file name by defining the variable **backup\_name** on the command line when running the playbook. In the example below:
 
 ```
-# ansible-playbook -i vm_hosts playbooks/backup_dtr_metadata.yml -e backup_name=**my_dtr_metadata_backup**
+# ansible-playbook -i vm_hosts playbooks/backup_dtr_metadata.yml -e backup_name=my_dtr_metadata_backup
 ```
 
 The generated files won't have `<vmname>` or `<timestamp>` appended:
@@ -165,7 +165,7 @@ This playbook creates two archives in the folder specified by the variable `back
 You can override the generated file names by defining the variable **backup\_name** on the command line when running the playbook, as shown in the example below:
 
 ```
-# ansible-playbook -i vm_hosts playbooks/backup_dtr_images.yml -e backup_name=**my_dtr_data_backup**
+# ansible-playbook -i vm_hosts playbooks/backup_dtr_images.yml -e backup_name=my_dtr_data_backup
 ```
 
 The generated files won't have `<vmname>` or `<timestamp>` appended:

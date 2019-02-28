@@ -97,7 +97,7 @@ NAME            REVISION        UPDATED                         STATUS          
 worn-olm        1               Fri Feb  8 16:23:21 2019        DEPLOYED        nginx-0.1.0                     default
 ```
 
-Use the `helm delete` command to removed the named release.
+Use the `helm delete` command to remove the named release.
 
 ```
 # helm delete worn-olm

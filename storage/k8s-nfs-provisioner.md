@@ -7,15 +7,7 @@
 -   Install the UCP Client bundle for the `admin` user
 -   Confirm that you can connect to the cluster by running a test command, for example, `kubectl get nodes`
 
-## Running the playbook
 
-Once the prerequisites are satisfied, run the appropriate playbook on your Ansible node:
-
-```
-# cd ~/Docker-SimpliVity
-# ansible-playbook -i vm_hosts playbooks/k8s-nfs-provisioner.yml --vault-password-file .vault_pass
-
-```
 
 ## Using NFS VM for post-deployment verification
 
@@ -34,13 +26,64 @@ In this example, it is assumed that the relevant variables are configured as fol
 
 In this instance, the server IP is set to the NFS VM that has been deployed.
 
-Ensure that your environment satisfies the prerequisites and then run the playbook:
+
+## Running the playbook
+
+Once the prerequisites are satisfied, run the appropriate playbook on your Ansible node:
 
 ```
 # cd ~/Docker-SimpliVity
 # ansible-playbook -i vm_hosts playbooks/k8s-nfs-provisioner.yml --vault-password-file .vault_pass
 
 ```
+
+For validation, the playbook creates a test claim and a pod, the pod writes content to a file, the pod is deleted and then
+playbook checks that the contents of the file have been persisted.
+
+```
+        kubectl -n {{ nfs_provisioner_namespace }} apply -f /tmp/nfs-provisioner-test-claim.yml
+        kubectl -n {{ nfs_provisioner_namespace }} apply -f /tmp/nfs-provisioner-test-pod.yml
+
+        sleep 5 # need sleep here to allow pod/container to start up and write file
+
+        ssh {{ nfs_provisioner_server_ip }} ls -R {{ nfs_provisioner_server_share }}
+
+        echo '*** delete test-pod ***'
+
+        kubectl -n {{ nfs_provisioner_namespace }} delete -f /tmp/nfs-provisioner-test-pod.yml
+
+        echo '*** cat bar.txt ***'
+
+        ssh {{ nfs_provisioner_server_ip }} "cd {{ nfs_provisioner_server_share }}/{{nfs_provisioner_namespace }}*; cat bar.txt"
+
+        echo '*** delete test-claim ***'
+        kubectl -n {{ nfs_provisioner_namespace }} delete -f /tmp/nfs-provisioner-test-claim.yml
+
+```
+
+The output of the playbook shows the various steps taking place:
+
+```
+        "Cluster \"ucp_hpe2-ucp01.am2.cloudra.local:6443_admin\" set.",
+        "User \"ucp_hpe2-ucp01.am2.cloudra.local:6443_admin\" set.",
+        "Context \"ucp_hpe2-ucp01.am2.cloudra.local:6443_admin\" modified.",
+        "persistentvolumeclaim/test-claim created",
+        "pod/test-pod created",
+        "/k8s:",
+        "nfsstorage-test-claim-pvc-e6a09191-3b41-11e9-a830-0242ac11000b",
+        "",
+        "/k8s/nfsstorage-test-claim-pvc-e6a09191-3b41-11e9-a830-0242ac11000b:",
+        "bar.txt",
+        "*** delete test-pod ***",
+        "pod \"test-pod\" deleted",
+        "*** cat bar.txt ***",
+        "hello",
+        "*** delete test-claim ***",
+        "persistentvolumeclaim \"test-claim\" deleted"
+
+```
+
+The following section will show how to manually perform a similar test. 
 
 Running the command `kubectl get sc` will show the storage class named `nfs`:
 
@@ -52,6 +95,10 @@ NAME      PROVISIONER   AGE
 nfs       hpe.com/nfs   5m
 
 ```
+
+
+
+## Manually testing the NFS provisioner
 
 Create a temporary file `/tmp/pvc.yml` for a persistent volume claim \(PVC\) named `dynnfs-testpvc` with a storage class of `nfs` 
 
@@ -139,7 +186,7 @@ Retrieve the pod ID and then execute a command in the pod to create a test file 
 
 ```
 # pod=$(kubectl get pod | awk '/dynnfs-testpod-/ {print $1}')
-# kubectl exec -it $pod -- sh -c "echo hello \>/tmp/foo/bar.txt"
+# kubectl exec -it $pod -- sh -c "echo hello >/tmp/foo/bar.txt"
 ```
 
 In this example, where the NFS VM is being used as the storage back-end, you can examine the content of the folder containing the persistent volumes. Given the values specified above, where the NFS VM is named `hpe2-nfs` and the `nfs_provisioner_server_share` is `k8s`, you can connect to the VM and explore the folder as follows.

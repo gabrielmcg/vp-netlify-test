@@ -181,7 +181,8 @@ Refresh the page in the browser to confirm that WordPress is indeed inaccessible
 Redeploy Wordpress 
 
 ```
-kubectl -n wordpress-mysql apply -f /tmp/wordpress-mysql-nfs/wordpress-deployment.yml        deployment.apps/wordpress created
+# kubectl -n wordpress-mysql apply -f /tmp/wordpress-mysql-nfs/wordpress-deployment.yml        
+deployment.apps/wordpress created
 ```
 
 Refresh the page in the browser to confirm that WordPress is now accessible and that the image in the blog post
@@ -215,7 +216,7 @@ Refresh the page for your blog post, and you will see that WordPress can no long
 Restore the MySQL deployment:
 
 ```
-kubectl -n wordpress-mysql apply -f /tmp/wordpress-mysql-nfs/mysql-deployment.yml
+# ubectl -n wordpress-mysql apply -f /tmp/wordpress-mysql-nfs/mysql-deployment.yml
 deployment.apps/wordpress-mysql created
 ```
 
