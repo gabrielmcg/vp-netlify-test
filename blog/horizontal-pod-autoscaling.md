@@ -16,7 +16,7 @@ description: An example of scaling pods based on CPU usage
 -   Install the `kubectl` binary on your Ansible box
 -   Install the UCP Client bundle for the `admin` user
 -   Confirm that you can connect to the cluster by running a test command, for example, `kubectl get nodes`
--   Install `metrics-server` as shown in [../install-metrics-server.html](../install-metrics-server.html)
+-   Install `metrics-server` as shown in [../blog/install-metrics-server.html](../blog/install-metrics-server.html)
 
 
 
