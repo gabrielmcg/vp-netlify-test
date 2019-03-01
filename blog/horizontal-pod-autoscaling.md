@@ -155,7 +155,7 @@ NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
 php-apache   ClusterIP   10.96.103.118   <none>        80/TCP    1m
 ```
 
-Use the `kubectl patch' command to change the service type to 'NodePort' and to set an explicit port, in this instance `33999`.
+Use the `kubectl patch` command to change the service type to `NodePort` and to set an explicit port, in this instance `33999`.
 
 ```
 # kubectl patch svc php-apache --type='json' -p '[{"op":"replace","path":"/spec/type","value":"NodePort"}]'
@@ -184,10 +184,10 @@ Use the `kubectl autoscale` command to generate the autoscaler.
 horizontalpodautoscaler.autoscaling/php-apache autoscaled
 ```
 
-In this instance, you specify that when the CPU hits 50% utilization, another pod should be deployed. (In reality, you may want to set this threshold higher, for example, to 70% or 80%). Remember that you set the CPU 'request' to `200m`, so  you should see a new pod being created when CPU utilization rises above `100m` in absolute terms. You also specifiy that, at most, 10 pods should be deployed. 
+In this instance, you specify that when the CPU hits 50% utilization, another pod should be deployed. (In reality, you may want to set this threshold higher, for example, to 70% or 80%). Remember that you set the CPU `request` to `200m`, so  you should see a new pod being created when CPU utilization rises above `100m` in absolute terms. You also specifiy that, at most, 10 pods should be deployed. 
 
 
-In a separate terminal, run a watch on the `hpa` resource. Note that as there is still no load on the web server, the target utilization shows `0%/50%`.
+In a separate terminal, run a watch on the `hpa` resource. Note that, as there is still no load on the web server, the target utilization shows `0%/50%`.
 
 ```
 # watch -n 10 kubectl get hpa
@@ -236,7 +236,7 @@ php-apache   Deployment/php-apache   443%/50%   1         10        1
 
 After a certain amount of time, the `watch` on pods, deployments and replica sets will show new pods being deployed:
 
-'''
+```
 Every 10.0s: kubectl get pods,deploy,rs                    Fri Mar  1 14:53:00 2019
 
 NAME                             READY     STATUS    RESTARTS   AGE
@@ -249,7 +249,7 @@ NAME                               DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   
 deployment.extensions/php-apache   4         4         4            4           10m
 NAME                                         DESIRED   CURRENT   READY     AGE
 replicaset.extensions/php-apache-7bf9f4b44   4         4         4         10m
-'''
+```
 
 Use `kubectl describe` on the deployment to see details of the scaling event.
 
@@ -267,7 +267,7 @@ Events:
 
 ## Impact of scaling to 4
 
-After a while, `kubectl top pods` will show that the 4 pods are coping better than one, but that they are still exceeding the target, in this instance, 50% of 200m or 100m.
+After a while, `kubectl top pods` will show that the 4 pods are coping better than one, but they are still exceeding the target, in this instance, 50% of 200m or 100m.
 
 ```
 Every 10.0s: kubectl top pods                      Fri Mar  1 14:55:28 2019
@@ -360,7 +360,7 @@ php-apache   Deployment/php-apache   54%/50%   1         10        8
 
 ## Further scaling and tolerance
 
-Given this particular workload and your environemt, the exact number of pods deployed is not certain. In this instance, another two pods were subsequently deployed, but then one was removed to leave a steady-state of 9 pods required to meet the CPU requirements. Tolerance levels are deployed to stop `thrashing', where pods are added and removed repeatedly.
+Given this particular workload and your environemt, the exact number of pods deployed is not certain. In this instance, another two pods were subsequently deployed, but then one was removed to leave a steady-state of 9 pods required to meet the CPU requirements. Tolerance levels are deployed to stop `thrashing`, where pods are added and removed repeatedly.
 
 
 ## Scaling down
