@@ -58,13 +58,15 @@ pod/metrics-server-559d9f45f-tg7l6             1/1       Running   0          34
 NAME                     TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)         AGE
 service/metrics-server   ClusterIP   10.96.181.69    <none>        443/TCP         34s
 
-NAME                                            DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-deployment.extensions/metrics-server            1         1         1            1           34s
+NAME                                            DESIRED   CURRENT   UP-TO-DATE   AVAILABLE 
+deployment.extensions/metrics-server            1         1         1            1         
 ```
 
 You can look at the pod logs to ensure that it installed correctly:
 
 ```
+# kubectl logs pod/metrics-server-559d9f45f-tg7l6 -n kube-system
+
 I0227 13:50:34.034542       1 serving.go:273] Generated self-signed cert (apiserver.local.config/certificates/apiserver.crt, apiserver.local.config/certificates/apiserver.key)
 [restful] 2019/02/27 13:50:34 log.go:33: [restful/swagger] listing is available at https://:443/swaggerapi
 [restful] 2019/02/27 13:50:34 log.go:33: [restful/swagger] https://:443/swaggerui/ is mapped to folder /swagger-ui/
