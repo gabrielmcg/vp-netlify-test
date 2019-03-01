@@ -1,6 +1,6 @@
 ---
 title: Installing metrics-server
-date: 2019-03-01
+date: 2019-02-28
 description: Install metrics-server, a prerequisite for Horizontal Pod Autoscaling
 ---
 
