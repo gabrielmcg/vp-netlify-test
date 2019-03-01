@@ -34,11 +34,10 @@ Once the prerequisites are satisfied, run the appropriate playbook on your Ansib
 ```
 # cd ~/Docker-SimpliVity
 # ansible-playbook -i vm_hosts playbooks/k8s-nfs-provisioner.yml --vault-password-file .vault_pass
-
 ```
 
 For validation, the playbook creates a test claim and a pod, the pod writes content to a file, the pod is deleted and then
-playbook checks that the contents of the file have been persisted.
+the playbook checks that the contents of the file have been persisted.
 
 ```
         kubectl -n {{ nfs_provisioner_namespace }} apply -f /tmp/nfs-provisioner-test-claim.yml
@@ -58,16 +57,11 @@ playbook checks that the contents of the file have been persisted.
 
         echo '*** delete test-claim ***'
         kubectl -n {{ nfs_provisioner_namespace }} delete -f /tmp/nfs-provisioner-test-claim.yml
-
 ```
 
 The output of the playbook shows the various steps taking place:
 
 ```
-        "Cluster \"ucp_hpe2-ucp01.am2.cloudra.local:6443_admin\" set.",
-        "User \"ucp_hpe2-ucp01.am2.cloudra.local:6443_admin\" set.",
-        "Context \"ucp_hpe2-ucp01.am2.cloudra.local:6443_admin\" modified.",
-        "persistentvolumeclaim/test-claim created",
         "pod/test-pod created",
         "/k8s:",
         "nfsstorage-test-claim-pvc-e6a09191-3b41-11e9-a830-0242ac11000b",
@@ -80,22 +74,20 @@ The output of the playbook shows the various steps taking place:
         "hello",
         "*** delete test-claim ***",
         "persistentvolumeclaim \"test-claim\" deleted"
-
 ```
 
-The following section will show how to manually perform a similar test. 
 
 Running the command `kubectl get sc` will show the storage class named `nfs`:
 
 ```
-
 # kubectl get sc
 
 NAME      PROVISIONER   AGE
 nfs       hpe.com/nfs   5m
-
 ```
 
+
+The following section  shows how to manually perform a similar valiation test to the one done by the playbook. 
 
 
 ## Manually testing the NFS provisioner
@@ -136,7 +128,6 @@ Verify that the corresponding persistent volume \(PV\) was created at the same t
 
 NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                    STORAGECLASS   REASON    AGE
 pvc-e685a9d2-8a6f-11e8-9025-0242ac110010   100Mi      RWX            Delete           Bound     default/dynnfs-testpvc   nfs                      4s
-
 ```
 
 Define a pod that will mount the persistent volume through using the persistent volume claim. The persistent volume is mounted under `/tmp/foo`.
