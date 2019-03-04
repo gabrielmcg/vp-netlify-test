@@ -97,7 +97,7 @@ replicaset.extensions/php-apache-7bf9f4b44   1         1         1         37s
 In another terminal, you can use `kubectl top` to monitor the CPU usage. Here, you can see that the single pod is using minimal CPU and memory resources (`1m` equals 1/1000th CPU, '7Mi' equals 7MB memory).
 
 ```
-watch -n 10 kubectl top pods
+# watch -n 10 kubectl top pods
 
 Every 10.0s: kubectl top pods | grep php-apache    Fri Mar  1 14:43:26 2019
 
@@ -108,7 +108,8 @@ You can use the `kubectl describe` command to see details of the deployment. You
 for now, only one replica is deployed.
 
 ```
-kubectl describe deploy php-apache
+# kubectl describe deploy php-apache
+
 Name:                   php-apache
 Namespace:              default
 CreationTimestamp:      Fri, 01 Mar 2019 14:41:45 +0000
@@ -360,7 +361,7 @@ php-apache   Deployment/php-apache   54%/50%   1         10        8
 
 ## Further scaling and tolerance
 
-Given this particular workload and your environemt, the exact number of pods deployed is not certain. In this instance, another two pods were subsequently deployed, but then one was removed to leave a steady-state of 9 pods required to meet the CPU requirements. Tolerance levels are deployed to stop `thrashing`, where pods are added and removed repeatedly.
+Given this particular workload and your environment, the exact number of pods deployed is not certain. In this instance, another two pods were subsequently deployed, but then one was removed to leave a steady-state of 9 pods required to meet the CPU requirements. Tolerance levels are deployed to stop `thrashing`, where pods are added and removed repeatedly.
 
 
 ## Scaling down
