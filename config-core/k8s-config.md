@@ -25,7 +25,7 @@ Variables related to the configuration of Kubernetes Persistent Volumes are show
 |nfs\_provisioner\_serviceaccount|group_vars/vars|The Kubernetes service account name to use for RBAC purposes, for example, `nfs-provisioner`|
 |nfs\_provisioner\_name|group_vars/vars|Name of the provisioner, for example, `hpe.com/nfs`|
 |nfs\_provisioner\_storage\_class\_name|group_vars/vars|Name of the storage class to create, for example, `nfs`|
-|nfs\_provisioner\_server\_ip|group_vars/vars|IP address \(or FQDN\) of your external NFS server, for example, `hpe2-nfs.am2.cloudra.local`|
+|nfs\_provisioner\_server\_ip|group_vars/vars|IP address (or FQDN) of your external NFS server, for example, `hpe2-nfs.am2.cloudra.local`|
 |nfs\_provisioner\_server\_share|group_vars/vars|Name of the NFS share where all the persistent volume data will be stored, for example, `/k8s`|
 
 ### Related playbooks

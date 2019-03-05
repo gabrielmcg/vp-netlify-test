@@ -41,7 +41,7 @@ For more information, see the documentation at [https://docs.splunk.com/Document
 
 In this instance, the folder `mycerts` was created under `/opt/splunk/etc` and the file `indexer.pem` was copied to this folder.
 
-Indexers are configured with the Root CA cert used to sign all certificates. This can be achieved by editing the file `server.conf` in `$SPLUNK_HOME/etc/system/local` on your indexer\(s\). The following code block shows the relevant portion of this file where `sssRootCaPath` is pointing to the root CA certificate.
+Indexers are configured with the Root CA cert used to sign all certificates. This can be achieved by editing the file `server.conf` in `$SPLUNK_HOME/etc/system/local` on your indexer(s). The following code block shows the relevant portion of this file where `sssRootCaPath` is pointing to the root CA certificate.
 
 ```
 [sslConfig]
@@ -50,13 +50,13 @@ sslRootCAPath = /opt/splunk/etc/mycerts/ca.pem
 
 **Note:** In order to be able to download and install additional applications, you may want to append the file `$SPLUNK_HOME/auth/appsCA.pem` to your `ca.pem` file. If you don't do this, the Splunk UI will make this suggestion when you attempt to `Find more apps`.
 
-Splunk should be restarted on the indexers if you had to make these changes \(see the Splunk documentation for more information\).
+Splunk should be restarted on the indexers if you had to make these changes (see the Splunk documentation for more information).
 
 ## Before you deploy
 
 Generate the forwarder certificate and name it `forwarder.pem`. Make sure that you copy the root CA certificate to `ca.pem`
 
-Copy both the `ca.pem` and the `forwarder.pem` files to `files/splunk/linux/SPLUNK_HOME/etc/mycerts/` \(overwriting any existing files\).
+Copy both the `ca.pem` and the `forwarder.pem` files to `files/splunk/linux/SPLUNK_HOME/etc/mycerts/` (overwriting any existing files).
 
 Edit the file `server.conf` in the folder `files/splunk/linux/SPLUNK_HOME/etc/system/local` and uncomment the last two lines as suggested in the file itself. Your file should look like this:
 
@@ -82,7 +82,7 @@ splunk_architecture_forward_servers:
 
 Currently, you cannot deploy your own certificates for use by the Universal Forwarders deployed on Windows machines. If you want to have your Linux machines in a hybrid deployment to use SSL, proceed as follows.
 
-Comment out the `splunk_architecture_forward_servers` variable \(and its values\) from `group_vars/vars`
+Comment out the `splunk_architecture_forward_servers` variable (and its values) from `group_vars/vars`
 
 ```
 monitoring_stack: splunk

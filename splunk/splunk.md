@@ -2,7 +2,7 @@
 
 Splunk Enterprise allows you to collect and index any data from any source, and to monitor systems and infrastructure in real time to preempt issues before they happen. It allows you to analyze your data to understand trends, patterns of activity and behavior, giving you valuable intelligence across your entire organization.
 
-This solution allows you to integrate your Containers-as-a-Service \(CaaS\) deployment with an existing Splunk Enterprise installation or to deploy a stand-alone Splunk Enterprise demo environment as a Docker stack in your cloud. In both instances, Universal Forwarders are used to collect data from your applications running on your Linux and Windows worker nodes in your cloud, as well as log data from the Docker platform itself and from the infrastructure VMs and servers. The following diagram shows the Splunk architecture.
+This solution allows you to integrate your Containers-as-a-Service (CaaS) deployment with an existing Splunk Enterprise installation or to deploy a stand-alone Splunk Enterprise demo environment as a Docker stack in your cloud. In both instances, Universal Forwarders are used to collect data from your applications running on your Linux and Windows worker nodes in your cloud, as well as log data from the Docker platform itself and from the infrastructure VMs and servers. The following diagram shows the Splunk architecture.
 
  ![ "Splunk architecture"][media-splunk-architecture-png] 
 
@@ -12,7 +12,7 @@ All the Universal Forwarders run natively on the operating system to allow great
 
 **Linux worker nodes:** The Universal Forwarders on the Linux worker nodes collect log and metrics data. The log data includes:
 
--   `/var/log/messages` from the Docker host \(including the daemon engine logs\)
+-   `/var/log/messages` from the Docker host (including the daemon engine logs)
 -   `/var/log/secure` from the Docker hosts
 -   container logs via a Splunk technical add-on
 
@@ -38,7 +38,7 @@ For more information on configuring standalone Splunk for Linux and Windows work
 **Non-Docker VMs:** Other VMs, for example, NFS, use a Splunk `monitor` to collect and forward data from the following files:
 
 -   /var/log/messages
--   /var/log/secure \(Red Hat\)
+-   /var/log/secure (Red Hat)
 
 **Note:** You can configure the list of files monitored by the Universal Forwarder.
 

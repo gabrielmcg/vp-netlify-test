@@ -2,8 +2,8 @@
 
 ## Linux-only VM configuration
 
--   3 Docker Universal Control Plane \(UCP\) VM nodes for HA and cluster management
--   3 Docker Trusted Registry \(DTR\) VM nodes for HA of the container registry
+-   3 Docker Universal Control Plane (UCP) VM nodes for HA and cluster management
+-   3 Docker Trusted Registry (DTR) VM nodes for HA of the container registry
 
 The Docker UCP and DTR nodes are spread across 3 physical nodes, with one on each physical node. An odd number of manager nodes is recommended to avoid split-brain issues. It is possible to restrict the deployment to 1 UCP and 1 DTR, or to expand to more than 3, but the recommended minimum for an enterprise production deployment is 3 UCPs and 3 DTRs.
 
@@ -24,9 +24,9 @@ With the addition of the NFS and logging VMs, a total of 13 VMs are created for 
 
 ## Hybrid VM configuration (Windows and Linux)
 
--   3 Docker swarm Windows worker VM nodes for container workloads \(optional\). Kubernetes is not yet supported for Windows workers.
+-   3 Docker swarm Windows worker VM nodes for container workloads (optional). Kubernetes is not yet supported for Windows workers.
 
 The hybrid deployment will typically add 3 Windows worker nodes to the above configuration, co-located with the Linux workers.
 
-**Note:** Some of the application software supported by this configuration does not currently run on Windows, for example, the Sysdig Software Agent \(see the section `Monitoring with Sysdig`\).
+**Note:** Some of the application software supported by this configuration does not currently run on Windows, for example, the Sysdig Software Agent (see the section `Monitoring with Sysdig`).
 

@@ -1,6 +1,6 @@
 # HPE SimpliVity solution overview 
 
-The HPE Express Containers with Docker Enterprise Edition on HPE SimpliVity solution consists of a set of Ansible playbooks that run on top of a VMware virtualization platform on HPE SimpliVity hardware. The solution allows you to configure a flexible OS environment \(with both RHEL and Windows workers\) providing built-in high availability \(HA\), container monitoring and security, and backup and restore functionality.
+The HPE Express Containers with Docker Enterprise Edition on HPE SimpliVity solution consists of a set of Ansible playbooks that run on top of a VMware virtualization platform on HPE SimpliVity hardware. The solution allows you to configure a flexible OS environment (with both RHEL and Windows workers) providing built-in high availability (HA), container monitoring and security, and backup and restore functionality.
 
 ![ "Solution overview"][svt----media-overview-graphic-svt-png]
 

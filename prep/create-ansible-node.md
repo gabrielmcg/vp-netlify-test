@@ -2,9 +2,9 @@
 
 The Ansible node will act as the driver to automate the provisioning of the environment and it is essential that it is properly installed.
 
-1.  Create a Virtual Machine and install your preferred OS \(in this example, and for the sake of simplicity, RHEL 7 will be used\). The rest of the instructions assume that, if you use a different OS, you understand the possible differences in syntax for the provided commands. If you use RHEL 7, select `Infrastructure Server` as the base environment and the `Guests Agents` add-on during the installation.
+1.  Create a Virtual Machine and install your preferred OS (in this example, and for the sake of simplicity, RHEL 7 will be used). The rest of the instructions assume that, if you use a different OS, you understand the possible differences in syntax for the provided commands. If you use RHEL 7, select `Infrastructure Server` as the base environment and the `Guests Agents` add-on during the installation.
 
-2.  Log in to the `root` account and create an SSH key pair. Do not protect the key with a passphrase \(unless you want to use `ssh-agent`\).
+2.  Log in to the `root` account and create an SSH key pair. Do not protect the key with a passphrase (unless you want to use `ssh-agent`).
 
     ```
     # ssh-keygen
@@ -29,7 +29,7 @@ The Ansible node will act as the driver to automate the provisioning of the envi
     # yum install ansible
     ```
 
-6.  Install the following packages which are a mandatory requirement for the playbooks to function as expected. \(Update `pip` if requested\).
+6.  Install the following packages which are a mandatory requirement for the playbooks to function as expected. (Update `pip` if requested).
 
     ```
     # yum install python-pyvmomi python-netaddr python2-jmespath python-pip gcc python-devel openssl-devel git 

@@ -40,7 +40,7 @@ loadbalancers:
 
 ```
 
-**Warning:** If you re-run `playbooks/loadbalancer.yml` after a configuration change, you may need to subsequently run `playbooks/reconfigure_dtr.yml` as the latter playbook configures the virtual IP address for accessing the UCP Single-Sign-On \(SSO\) page. If there is no virtual IP or FQDN defined for UCP in the variables file, the playbook will choose the address of the first UCP node in the `[ucp]` group. This scenario introduces a single point of failure and should be avoided.
+**Warning:** If you re-run `playbooks/loadbalancer.yml` after a configuration change, you may need to subsequently run `playbooks/reconfigure_dtr.yml` as the latter playbook configures the virtual IP address for accessing the UCP Single-Sign-On (SSO) page. If there is no virtual IP or FQDN defined for UCP in the variables file, the playbook will choose the address of the first UCP node in the `[ucp]` group. This scenario introduces a single point of failure and should be avoided.
 
 **Note:** By default, the playbook supports ports `433` and `6443` for UCP and port `433` for DTR. If you deploy Prometheus and Grafana on Docker Swarm, the Grafana port `3000` will be handled as well.
 

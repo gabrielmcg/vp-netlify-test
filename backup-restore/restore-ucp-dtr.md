@@ -41,7 +41,7 @@ ucp_version="2.2.7"
 dtr_version=""
 ```
 
-Take note of the replica ID \(`ad5204e8a4d0`\), the version of DTR \(`2.4.3`\) and the version of UCP \(`2.2.7`\).
+Take note of the replica ID (`ad5204e8a4d0`), the version of DTR (`2.4.3`) and the version of UCP (`2.2.7`).
 
 **Step 3:** Populate the `group_vars/backups` file
 
@@ -76,13 +76,13 @@ ucp_version: '2.2.7'
 
 You must ensure that the UCP admin credentials in your current `group_vars/vars` file are those that were in effect when you generated the backup files. If they have changed since then, you must restore the original credentials for the duration of the restore procedure.
 
-**Step 6:** Restore your inventory \(`vm_hosts`\)
+**Step 6:** Restore your inventory (`vm_hosts`)
 
 Your inventory must reflect the environment that was present when the backup files were created. You can find a copy of the inventory as it was when the backup was taken in the `*.vars.tgz` files.
 
 ## Restore UCP and DTR
 
-**Warning:** This procedure is aimed at restoring a cluster after a disaster. It assumes you have lost all the VMs in your cluster and want to redeploy using data that you backed up earlier. The solution follows Docker best practice, which means the swarm artifacts are not restored. You will need to restore your Docker volumes and your applications \(stacks and services\) when this procedure is complete.
+**Warning:** This procedure is aimed at restoring a cluster after a disaster. It assumes you have lost all the VMs in your cluster and want to redeploy using data that you backed up earlier. The solution follows Docker best practice, which means the swarm artifacts are not restored. You will need to restore your Docker volumes and your applications (stacks and services) when this procedure is complete.
 
 1.  Ensure that you have completed all the preliminary steps as outlined in the section [Before you restore](#) 
 2.  Run the restore playbook

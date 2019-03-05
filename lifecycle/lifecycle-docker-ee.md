@@ -10,7 +10,7 @@ A banner will be displayed on the UI, as shown in Figure 32, when an update is a
 
 **Table 30.** Docker EE components
 
-|Order|Component|Dependency \(compatibility\)|Download/Documentation|
+|Order|Component|Dependency (compatibility)|Download/Documentation|
 |:----|:--------|:---------------------------|:---------------------|
 |1.|Docker Daemon/Engine|1.  VM Operating System<br>2.  vDVS plugin<br>3.  Prometheus and Grafana|-   [Docker Lifecycle Maintenance](https://success.docker.com/Policies/Maintenance_Lifecycle)<br>
 -   [Docker Compatibility Matrix](https://success.docker.com/Policies/Compatibility_Matrix)|

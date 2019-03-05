@@ -1,6 +1,6 @@
 # Splunk configuration
 
-This solution supports two types of Splunk deployment. Firstly, there is a built-in deployment useful for demos and for getting up to speed with Splunk. Alternatively, the solution can be configured to interact with a standalone, production Splunk deployment that you set up independently. In this case, you must explicitly configure the universal forwarders with external "forward servers" \(Splunk indexers\), whereas this happens automatically with the built-in option.
+This solution supports two types of Splunk deployment. Firstly, there is a built-in deployment useful for demos and for getting up to speed with Splunk. Alternatively, the solution can be configured to interact with a standalone, production Splunk deployment that you set up independently. In this case, you must explicitly configure the universal forwarders with external "forward servers" (Splunk indexers), whereas this happens automatically with the built-in option.
 
 In the standalone deployment, you can enable SSL authentication between the universal forwarders and the indexers, by setting the `splunk_ssl` variable to `yes` in the file `group_vars/vars`. The built-in deployment does not support SSL and so, in this instance, the value of the `splunk_ssl` variable is ignored. For more information on enabling SSL, see [Appendix C](#).
 
@@ -8,12 +8,12 @@ In the standalone deployment, you can enable SSL authentication between the univ
 
 You should select the Splunk deployment type that you require by setting the variable `monitoring_stack` in the `group_vars/vars` file to either **splunk**, for a standalone Splunk deployment, or **splunk\_demo** for the built-in version. If you omit this variable, or if it has an invalid value, no Splunk deployment will be configured.
 
-For both types of deployment, you need to download the Splunk Universal forwarder images/packages from [https://www.splunk.com/en\_us/download/universal-forwarder.html](https://www.splunk.com/en_us/download/universal-forwarder.html). Packages are available for 64-bit Linux and 64-bit Windows 8.1/Windows 10. Download the RPM package for Linux 64-bit \(2.6+ kernel Linux distributions\) to `./files/splunk/linux`. If you are deploying Windows nodes, download the MSI package for Windows 64 bit to `./files/splunk/windows`. For a dual Linux/Windows deployment, the images and packages must have same name and version, along with the appropriate extensions, for example:
+For both types of deployment, you need to download the Splunk Universal forwarder images/packages from [https://www.splunk.com/en\_us/download/universal-forwarder.html](https://www.splunk.com/en_us/download/universal-forwarder.html). Packages are available for 64-bit Linux and 64-bit Windows 8.1/Windows 10. Download the RPM package for Linux 64-bit (2.6+ kernel Linux distributions) to `./files/splunk/linux`. If you are deploying Windows nodes, download the MSI package for Windows 64 bit to `./files/splunk/windows`. For a dual Linux/Windows deployment, the images and packages must have same name and version, along with the appropriate extensions, for example:
 
 -   files/splunk/windows/splunkforwarder-7.1.2.msi
 -   files/splunk/linux/splunkforwarder-7.1.2.rpm
 
-You need to set the variable `splunk_architecture_universal_forwarder_package` to the name you selected for the package\(s\), not including the file extension. Depending on the Splunk deployment you have chosen, edit the file `templates/splunk/splunk/vars.yml` or the file `templates/splunk/splunk_demo/vars.yml` and set the variable, for example:
+You need to set the variable `splunk_architecture_universal_forwarder_package` to the name you selected for the package(s), not including the file extension. Depending on the Splunk deployment you have chosen, edit the file `templates/splunk/splunk/vars.yml` or the file `templates/splunk/splunk_demo/vars.yml` and set the variable, for example:
 
 ```
 splunk_architecture_universal_forwarder_package: 'splunkforwarder-7.1.2'
@@ -41,8 +41,8 @@ To monitor the **Windows worker nodes**, install the **Splunk App for Windows In
 -   Splunk App for Windows Infrastructure version 1.4.4. The Splunk App for Windows Infrastructure is not compatible with the Splunk Add-on for Windows 5.0 at this time. See [https://splunkbase.splunk.com/app/1680/](https://splunkbase.splunk.com/app/1680/)
 -   Splunk Add-on for Microsoft Windows version 4.8.4 - see [https://splunkbase.splunk.com/app/742/](https://splunkbase.splunk.com/app/742/)
 -   Splunk Add-On for Microsoft Active Directory version 1.0.0 - see [https://splunkbase.splunk.com/app/3207/](https://splunkbase.splunk.com/app/3207/)
--   Splunk Add-on for Microsoft Windows DNS version 1.0.1 \(if this is not installed on central Splunk, you will see yellow icons on some dashboards with the message `eventtype wineventlog-dns does not exist or is disabled`\) - see [https://splunkbase.splunk.com/app/3208/](https://splunkbase.splunk.com/app/3208/)
--   Splunk Supporting Add-on for Active Directory version 2.1.7 \(if this is not installed on central Splunk, you will see yellow icons on some dashboards with the message `eventtype wineventlog-ds does not exist or is disabled`\) - see [https://splunkbase.splunk.com/app/1151/](https://splunkbase.splunk.com/app/1151/)
+-   Splunk Add-on for Microsoft Windows DNS version 1.0.1 (if this is not installed on central Splunk, you will see yellow icons on some dashboards with the message `eventtype wineventlog-dns does not exist or is disabled`) - see [https://splunkbase.splunk.com/app/3208/](https://splunkbase.splunk.com/app/3208/)
+-   Splunk Supporting Add-on for Active Directory version 2.1.7 (if this is not installed on central Splunk, you will see yellow icons on some dashboards with the message `eventtype wineventlog-ds does not exist or is disabled`) - see [https://splunkbase.splunk.com/app/1151/](https://splunkbase.splunk.com/app/1151/)
 
 If you want to use your own certificates in your standalone Splunk deployment to secure the communications between the indexers and the universal forwarders, see the subsequent section [Enabling SSL](#).
 

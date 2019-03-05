@@ -1,6 +1,6 @@
 # Deploying RHEL workers
 
-By default, `site.yml` will automatically deploy any RHEL \(and / or Windows\) worker nodes that are declared in the inventory.
+By default, `site.yml` will automatically deploy any RHEL (and / or Windows) worker nodes that are declared in the inventory.
 
 If you subsequently want additional RHEL worker nodes, add them to the inventory as appropriate and then run the playbooks for Provisioning RHEL VMs, followed by the specific playbooks for RHEL worker nodes outlined below:
 

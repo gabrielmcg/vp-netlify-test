@@ -95,7 +95,7 @@ docker_volumes_policy: 'hpe-gold'
 
 ```
 
-The backup policy `hpe-gold` is assigned to the special VM that is used to back up the Docker volumes. This policy specifies that a backup is taken every hour \(`frequency: '60'` means sixty minutes\) while the backup is retained for one month \(`retention: '43200'` means 43200 minutes or thirty days\).
+The backup policy `hpe-gold` is assigned to the special VM that is used to back up the Docker volumes. This policy specifies that a backup is taken every hour (`frequency: '60'` means sixty minutes) while the backup is retained for one month (`retention: '43200'` means 43200 minutes or thirty days).
 
 ## Manual backup
 

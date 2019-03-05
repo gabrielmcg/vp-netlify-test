@@ -8,7 +8,7 @@ The following commands should return the CA certificates used by UCP / DTR. This
 
 ```
 
-**Output 1**: certificates successfully deployed \(content will depend on your own CA certificate\)
+**Output 1**: certificates successfully deployed (content will depend on your own CA certificate)
 
 ```
 -----BEGIN CERTIFICATE-----
@@ -34,7 +34,7 @@ More details here: http://curl.haxx.se/docs/sslcerts.html
 
 ```
 
-## Enable certs for browser \(Windows 2016 example\)
+## Enable certs for browser (Windows 2016 example)
 
 Choose `Manage computer certificates` in the control panel as shown in Figure 33. 
 

@@ -18,7 +18,7 @@ The following table shows the variables related to backing up UCP and DTR. All t
 
 ## Backing up the Swarm
 
-When you backup the swarm, your services and stack definitions are backed up together with the networks definitions. However, Docker volumes or their contents will not be backed up. \(If Docker volumes are defined in stacks, they will be re-created when you restore the stacks, but their content will be lost\). You can backup the swarm using the playbook named `backup_swarm.yml` which is located in the `playbooks` folder on your Ansible server. The playbook is invoked as follows:
+When you backup the swarm, your services and stack definitions are backed up together with the networks definitions. However, Docker volumes or their contents will not be backed up. (If Docker volumes are defined in stacks, they will be re-created when you restore the stacks, but their content will be lost). You can backup the swarm using the playbook named `backup_swarm.yml` which is located in the `playbooks` folder on your Ansible server. The playbook is invoked as follows:
 
 ```
 # ansible-playbook -i vm_hosts playbooks/backup_swarm.yml
@@ -31,7 +31,7 @@ This playbook creates two archives in the folder specified by the variable `back
 <backup_dest>/backup_swarm_<vmname>_<timestamp>.vars.tgz
 ```
 
-`<vmname>` is the name of the host \(in the inventory\) that was used to take the backup, and `<timestamp>` is the time at which the backup was taken. The file with the extension `.vars.tgz` contains information regarding the system that was backed up.
+`<vmname>` is the name of the host (in the inventory) that was used to take the backup, and `<timestamp>` is the time at which the backup was taken. The file with the extension `.vars.tgz` contains information regarding the system that was backed up.
 
 You can override the generated file name by defining the variable **backup_name** on the command line when running the playbook. In the example below:
 
@@ -46,7 +46,7 @@ The generated files won't have `<vmname>` or `<timestamp>` appended:
 <backup_dest>/my_swarm_backup.vars.tgz
 ```
 
-**Warning: Online versus offline backups:** By default, the playbook performs online backups. You can take offline backups by setting the variable `swarm_backup_offline` to `"true"`. The playbook will then stop the Docker daemon on the machine used to take the backup \(a manager or UCP node\). Before it does so, the playbook will verify that enough managers are running in the cluster to maintain the quorum. If this is not the case, the playbook will exit with an error. For more information, see the Docker documentation at [https://docs.docker.com/engine/swarm/admin\_guide/\#recover-from-disasterv](https://docs.docker.com/engine/swarm/admin_guide/#recover-from-disasterv)
+**Warning: Online versus offline backups:** By default, the playbook performs online backups. You can take offline backups by setting the variable `swarm_backup_offline` to `"true"`. The playbook will then stop the Docker daemon on the machine used to take the backup (a manager or UCP node). Before it does so, the playbook will verify that enough managers are running in the cluster to maintain the quorum. If this is not the case, the playbook will exit with an error. For more information, see the Docker documentation at [https://docs.docker.com/engine/swarm/admin\_guide/\#recover-from-disasterv](https://docs.docker.com/engine/swarm/admin_guide/#recover-from-disasterv)
 
 ## Backing up the Universal Control Plane (UCP)
 
@@ -77,7 +77,7 @@ This playbook creates two archives in the folder specified by the variable `back
 <backup_dest>/backup_ucp_<ucpid>_<vmname>_<timestamp>.vars.tgz
 ```
 
-`<ucpid>` is the ID of the UCP instance, `<vmname>` is the name of the host \(in the inventory\) that was used to take the backup, and `<timestamp>` is the time at which the backup was taken. The file with the extension `.vars.tgz` contains information regarding the system which was backed up.
+`<ucpid>` is the ID of the UCP instance, `<vmname>` is the name of the host (in the inventory) that was used to take the backup, and `<timestamp>` is the time at which the backup was taken. The file with the extension `.vars.tgz` contains information regarding the system which was backed up.
 
 You can override the generated file name by defining the variable **backup\_name** on the command line when running the playbook. In the example below:
 
@@ -128,7 +128,7 @@ This playbook creates two archives in the folder specified by the variable `back
 <backup_dest>/backup_dtr_meta_<replica_id>_<vmname>_<timestamp>.vars.tgz
 ```
 
-`<replica_id>` is the ID of the DTR replica that was backed up, `<vmname>` is the name of the host \(in the inventory\) that was used to take the backup, and `<timestamp>` is the time at which the backup was taken. The file with the extension `.vars.tgz` contains information regarding the system that was backed up.
+`<replica_id>` is the ID of the DTR replica that was backed up, `<vmname>` is the name of the host (in the inventory) that was used to take the backup, and `<timestamp>` is the time at which the backup was taken. The file with the extension `.vars.tgz` contains information regarding the system that was backed up.
 
 You can override the generated file name by defining the variable **backup\_name** on the command line when running the playbook. In the example below:
 
@@ -160,7 +160,7 @@ This playbook creates two archives in the folder specified by the variable `back
 <backup_dest>/backup_dtr_data_<replica_id>_<vmname>_<timestamp>.vars.tgz
 ```
 
-`<replica_id>` is the ID of the DTR replica that was backed up, `<vmname>` is the name of the host \(in the inventory\) that was used to take the backup, and `<timestamp>` is the time at which the backup was taken.
+`<replica_id>` is the ID of the DTR replica that was backed up, `<vmname>` is the name of the host (in the inventory) that was used to take the backup, and `<timestamp>` is the time at which the backup was taken.
 
 You can override the generated file names by defining the variable **backup\_name** on the command line when running the playbook, as shown in the example below:
 
@@ -197,7 +197,7 @@ dtr_version="<DTR version of DTR backup>"
 
 ## Backup Utility
 
-The script `backup.sh` can be used to take a backup of the swarm, UCP, DTR metadata and the DTR images in one go. You can pass this script an argument \(tag\) that will be used to prefix the backup filenames, thereby overriding the default naming. Table 24 shows the file names produced by `backup.sh` based on the argument passed in the command line.
+The script `backup.sh` can be used to take a backup of the swarm, UCP, DTR metadata and the DTR images in one go. You can pass this script an argument (tag) that will be used to prefix the backup filenames, thereby overriding the default naming. Table 24 shows the file names produced by `backup.sh` based on the argument passed in the command line.
 
 **Table 24.** Backup utility
 

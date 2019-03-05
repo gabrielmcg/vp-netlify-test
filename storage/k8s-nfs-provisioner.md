@@ -92,7 +92,7 @@ The following section  shows how to manually perform a similar valiation test to
 
 ## Manually testing the NFS provisioner
 
-Create a temporary file `/tmp/pvc.yml` for a persistent volume claim \(PVC\) named `dynnfs-testpvc` with a storage class of `nfs` 
+Create a temporary file `/tmp/pvc.yml` for a persistent volume claim (PVC) named `dynnfs-testpvc` with a storage class of `nfs` 
 
 ```
 # cat /tmp/pvc.yml <<EOF
@@ -121,7 +121,7 @@ Create the PVC resource by running `kubectl apply` on this file.
 persistentvolumeclaim "dynnfs-testpvc" created
 ```
 
-Verify that the corresponding persistent volume \(PV\) was created at the same time.
+Verify that the corresponding persistent volume (PV) was created at the same time.
 
 ```
 # kubectl get pv

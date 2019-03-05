@@ -19,7 +19,7 @@ The certificates should specify the names of the FQDNs of the load balancer and 
 
 In the example described here we have a root CA named `Example root CA` and an intermediate CA named `Intermediate CA valid 3 years`. The intermediate CA signs the server certificates for UCP and DTR.
 
-Below is the start of the output displayed by running the `openssl x509` utility against the `ca.pem` file \(the root CA certificate\).
+Below is the start of the output displayed by running the `openssl x509` utility against the `ca.pem` file (the root CA certificate).
 
 ```
 
@@ -54,7 +54,7 @@ MNviy376xZbyAc1CV5kgmnZzjU5bDkgT8Q==
 -----END CERTIFICATE-----
 ```
 
-The `cert.pem` file should contain the server certificate itself, followed by your intermediate CA's certificate. The following example shows how to extract the intermediate CA certificate from `cert.pem` and to save it to a file named `intca.pem`. Using the `openssl x509` utility, you can display the content of the `intca.pem` file in human readable form. This certificate was signed by the example CA above \(`Issuer = 'Example Root CA'`\).
+The `cert.pem` file should contain the server certificate itself, followed by your intermediate CA's certificate. The following example shows how to extract the intermediate CA certificate from `cert.pem` and to save it to a file named `intca.pem`. Using the `openssl x509` utility, you can display the content of the `intca.pem` file in human readable form. This certificate was signed by the example CA above (`Issuer = 'Example Root CA'`).
 
 ```
 [root@ansible ucp_certs]# openssl x509 -text -noout -in intca.pem|head -14
@@ -88,7 +88,7 @@ Ni1JnZandVlyQdoOaB2M/1DNFfKvwW3JeArKvDA9j95n/BWFTjoZ+YOz9pYit6T7
 -----END CERTIFICATE-----
 ```
 
-The `openssl x509` utility will only decrypt the first certificate found in `cert.pem`, so you don't need to extract the server certificate from `cert.pem`. In this example, the server certificate is signed by the intermediate CA above. Note the `Subject Alternate Names: hpe-ucp.cloudra.local` is the FQDN of the UCP load balancer, and the other names are those of the UCP instances \(`hpe-ucp01.cloudra.local`, `hpe-ucp02.clodura.local`, `hpe-ucp03.cloudra.local`\).
+The `openssl x509` utility will only decrypt the first certificate found in `cert.pem`, so you don't need to extract the server certificate from `cert.pem`. In this example, the server certificate is signed by the intermediate CA above. Note the `Subject Alternate Names: hpe-ucp.cloudra.local` is the FQDN of the UCP load balancer, and the other names are those of the UCP instances (`hpe-ucp01.cloudra.local`, `hpe-ucp02.clodura.local`, `hpe-ucp03.cloudra.local`).
 
 ```
 [root@ansible ucp_certs]# openssl x509 -text -noout -in server.pem
@@ -167,7 +167,7 @@ if [ "$ckkey" == "$ckcert" ] ; then echo "Private key and Certificate match" ; e
 
 ### Verify that the server certificate was signed by the CA
 
-Extract all but the first certificate from `cert.pem` \( i.e. extract the certs for the intermediate CA authorities\) into the file `int.pem`
+Extract all but the first certificate from `cert.pem` ( i.e. extract the certs for the intermediate CA authorities) into the file `int.pem`
 
 ```
 sed -e '1,/-----END CERTIFICATE-----/d' cert.pem >intca.pem

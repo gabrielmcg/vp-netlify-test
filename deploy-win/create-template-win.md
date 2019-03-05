@@ -6,8 +6,8 @@ As the creation of the template is a one-off task, this procedure has not been a
 
 Log in to vCenter and create a new Virtual Machine with the following characteristics:
 
--   Guest OS Family: Windows, Guest OS Version: Microsoft Windows Server 2016 \(64-bit\).
--   Hard Disk size: 100GB \(Thin provisioning\), 1 vCPU and 4 GB of RAM. Both vCPU and memory can be altered later after you deploy from this template.
+-   Guest OS Family: Windows, Guest OS Version: Microsoft Windows Server 2016 (64-bit).
+-   Hard Disk size: 100GB (Thin provisioning), 1 vCPU and 4 GB of RAM. Both vCPU and memory can be altered later after you deploy from this template.
 -   A single network controller connected to the network or VLAN of your choice. All VMs will connect to this same network.
 -   Change the network type to VMXNET3, and attach the Windows Server 2016 ISO image from a datastore ensuring you connect the CD/DVD drive on boot.
 -   Click on the `VM Options` tab, and in the `Boot Options` section, select `Force BIOS setup(*)` to ensure that the machine enters the BIOS setup screen on next boot of this VM. This will allow you to adjust the boot order, placing the virtual CD-ROM in front of your hard drive.
@@ -26,12 +26,12 @@ Install Windows Server 2016:
 Once the VM has re-booted:
 
 -   Add a temporary network IP address and configure any proxy settings required to download Windows Updates.
--   Use the `sconfig` utility from \(MS-DOS\) command line to install Windows Updates and enable Remote Desktop.
+-   Use the `sconfig` utility from (MS-DOS) command line to install Windows Updates and enable Remote Desktop.
 -   Perform any other customizations you require at this point.
 
 Prior to converting the VM to Template, run Sysprep: `C:\Windows\System32\Sysprep\Sysprep.exe`.
 
--   Ensure ‘System Out-of-Box Experience \(OOBE\)’ is selected.
+-   Ensure ‘System Out-of-Box Experience (OOBE)’ is selected.
 -   Select the ‘Generalize’ option.
 -   Select ‘Shutdown’ from the Shutdown Options.
 

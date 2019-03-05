@@ -1,13 +1,13 @@
 # Sizing considerations
 
-A node is a machine in the cluster \(virtual or physical\) with Docker Engine running on it. There are two types of nodes: managers and workers. UCP will run on the manager nodes. Although DTR runs on a worker node, Docker does not recommend running other application containers on these nodes.
+A node is a machine in the cluster (virtual or physical) with Docker Engine running on it. There are two types of nodes: managers and workers. UCP will run on the manager nodes. Although DTR runs on a worker node, Docker does not recommend running other application containers on these nodes.
 
 To decide what size the node should be in terms of CPU, RAM, and storage resources, consider the following:
 
 1.  All nodes should at least fulfil the minimal requirements, for UCP 3.1, 8GB of RAM and 4GB of storage. For production systems, 16GB of RAM is recommended for manager nodes. More detailed requirements are in the Docker EE UCP documentation at [https://docs.docker.com/ee/ucp/admin/install/system-requirements/](https://docs.docker.com/ee/ucp/admin/install/system-requirements/).
 2.  UCP controller nodes should be provisioned with more than the minimal requirements if other workloads run on them.
 3.  Ideally, worker node size will vary based on your workloads so it is impossible to define a universal standard size.
-4.  Other considerations like target density \(average number of containers per node\), whether one standard node type or several are preferred, and other operational considerations might also influence sizing.
+4.  Other considerations like target density (average number of containers per node), whether one standard node type or several are preferred, and other operational considerations might also influence sizing.
 
 If possible, node size should be determined by experimentation and testing actual workloads; and they should be refined iteratively. A good starting point is to select a standard or default machine type in your environment and use this size only. If your standard machine type provides more resources than the UCP controller nodes need, it makes sense to have a smaller node size for these. Whatever the starting choice, it is important to monitor resource usage and cost to improve the model.
 
@@ -40,7 +40,7 @@ In the case of one ESX host failure, 2 nodes are enough to accommodate the amoun
 
 **Table 2.** Memory allocation
 
-|RAM \(GB\)|node01|node02|node03|
+|RAM (GB)|node01|node02|node03|
 |:---------|:----:|:----:|:----:|
 |ucp1|16| | |
 |ucp2| |16| |
@@ -58,7 +58,7 @@ In the case of one ESX host failure, 2 nodes are enough to accommodate the amoun
 |win-worker1|64| | |
 |win-worker2| |64| |
 |win-worker3| | |64|
-|**Total RAM required \(per node\)**|**164**|**168**|**164**|
+|**Total RAM required (per node)**|**164**|**168**|**164**|
 |**Available RAM**|**384**|**384**|**384**|
 
 **Note:** 

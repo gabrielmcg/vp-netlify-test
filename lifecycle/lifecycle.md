@@ -4,7 +4,7 @@ Lifecycle management with respect to this solution refers to the maintenance and
 
 In this section, we will cover life cycle management of the different components that are used in this solution. The lifecycle of the following stacks need to be maintained and managed:
 
--   Monitoring Tools \(Splunk or Prometheus and Grafana\)
+-   Monitoring Tools (Splunk or Prometheus and Grafana)
 -   Docker Enterprise Edition Environment
 -   Virtual Machine Operating systems
 -   HPE SimpliVity environment

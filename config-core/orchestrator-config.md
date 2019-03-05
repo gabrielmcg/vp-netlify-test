@@ -1,6 +1,6 @@
 # Orchestrator configuration
 
-The variable `orchestrator` in the `[worker]` group is used to specify if a worker node should be assigned to the Kubernetes orchestrator \(`orchestrator: 'kubernetes'`\) or to the Swarm orchestrator \(`orchestrator: 'swarm'`\). In general, you should only change the orchestrator for worker nodes.
+The variable `orchestrator` in the `[worker]` group is used to specify if a worker node should be assigned to the Kubernetes orchestrator (`orchestrator: 'kubernetes'`) or to the Swarm orchestrator (`orchestrator: 'swarm'`). In general, you should only change the orchestrator for worker nodes.
 
 **Note:** Docker supports a third type, `mixed`, that enables workloads to be scheduled by both Kubernetes and Swarm on the same node. Mixing orchestrator types on the same node is not recommended for production deployments because of the likelihood of resource contention and so, these playbooks do not support the `mixed` type.
 

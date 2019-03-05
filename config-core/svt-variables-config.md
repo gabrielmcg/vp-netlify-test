@@ -76,7 +76,7 @@ hpe-nfs ip_addr='10.10.174.121/22'    esxi_host='simply04.am2.cloudra.local'
 When you specify the placement of the VM, you should ensure that you follow these placement guidelines:
 
 -   Do not place two UCP VMs on the same node. If the node fails, the UCP cluster will lose quorum and the service will go down.
--   Do not place two DTR replicas \(VMs\) on the same node. Once again, the cluster will lose quorum if that node fails.
+-   Do not place two DTR replicas (VMs) on the same node. Once again, the cluster will lose quorum if that node fails.
 
 **Note:** The OmniStack software maintains two replicas on two different hosts for each VM. As a result, when a VM is scheduled on an ESX server that does not have local access to one of the replicas, the VM will report the warning “SimpliVity VM Data Access Not Optimized”. You can safely ignore this warning.
 

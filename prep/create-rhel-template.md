@@ -6,8 +6,8 @@ As the creation of the template is a one-off task, this procedure has not been a
 
 Log in to vCenter and create a new Virtual Machine with the following characteristics:
 
--   Guest OS Family: Linux, Guest OS Version: Red Hat Enterprise Linux \(64-bit\)
--   Hard Disk size: 50GB, \(Thin provisioning\)
+-   Guest OS Family: Linux, Guest OS Version: Red Hat Enterprise Linux (64-bit)
+-   Hard Disk size: 50GB, (Thin provisioning)
 -   A single network controller connected to the network or VLAN of your choice. All VMs will connect to this same network.
 -   Optionally you can remove the floppy drive
 

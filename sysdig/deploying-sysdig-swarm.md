@@ -8,4 +8,4 @@ The playbook `playbooks/install_sysdig.yml` is used to automate the configuratio
 
 ```
 
-Using the Sysdig software as a solution \(SaaS\) website [https://app.sysdigcloud.com](https://app.sysdigcloud.com), you are able to view, analyze and inspect various different dashboards.
+Using the Sysdig software as a solution (SaaS) website [https://app.sysdigcloud.com](https://app.sysdigcloud.com), you are able to view, analyze and inspect various different dashboards.
