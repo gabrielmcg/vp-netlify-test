@@ -12,13 +12,13 @@ configuration is the same as used in that section, namely:
 
 |Variable|Value|
 |:-------|:----|
-|nfs\_provisioner_namespace|`nfsstorage`|
-|nfs\_provisioner\_role|`nfs-provisioner-runner`|
-|nfs\_provisioner\_serviceaccount|`nfs-provisioner`|
-|nfs\_provisioner\_name|`hpe.com/nfs`|
-|nfs\_provisioner\_storage\_class\_name|`nfs`|
-|nfs\_provisioner\_server\_ip|`hpe2-nfs.am2.cloudra.local`|
-|nfs\_provisioner\_server\_share|`/k8s`|
+|nfs_provisioner_namespace|`nfsstorage`|
+|nfs_provisioner_role|`nfs-provisioner-runner`|
+|nfs_provisioner_serviceaccount|`nfs-provisioner`|
+|nfs_provisioner_name|`hpe.com/nfs`|
+|nfs_provisioner_storage_class_name|`nfs`|
+|nfs_provisioner_server_ip|`hpe2-nfs.am2.cloudra.local`|
+|nfs_provisioner_server_share|`/k8s`|
 
 
 ## Running the playbook

@@ -27,20 +27,20 @@ If you are using the legacy, standalone load balancers:
 
 There are also a few special groups:
 
--   \[docker:children\]: A group of groups including all the nodes where Docker will be installed.
--   \[vms:children\]: A group of groups including all the Virtual Machines involved, with the exception of the local host.
+-   [docker:children]: A group of groups including all the nodes where Docker will be installed.
+-   [vms:children]: A group of groups including all the Virtual Machines involved, with the exception of the local host.
 
 Finally, you will find some variables defined for each group:
 
--   \[vms:vars\]: A set of variables defined for all VMs. Currently only the size of the boot disk is defined here.
--   \[ucp:vars\]: A set of variables defined for all nodes in the \[`ucp`\] group.
--   \[dtr:vars\]: A set of variables defined for all nodes in the \[`dtr`\] group.
--   \[worker:vars\]: A set of variables defined for all nodes in the \[`worker`\] group.
--   \[win\_worker:vars\]: A set of variables defined for all nodes in the \[`win_worker`\] group.
--   \[loadbalancer:vars\]: A set of variables defined for all nodes in the \[`loadbalancer`\] group.
--   \[lbs:vars\]: A set of variables defined for all nodes in the \[`lbs`\] group.
--   \[nfs:vars\]: A set of variables defined for all nodes in the \[`nfs`\] group.
--   \[logger:vars\]: A set of variables defined for all nodes in the \[`logger`\] group.
+-   [vms:vars]: A set of variables defined for all VMs. Currently only the size of the boot disk is defined here.
+-   [ucp:vars]: A set of variables defined for all nodes in the [`ucp`] group.
+-   [dtr:vars]: A set of variables defined for all nodes in the [`dtr`] group.
+-   [worker:vars]: A set of variables defined for all nodes in the [`worker`] group.
+-   [win_worker:vars]: A set of variables defined for all nodes in the [`win_worker`] group.
+-   [loadbalancer:vars]: A set of variables defined for all nodes in the [`loadbalancer`] group.
+-   [lbs:vars]: A set of variables defined for all nodes in the [`lbs`] group.
+-   [nfs:vars]: A set of variables defined for all nodes in the [`nfs`] group.
+-   [logger:vars]: A set of variables defined for all nodes in the [`logger`] group.
 
 If you wish to configure your nodes with different specifications to the ones defined by the group, it is possible to declare the same variables at the node level, overriding the group value. For instance, you could have one of your workers with higher specifications by setting:
 
@@ -60,9 +60,9 @@ The different variables you can use are described in the table below. They are a
 
 |Variable|Scope|Description|
 |:-------|:----|:----------|
-|ip\_addr|Node|IP address in CIDR format to be given to a node|
-|esxi\_host|Node|ESXi host where the node will be deployed. If the cluster is configured with DRS, this option will be overridden|
+|ip_addr|Node|IP address in CIDR format to be given to a node|
+|esxi_host|Node|ESXi host where the node will be deployed. If the cluster is configured with DRS, this option will be overridden|
 |cpus|Node/Group|Number of CPUs to assign to a VM or a group of VMs|
 |ram|Node/Group|Amount of RAM in MB to assign to a VM or a group of VMs|
-|disk2\_usage|Node/Group|Size of the second disk in GB to attach to a VM or a group of VMs. This variable is only mandatory on Docker nodes (UCP, DTR, worker) and NFS node. It is not required for the logger node or the load balancers.|
-|node\_policy|Node/Group|HPE SimpliVity backup policy to assign to a VM or a group of VMs. The name has to match one of the backup policies defined in the `group_vars/vars` file described in the section `HPE SimpliVity backup configuration`.|
+|disk2_usage|Node/Group|Size of the second disk in GB to attach to a VM or a group of VMs. This variable is only mandatory on Docker nodes (UCP, DTR, worker) and NFS node. It is not required for the logger node or the load balancers.|
+|node_policy|Node/Group|HPE SimpliVity backup policy to assign to a VM or a group of VMs. The name has to match one of the backup policies defined in the `group_vars/vars` file described in the section `HPE SimpliVity backup configuration`.|

@@ -4,15 +4,15 @@ Variables related to your HPE SimpliVity deployment are mandatory and are descri
 
 |Variable|File|Description|
 |:-------|:---|:----------|
-|simplivity\_username|group_vars/vars|Username to log in to the HPE SimpliVity Omnistack appliances. It might include a domain, for example, `administrator@vsphere.local`. The corresponding password is stored in the variable named `simplivity_password`.|
-|simplivity\_password|**group_vars/vault**|The password for the `simplivity_username` user.|
-|omnistack\_ovc|group_vars/vars|List of Omnistack hosts to be used, in list format, i.e. `[‘omni1.local’,’onmi2.local’...]`. If your OmniStack virtual machines do not have their names registered in DNS, you can use their IP addresses.|
+|simplivity_username|group_vars/vars|Username to log in to the HPE SimpliVity Omnistack appliances. It might include a domain, for example, `administrator@vsphere.local`. The corresponding password is stored in the variable named `simplivity_password`.|
+|simplivity_password|**group_vars/vault**|The password for the `simplivity_username` user.|
+|omnistack_ovc|group_vars/vars|List of Omnistack hosts to be used, in list format, i.e. `[‘omni1.local’,’onmi2.local’...]`. If your OmniStack virtual machines do not have their names registered in DNS, you can use their IP addresses.|
 
 ### VM placement and number of HPE SimpliVity servers in the cluster
 
 The placement of the various VMs deployed by the playbooks depends on whether DRS is enabled or not:
 
-1.  If DRS is not enabled, the placement of the VMs is specified in the ansible inventory file vm\_hosts
+1.  If DRS is not enabled, the placement of the VMs is specified in the ansible inventory file vm_hosts
 2.  If DRS is enabled, the placement of the VMs is outside the control of the playbooks
 
 The playbooks have only been tested with three nodes in the ESX cluster, but the following sections provide guidance on how to use more than three nodes.

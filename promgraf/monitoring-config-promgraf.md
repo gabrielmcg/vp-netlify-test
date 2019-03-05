@@ -4,9 +4,9 @@ All Monitoring-related variables for Prometheus and Grafana are described in [\#
 
 |Variable|Description|
 |:-------|:----------|
-|cadvisor\_version| `v0.28.3` |
-|node\_exporter\_version| `v1.15.0` |
-|prometheus\_version| `v2.3.2` |
-|grafana\_version| `5.2.3` |
-|prom\_persistent\_vol\_name|The name of the volume which will be used to store the monitoring data. The volume is created using the vSphere Docker Volume plugin.|
-|prom\_persistent\_vol\_size|The size of the volume which will hold the monitoring data. The exact syntax is dictated by the vSphere Docker Volume plugin. The default value is 10GB.|
+|cadvisor_version| `v0.28.3` |
+|node_exporter_version| `v1.15.0` |
+|prometheus_version| `v2.3.2` |
+|grafana_version| `5.2.3` |
+|prom_persistent_vol_name|The name of the volume which will be used to store the monitoring data. The volume is created using the vSphere Docker Volume plugin.|
+|prom_persistent_vol_size|The size of the volume which will hold the monitoring data. The exact syntax is dictated by the vSphere Docker Volume plugin. The default value is 10GB.|

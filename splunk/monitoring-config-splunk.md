@@ -6,9 +6,9 @@ In the standalone deployment, you can enable SSL authentication between the univ
 
 ## Splunk prerequisites
 
-You should select the Splunk deployment type that you require by setting the variable `monitoring_stack` in the `group_vars/vars` file to either **splunk**, for a standalone Splunk deployment, or **splunk\_demo** for the built-in version. If you omit this variable, or if it has an invalid value, no Splunk deployment will be configured.
+You should select the Splunk deployment type that you require by setting the variable `monitoring_stack` in the `group_vars/vars` file to either **splunk**, for a standalone Splunk deployment, or **splunk_demo** for the built-in version. If you omit this variable, or if it has an invalid value, no Splunk deployment will be configured.
 
-For both types of deployment, you need to download the Splunk Universal forwarder images/packages from [https://www.splunk.com/en\_us/download/universal-forwarder.html](https://www.splunk.com/en_us/download/universal-forwarder.html). Packages are available for 64-bit Linux and 64-bit Windows 8.1/Windows 10. Download the RPM package for Linux 64-bit (2.6+ kernel Linux distributions) to `./files/splunk/linux`. If you are deploying Windows nodes, download the MSI package for Windows 64 bit to `./files/splunk/windows`. For a dual Linux/Windows deployment, the images and packages must have same name and version, along with the appropriate extensions, for example:
+For both types of deployment, you need to download the Splunk Universal forwarder images/packages from [https://www.splunk.com/en_us/download/universal-forwarder.html](https://www.splunk.com/en_us/download/universal-forwarder.html). Packages are available for 64-bit Linux and 64-bit Windows 8.1/Windows 10. Download the RPM package for Linux 64-bit (2.6+ kernel Linux distributions) to `./files/splunk/linux`. If you are deploying Windows nodes, download the MSI package for Windows 64 bit to `./files/splunk/windows`. For a dual Linux/Windows deployment, the images and packages must have same name and version, along with the appropriate extensions, for example:
 
 -   files/splunk/windows/splunkforwarder-7.1.2.msi
 -   files/splunk/linux/splunkforwarder-7.1.2.rpm
@@ -48,15 +48,15 @@ If you want to use your own certificates in your standalone Splunk deployment to
 
 You can specify advanced Splunk configuration in the following files:
 
--   files/splunk/linux/SPLUNK\_HOME
--   files/splunk/linux/DOCKER\_TAS
--   files/splunk/windows/SPLUNK\_HOME
+-   files/splunk/linux/SPLUNK_HOME
+-   files/splunk/linux/DOCKER_TAS
+-   files/splunk/windows/SPLUNK_HOME
 
 These files will be copied as-is to the systems running the universal forwarder.
 
 ## Configuring syslog in UCP
 
-In order to see some data in the UCP operational dashboard, you need to have UCP send its logs to the VM configured in the \[logger\] group. For example, for the following `vm_host` file:
+In order to see some data in the UCP operational dashboard, you need to have UCP send its logs to the VM configured in the [logger] group. For example, for the following `vm_host` file:
 
 ```
 [logger]
@@ -71,7 +71,7 @@ This will configure UCP to send its logs to `hpe-logger.cloudra.local:1514`. You
 
 ## Configuring syslog in ESX
 
-This configuration must be done manually for each ESX server. The syslog server should be the server configured in the \[logger\] group in your `vm_hosts` inventory. The protocol should be `tcp` and the port `514` as shown in Figure 14.
+This configuration must be done manually for each ESX server. The syslog server should be the server configured in the [logger] group in your `vm_hosts` inventory. The protocol should be `tcp` and the port `514` as shown in Figure 14.
 
  ![ "Configure Syslog on ESXi Hosts"][media-esx-config-syslog-png] 
 
