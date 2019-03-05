@@ -12,13 +12,13 @@ The following example shows how to set Kubernetes as the default orchestrator fo
 [worker]
 hpe-worker01 ip_addr='10.60.59.21/16' esxi_host='esxi-hpe-1.cloudra.local'
 hpe-worker02 ip_addr='10.60.59.22/16' esxi_host='esxi-hpe-2.cloudra.local'
-hpe-worker03 ip_addr='10.60.59.23/16' esxi_host='esxi-hpe-3.cloudra.local' **orchestrator=swarm**
+hpe-worker03 ip_addr='10.60.59.23/16' esxi_host='esxi-hpe-3.cloudra.local' orchestrator=swarm
  
 [worker:vars]
 cpus='4'
 ram='65536'
 disk2_size='500'
-**orchestrator=kubernetes**
+orchestrator=kubernetes
 
 ```
 

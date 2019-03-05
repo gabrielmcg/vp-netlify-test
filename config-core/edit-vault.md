@@ -43,7 +43,5 @@ In order for Ansible to be able to read the vault, you need to specify a file wh
 When you use a vault, you must specify the password file every time on the command line, for example,
 
 ```
-
-# ansible-playbook -i vm_hosts site.yml **--vault-password-file .vault\_pass**
-
+# ansible-playbook -i vm_hosts site.yml --vault-password-file .vault\_pass
 ```

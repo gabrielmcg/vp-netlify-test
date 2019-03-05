@@ -72,8 +72,8 @@ The container will exit once the shell command has run and any unnamed volumes w
 ```
 
 # docker run -it --rm -v test_01:/tmp alpine sh -c "cat /tmp/foo.txt"	
-**some test data here**
 
+some test data here
 ```
 
 ## Automated backup

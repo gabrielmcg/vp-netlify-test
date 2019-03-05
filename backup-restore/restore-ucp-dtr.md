@@ -25,10 +25,10 @@ To retrieve the ID of the replica that was backed up, as well as the version of 
 ```
 # tar -Oxf /root/restore/2018_04_17_151734_dtr_meta.vars.tgz meta.yml
 backup_node="hpe-dtr01"
-replica_id="**ad5204e8a4d0**"
+replica_id="ad5204e8a4d0"
 backup_source=""
 ucp_version=""
-dtr_version="**2.4.3**"
+dtr_version="2.4.3"
 
 ```
 
@@ -37,7 +37,7 @@ dtr_version="**2.4.3**"
 backup_node="hpe-ucp01"
 replica_id=""
 backup_source=""
-ucp_version="**2.2.7**"
+ucp_version="2.2.7"
 dtr_version=""
 ```
 
@@ -55,7 +55,7 @@ backup_dest: "/root/backups"
 backup_server: <IP of your ansible box>
 ```
 
-You should populate your `group_vars/backups` file as above, with the `backup_dtr_id` variable containing the value you retrieved in the preceding step as `replica_id="**ad5204e8a4d0**"`.
+You should populate your `group_vars/backups` file as above, with the `backup_dtr_id` variable containing the value you retrieved in the preceding step as `replica_id="ad5204e8a4d0"`.
 
 **Step 4:** Verify that your `group_vars/vars` file specifies the correct versions of DTR and UCP.
 
