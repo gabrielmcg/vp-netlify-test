@@ -112,7 +112,7 @@ module.exports = {
 			{
                 title: 'Post deployment',
                 children: [ 
-				'post-deploy/post-deploy',
+				
 				'post-deploy/install-kubectl',
 				'post-deploy/install-client-bundle',
 				'post-deploy/install-helm',				
