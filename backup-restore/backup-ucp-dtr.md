@@ -4,17 +4,17 @@ The playbooks support backing up the swarm, UCP, DTR metadata and DTR images.
 
 ## Backup configuration variables
 
-The following table shows the variables related to backing up UCP and DTR. All these variables are defined in the file **group\_vars/backups**. All the data that is backed up is streamed over an SSH connection to the backup server. Currently, the playbooks only support the use of the Ansible box as the backup server.
+The following table shows the variables related to backing up UCP and DTR. All these variables are defined in the file **group_vars/backups**. All the data that is backed up is streamed over an SSH connection to the backup server. Currently, the playbooks only support the use of the Ansible box as the backup server.
 
 
 **Table 21.** Backup variables
 
 |Variable|File|Description|
 |:-------|:---|:----------|
-|backup\_server|**group\_vars/backups**|Currently, the playbooks only support the use of the Ansible box as the backup server.|
-|backup\_dest|**group\_vars/backups**|This variable should point to an existing folder on your Ansible box where the `root` user has write access. All the backups will be stored in this folder. For example, `/root/backup`|
-|backup\_passphrase|**group\_vars/vault**|This variable is used to encrypt the tar file with a passphrase that must be at least 12 characters long.|
-|\#swarm\_offline\_backups|**group\_vars/backups**|This variable is commented out by default. More information on this variable is provided below.|
+|backup\_server|**group_vars/backups**|Currently, the playbooks only support the use of the Ansible box as the backup server.|
+|backup\_dest|**group_vars/backups**|This variable should point to an existing folder on your Ansible box where the `root` user has write access. All the backups will be stored in this folder. For example, `/root/backup`|
+|backup\_passphrase|**group_vars/vault**|This variable is used to encrypt the tar file with a passphrase that must be at least 12 characters long.|
+|\#swarm\_offline\_backups|**group_vars/backups**|This variable is commented out by default. More information on this variable is provided below.|
 
 ## Backing up the Swarm
 

@@ -4,9 +4,9 @@ Variables related to your HPE SimpliVity deployment are mandatory and are descri
 
 |Variable|File|Description|
 |:-------|:---|:----------|
-|simplivity\_username|group\_vars/vars|Username to log in to the HPE SimpliVity Omnistack appliances. It might include a domain, for example, `administrator@vsphere.local`. The corresponding password is stored in the variable named `simplivity_password`.|
-|simplivity\_password|**group\_vars/vault**|The password for the `simplivity_username` user.|
-|omnistack\_ovc|group\_vars/vars|List of Omnistack hosts to be used, in list format, i.e. `[‘omni1.local’,’onmi2.local’...]`. If your OmniStack virtual machines do not have their names registered in DNS, you can use their IP addresses.|
+|simplivity\_username|group_vars/vars|Username to log in to the HPE SimpliVity Omnistack appliances. It might include a domain, for example, `administrator@vsphere.local`. The corresponding password is stored in the variable named `simplivity_password`.|
+|simplivity\_password|****|The password for the `simplivity_username` user.|
+|omnistack\_ovc|group_vars/vars|List of Omnistack hosts to be used, in list format, i.e. `[‘omni1.local’,’onmi2.local’...]`. If your OmniStack virtual machines do not have their names registered in DNS, you can use their IP addresses.|
 
 ### VM placement and number of HPE SimpliVity servers in the cluster
 

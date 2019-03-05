@@ -4,9 +4,9 @@ Variables related to configuring HPE SimpliVity backups are described in the fol
 
 |Variable|File|Description|
 |:-------|:---|:----------|
-|dummy\_vm\_prefix|group\_vars/vars|In order to be able to backup the Docker volumes, a number of "dummy" VMs need to spin up. This variable will set a recognizable prefix for them.|
-|docker\_volumes\_policy|group\_vars/vars|Backup policy to use for the Docker volumes.|
-|backup\_policies|group\_vars/vars|List of dictionaries containing the different backup policies to be used along with the scheduling information. Any number of backup policies can be created and they need to match the node\_policy variables defined in the inventory. Times are indicated in minutes. All month calculations use a 30-day month. All year calculations use a 365-day year. The format is as follows:  |
+|dummy\_vm\_prefix|group_vars/vars|In order to be able to backup the Docker volumes, a number of "dummy" VMs need to spin up. This variable will set a recognizable prefix for them.|
+|docker\_volumes\_policy|group_vars/vars|Backup policy to use for the Docker volumes.|
+|backup\_policies|group_vars/vars|List of dictionaries containing the different backup policies to be used along with the scheduling information. Any number of backup policies can be created and they need to match the node\_policy variables defined in the inventory. Times are indicated in minutes. All month calculations use a 30-day month. All year calculations use a 365-day year. The format is as follows:  |
 
 ```
 backup_policies:

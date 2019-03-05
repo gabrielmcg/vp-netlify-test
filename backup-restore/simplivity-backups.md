@@ -113,7 +113,7 @@ You can specify a backup name, in this case `manual_backup_test_01`, as shown in
 
 ## Restore
 
-Right-click on the special VM, in this case hpe-VM-in-dockervols-Docker\_HPE. On the `Configure` tab, select `HPE SimpliVity Search Backups` as shown in Figure 24.
+Right-click on the special VM, in this case `hpe-VM-in-dockervols-Docker_HPE`. On the `Configure` tab, select `HPE SimpliVity Search Backups` as shown in Figure 24.
 
  ![ "Search backups"][media-search-backups-png] 
 
@@ -170,20 +170,18 @@ It is only necessary to move the `.vmdk` file as the `.vmfd` file will automatic
 You can check that the volume `test_01` has been restored by using the `docker volume ls` command again.
 
 ```
-
 # docker volume ls | grep vsphere
-vsphere:latest      prom_hpe-db-data@Docker_HPE
-vsphere:latest      **test\_01@Docker\_HPE**
 
+vsphere:latest      prom_hpe-db-data@Docker_HPE
+vsphere:latest      test_01@Docker_HPE
 ```
 
 You can verify that the volume contains the correct data by spinning up a container and running a shell command:
 
 ```
-
 # docker run -it --rm -v test_01:/tmp alpine sh -c "cat /tmp/foo.txt"
-**some test data here**
 
+some test data here
 ```
 
 The data you entered in the text file before performing the backup and deleting the volume is available once again after restoring the volume.
