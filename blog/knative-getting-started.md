@@ -34,7 +34,7 @@ The Service "istio-ingressgateway" is invalid: spec.ports[0].nodePort: Invalid v
 
 You need to download the [https://github.com/knative/serving/releases/download/v0.4.0/istio-crds.yaml](https://github.com/knative/serving/releases/download/v0.4.0/istio-crds.yaml) file locally and modify the ports used, to fall within this range:
 
-Change the `nodePort' values from:
+Change the `nodePort` values from 31380, 31390, 31400 to  33380, 33390, 33400:
 
 ```
 ...
@@ -72,7 +72,7 @@ spec:
 ....
 ``` 
 
-To:
+to:
 
 ```
 ...
@@ -198,7 +198,7 @@ spec:
                 value: "Go Sample v1"
 ```
 
-From the directory where the new service.yaml file was created, apply the configuration:
+From the directory where the new `service.yaml` file was created, apply the configuration:
 
 ```
 # kubectl apply --filename service.yaml
