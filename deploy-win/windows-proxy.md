@@ -14,7 +14,7 @@ However, if the deployment is running behind a proxy, you may need to make this 
 
     ```
     wget https://github.com/ansible/ansible/blob/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
-        ```
+    ```
 
 2.  Deploy a local HTTP server, enabling port 80, for example:
 
